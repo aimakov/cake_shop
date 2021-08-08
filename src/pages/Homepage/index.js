@@ -6,18 +6,20 @@ import Gallery from "../../Components/Gallery";
 import CakeBuilder from "../../Components/CakeBuilder";
 import Footer from "../../Components/Footer";
 
-import { HomepageContainer } from "./HomepageElements";
+import { HomepageContainer, HomepageWrap } from "./HomepageElements";
 
 const Homepage = () => {
     return (
         <>
             <HomepageContainer>
-                <Navbar />
-                <Sidebar />
-                <Intro></Intro>
-                <CakeBuilder></CakeBuilder>
-                <Gallery></Gallery>
-                <Footer></Footer>
+                <HomepageWrap>
+                    <Navbar />
+                    <Sidebar />
+                    <Intro></Intro>
+                    <CakeBuilder></CakeBuilder>
+                    <Gallery></Gallery>
+                    <Footer></Footer>
+                </HomepageWrap>
             </HomepageContainer>
         </>
     );

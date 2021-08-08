@@ -10,6 +10,7 @@ export const NavbarContainer = styled.div`
     align-items: center;
     justify-content: flex-start;
     border-bottom: 1px black solid;
+    border-radius: 20px 20px 0 0;
 `;
 
 export const LogoWrapper = styled.div``;

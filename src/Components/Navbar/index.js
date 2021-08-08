@@ -16,8 +16,8 @@ const Navbar = () => {
                 </LinksWrapper>
                 <Title>Nottingham Homemade Cakes</Title>
                 <AuthWrapper>
-                    <AuthLink>Sign In</AuthLink>
-                    <AuthLink>Sign Up</AuthLink>
+                    <AuthLink to="/">Sign In</AuthLink>
+                    <AuthLink to="/">Sign Up</AuthLink>
                 </AuthWrapper>
             </NavbarContainer>
         </>
