@@ -1,6 +1,6 @@
 import React from "react";
 
-import { NavbarContainer, LogoWrapper, Logo, Title, LinksWrapper, NavLink, AuthWrapper, AuthLink } from "./NavbarElements";
+import { NavbarContainer, LogoWrapper, Logo, Title, LinksWrapper, NavLink, AuthWrapper, Language, Eng, Kor, AuthLink } from "./NavbarElements";
 
 const Navbar = () => {
     return (
@@ -14,8 +14,14 @@ const Navbar = () => {
                     <NavLink> Discover </NavLink>
                     <NavLink> Contact Us</NavLink>
                 </LinksWrapper>
-                <Title>Nottingham Homemade Cakes</Title>
+                <Title>
+                    <span style={{ color: "orange" }}>Cake</span>sie
+                </Title>
                 <AuthWrapper>
+                    <Language>
+                        <Eng>🇺🇸</Eng>
+                        <Kor>🇰🇷</Kor>
+                    </Language>
                     <AuthLink to="/">Sign In</AuthLink>
                     <AuthLink to="/">Sign Up</AuthLink>
                 </AuthWrapper>

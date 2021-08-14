@@ -12,14 +12,12 @@ const Homepage = () => {
     return (
         <>
             <HomepageContainer>
-                <HomepageWrap>
-                    <Navbar />
-                    <Sidebar />
-                    <Intro></Intro>
-                    <CakeBuilder></CakeBuilder>
-                    <Gallery></Gallery>
-                    <Footer></Footer>
-                </HomepageWrap>
+                <Navbar />
+                <Sidebar />
+                <Intro></Intro>
+                <CakeBuilder></CakeBuilder>
+                <Gallery></Gallery>
+                <Footer></Footer>
             </HomepageContainer>
         </>
     );
