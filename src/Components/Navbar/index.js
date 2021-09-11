@@ -11,7 +11,8 @@ const Navbar = () => {
                 </LogoWrapper>
                 <LinksWrapper>
                     <NavLink> Build a Cake </NavLink>
-                    <NavLink> Discover </NavLink>
+                    <NavLink> Menu </NavLink>
+                    <NavLink> Gallery </NavLink>
                     <NavLink> Contact Us</NavLink>
                 </LinksWrapper>
                 <Title>
