@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "../../Components/Navbar";
 import Sidebar from "../../Components/Sidebar";
 import Intro from "../../Components/Intro";
@@ -9,11 +9,22 @@ import Footer from "../../Components/Footer";
 import { HomepageContainer, HomepageWrap } from "./HomepageElements";
 
 const Homepage = () => {
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggle = () => {
+        console.log("Toggle");
+        setIsOpen(!isOpen);
+    };
+
     return (
         <>
             <HomepageContainer>
                 <Navbar />
-                <Sidebar />
+                <button onClick={toggle} style={{ zIndex: "100" }}>
+                    {" "}
+                    Open{" "}
+                </button>
+                <Sidebar isOpen={isOpen} />
                 <Intro></Intro>
                 <CakeBuilder></CakeBuilder>
                 <Gallery></Gallery>

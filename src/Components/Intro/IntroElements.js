@@ -38,14 +38,24 @@ export const IntroButton = styled.button`
     margin: 20px auto;
     cursor: pointer;
     font-size: 15px;
-    border-radius: 10px;
+    border-radius: 50px;
+    border: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s ease-in-out;
+
+    &:hover {
+        background-color: #2ee59d;
+        box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+        color: #fff;
+        transform: translateY(-7px);
+    }
 `;
 
 export const IntroCakeWrap = styled.div`
     padding: 20px;
     width: 30vw;
     /* background-color: red; */
-    @media screen and (max-width: 1095px) {
+    @media screen and (max-width: 1024px) {
         display: none;
     }
 `;

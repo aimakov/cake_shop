@@ -19,10 +19,10 @@ const Navbar = () => {
                     <span style={{ color: "orange" }}>Cake</span>sie
                 </Title>
                 <AuthWrapper>
-                    <Language>
-                        <Eng>🇺🇸</Eng>
-                        <Kor>🇰🇷</Kor>
-                    </Language>
+                    {/* <Language> */}
+                    <Eng>🇺🇸</Eng>
+                    <Kor>🇰🇷</Kor>
+                    {/* </Language> */}
                     <AuthLink to="/">Sign In</AuthLink>
                     <AuthLink to="/">Sign Up</AuthLink>
                 </AuthWrapper>

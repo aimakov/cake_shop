@@ -6,7 +6,7 @@ export const NavbarContainer = styled.div`
     position: sticky;
     /* background-color: #ff8474; */
     display: flex;
-    height: 100px;
+    height: 120px;
     align-items: flex-end;
     justify-content: flex-start;
     /* border-bottom: 1px black solid; */
@@ -36,6 +36,7 @@ export const Title = styled.p`
 
 export const LinksWrapper = styled.div`
     margin-left: 50px;
+    margin-bottom: 9px;
     /* position: absolute; */
     /* left: 50%; */
     /* transform: translateX(-50%); */
@@ -54,6 +55,8 @@ export const AuthWrapper = styled.div`
     margin-left: auto;
     margin-right: 20px;
     display: flex;
+    width: 300px;
+    justify-content: space-evenly;
     @media screen and (max-width: 900px) {
         display: none;
     }
