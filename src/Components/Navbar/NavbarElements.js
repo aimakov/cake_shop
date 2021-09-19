@@ -32,6 +32,7 @@ export const Title = styled.p`
     left: 50%;
     top: 20px;
     transform: translateX(-50%);
+    z-index: 100;
 `;
 
 export const LinksWrapper = styled.div`

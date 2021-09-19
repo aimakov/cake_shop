@@ -7,7 +7,10 @@ const Sidebar = (props) => {
         <>
             <SidebarContainer isOpen={props.isOpen}>
                 <SidebarWrapper>
-                    <SidebarLink></SidebarLink>
+                    <SidebarLink>Build a Cake</SidebarLink>
+                    <SidebarLink>Menu</SidebarLink>
+                    <SidebarLink>Gallery</SidebarLink>
+                    <SidebarLink>Contact Us</SidebarLink>
                 </SidebarWrapper>
             </SidebarContainer>
         </>

@@ -19,11 +19,8 @@ const Homepage = () => {
     return (
         <>
             <HomepageContainer>
-                <Navbar />
-                <button onClick={toggle} style={{ zIndex: "100" }}>
-                    {" "}
-                    Open{" "}
-                </button>
+                <Navbar open={isOpen} setIsOpen={setIsOpen} />
+
                 <Sidebar isOpen={isOpen} />
                 <Intro></Intro>
                 <CakeBuilder></CakeBuilder>

@@ -1,8 +1,9 @@
 import React from "react";
 
 import { NavbarContainer, LogoWrapper, Logo, Title, LinksWrapper, NavLink, AuthWrapper, Language, Eng, Kor, AuthLink } from "./NavbarElements";
+import { BurgerMenu } from "../../Components/BurgerMenu";
 
-const Navbar = () => {
+const Navbar = (props) => {
     return (
         <>
             <NavbarContainer>
@@ -15,9 +16,14 @@ const Navbar = () => {
                     <NavLink> Gallery </NavLink>
                     <NavLink> Contact Us</NavLink>
                 </LinksWrapper>
-                <Title>
+                <Title open={props.open}>
                     <span style={{ color: "orange" }}>Cake</span>sie
                 </Title>
+                <BurgerMenu open={props.open} onClick={() => props.setIsOpen(!props.open)}>
+                    <div />
+                    <div />
+                    <div />
+                </BurgerMenu>
                 <AuthWrapper>
                     {/* <Language> */}
                     <Eng>🇺🇸</Eng>

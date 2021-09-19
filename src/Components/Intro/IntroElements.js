@@ -54,7 +54,6 @@ export const IntroButton = styled.button`
 export const IntroCakeWrap = styled.div`
     padding: 20px;
     width: 30vw;
-    /* background-color: red; */
     @media screen and (max-width: 1024px) {
         display: none;
     }
