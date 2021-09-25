@@ -1,0 +1,19 @@
+.intro {
+    height: 100vh;
+}
+
+.slogan {
+    font-size: 7vw;
+    margin-bottom: 1rem;
+}
+
+.intro_cake {
+    max-width: 450px !important;
+    width: 100%;
+}
+
+@media screen and (min-width: 993px) {
+    .slogan {
+        font-size: 3rem;
+    }
+}

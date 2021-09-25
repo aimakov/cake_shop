@@ -1,28 +1,27 @@
 import React from "react";
-
-import { IntroContainer, IntroTitleWrap, IntroTitle, IntroP, IntroButton, IntroCakeWrap, IntroCake } from "./IntroElements";
-
-import Cake from "../../images/Intro_cake.png";
-import Cake2 from "../../images/Intro_cake_2.png";
+import "./Intro.css";
+import Cake_1 from "../../images/Intro_cake.png";
+import Cake_2 from "../../images/Intro_cake_2.png";
 
 const Intro = () => {
     return (
         <>
-            <IntroContainer>
-                <IntroCakeWrap>
-                    <IntroCake src={Cake2} />
-                </IntroCakeWrap>
-                <IntroTitleWrap>
-                    <IntroTitle>
+            <div className="row intro valign-wrapper ">
+                <div className="col l4 hide-on-med-and-down center">
+                    <img class="responsive-img intro_cake" src={Cake_1} />
+                </div>
+                <div className="col s12 m12 l6 center">
+                    <p className="slogan">
                         You build the cake <br /> We make it real{" "}
-                    </IntroTitle>
-                    {/* <IntroP>We strive to bring people best cakes</IntroP> */}
-                    <IntroButton>Order Here</IntroButton>
-                </IntroTitleWrap>
-                <IntroCakeWrap>
-                    <IntroCake src={Cake} />
-                </IntroCakeWrap>
-            </IntroContainer>
+                    </p>
+                    <button className="waves-effect waves-light btn-large orange lighten-1 black-text" style={{ borderRadius: "20px" }}>
+                        Order Now
+                    </button>
+                </div>
+                <div className="col l4 hide-on-med-and-down center">
+                    <img class="responsive-img intro_cake" src={Cake_2} />
+                </div>
+            </div>
         </>
     );
 };

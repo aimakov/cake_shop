@@ -1,0 +1,24 @@
+nav ul li a {
+    color: black;
+}
+
+.left-links {
+    margin-left: 1rem;
+}
+
+.right-links {
+    margin-right: 1rem;
+}
+
+#cakesie {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+#title {
+    margin-top: 1rem;
+}
+
+nav div li a {
+    font-size: 18px;
+}

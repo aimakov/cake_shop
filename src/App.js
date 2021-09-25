@@ -1,6 +1,5 @@
 import "./App.css";
-import HomepageMaterialize from "./pages/HomepageMaterialize";
-import Homepage from "./pages/Homepage";
+import Layout from "./pages/Layout";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
@@ -8,8 +7,7 @@ function App() {
         <>
             <Router>
                 <Switch>
-                    <Route path="/" exact component={HomepageMaterialize} />
-                    <Route path="/homepage" exact component={Homepage} />
+                    <Route path="/" exact component={Layout} />
                 </Switch>
             </Router>
         </>
