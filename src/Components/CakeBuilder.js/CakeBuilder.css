@@ -1,4 +1,19 @@
 .cake {
-    width: fit-content;
+    width: 355px;
+    height: auto;
     margin: 0 auto;
 }
+
+.icing {
+    width: 360px;
+    /* transform: translateX(-2px); */
+}
+
+/* @media all and (max-width: 425px) {
+    .cake {
+        width: 300px;
+    }
+    .icing {
+        width: 305px;
+    }
+} */
