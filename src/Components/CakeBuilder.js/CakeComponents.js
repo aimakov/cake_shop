@@ -23,6 +23,7 @@ export const Cream = styled.img`
     width: 300px;
     margin: 0 auto;
     margin-top: -27px;
+    padding-left: 2px;
     z-index: 1;
 
     @media (min-width: 768px) {

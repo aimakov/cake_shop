@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import "./CakeBuilder.css";
 
@@ -18,57 +18,73 @@ import LemonIcing from "../../images/CakeComponents/LemonIcing.png";
 import StrawberryIcing from "../../images/CakeComponents/StrawberryIcing.png";
 
 import { Layer, Cream, Icing } from "./CakeComponents";
+import CakeRadio from "./CakeRadio";
 
 const CakeBuilder = () => {
+    const [Layers, setLayers] = useState("");
+    const [CreamType, setCreamType] = useState("");
+    const [IcingType, setIcingType] = useState("");
+
     return (
         <>
             <div className="CakeBuilderContainer">
-                <div className="CakeBuilderControls">
-                    {/* <div className="CakeBuilderFirstColumn" style={{ gridRow: "2/3", gridColumn: "1/2", borderTop: "1px solid black" }}>
-                        Layers
-                    </div>
-                    <div className="CakeBuilderFirstColumn" style={{ gridRow: "3/4", gridColumn: "1/2" }}>
-                        Cream
-                    </div>
-                    <div className="CakeBuilderFirstColumn" style={{ gridRow: "4/5", gridColumn: "1/2" }}>
-                        Icing
-                    </div>
-                    <div className="CakeBuilderFirstRow" style={{ gridRow: "1/2", gridColumn: "2/3", borderLeft: "1px solid black" }}>
-                        Vanilla
-                    </div>
-                    <div className="CakeBuilderFirstRow" style={{ gridRow: "1/2", gridColumn: "3/4" }}>
-                        Chocolate
-                    </div>
-                    <div className="CakeBuilderFirstRow" style={{ gridRow: "1/2", gridColumn: "4/5" }}>
-                        Lemon
-                    </div>
-                    <div className="CakeBuilderFirstRow" style={{ gridRow: "1/2", gridColumn: "5/6" }}>
-                        Strawberry
-                    </div> */}
-                    <table>
+                <div className="CakeBuilderControls center-align">
+                    <table className="center-align">
                         <thead>
                             <tr>
                                 <th></th>
-                                <th>Item Name</th>
-                                <th>Item Price</th>
+                                <th>Vanilla</th>
+                                <th>Chocolate</th>
+                                <th>Lemon</th>
+                                <th>Strawberry</th>
                             </tr>
                         </thead>
 
                         <tbody>
                             <tr>
-                                <td>Alvin</td>
-                                <td>Eclair</td>
-                                <td>$0.87</td>
+                                <td className="cake">Layers</td>
+                                <td className="center-align">
+                                    <CakeRadio CakePart={Layers} name="Layers" value="Vanilla" setCakePart={setLayers} />
+                                </td>
+                                <td className="center-align">
+                                    <CakeRadio CakePart={Layers} name="Layers" value="Chocolate" setCakePart={setLayers} />
+                                </td>
+                                <td className="center-align">
+                                    <CakeRadio CakePart={Layers} name="Layers" value="Lemon" setCakePart={setLayers} />
+                                </td>
+                                <td className="center-align">
+                                    <CakeRadio CakePart={Layers} name="Layers" value="Strawberry" setCakePart={setLayers} />
+                                </td>
                             </tr>
                             <tr>
-                                <td>Alan</td>
-                                <td>Jellybean</td>
-                                <td>$3.76</td>
+                                <td className="cake">Cream</td>
+                                <td className="center-align">
+                                    <CakeRadio CakePart={CreamType} name="Cream" value="Vanilla" setCakePart={setCreamType} />
+                                </td>
+                                <td className="center-align">
+                                    <CakeRadio CakePart={CreamType} name="Cream" value="Chocolate" setCakePart={setCreamType} />
+                                </td>
+                                <td className="center-align">
+                                    <CakeRadio CakePart={CreamType} name="Cream" value="Lemon" setCakePart={setCreamType} />
+                                </td>
+                                <td className="center-align">
+                                    <CakeRadio CakePart={CreamType} name="Cream" value="Strawberry" setCakePart={setCreamType} />
+                                </td>
                             </tr>
                             <tr>
-                                <td>Jonathan</td>
-                                <td>Lollipop</td>
-                                <td>$7.00</td>
+                                <td className="cake">Icing</td>
+                                <td className="center-align">
+                                    <CakeRadio CakePart={IcingType} name="Icing" value="Vanilla" setCakePart={setIcingType} />
+                                </td>
+                                <td className="center-align">
+                                    <CakeRadio CakePart={IcingType} name="Icing" value="Chocolate" setCakePart={setIcingType} />
+                                </td>
+                                <td className="center-align">
+                                    <CakeRadio CakePart={IcingType} name="Icing" value="Lemon" setCakePart={setIcingType} />
+                                </td>
+                                <td className="center-align">
+                                    <CakeRadio CakePart={IcingType} name="Icing" value="Strawberry" setCakePart={setIcingType} />
+                                </td>
                             </tr>
                         </tbody>
                     </table>
