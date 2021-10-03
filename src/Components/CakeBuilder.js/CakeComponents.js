@@ -3,18 +3,17 @@ import styled from "styled-components";
 export const Layer = styled.img`
     width: 300px;
     margin: 0 auto;
-    margin-top: ${({ first }) => (first ? "-45px" : "-27px")};
+    margin-top: ${({ first }) => (first ? "-45px" : "-28px")};
     z-index: 2;
 
-    @media (min-width: 768px) {
-        width: 400px;
+    /* @media (min-width: 768px) {
+        width: 350px;
         margin-top: ${({ first }) => (first ? "-58px" : "-37px")};
-        /* background-color: ${({ first }) => (first ? "blue" : "red")}; */
-    }
+    } */
 
     @media (min-width: 1024px) {
-        width: 500px;
-        margin-top: ${({ first }) => (first ? "-73px" : "-46px")};
+        width: 400px;
+        margin-top: ${({ first }) => (first ? "-62px" : "-37px")};
         /* background-color: ${({ first }) => (first ? "blue" : "red")}; */
     }
 `;
@@ -22,18 +21,18 @@ export const Layer = styled.img`
 export const Cream = styled.img`
     width: 300px;
     margin: 0 auto;
-    margin-top: -27px;
+    margin-top: -28px;
     padding-left: 2px;
     z-index: 1;
 
-    @media (min-width: 768px) {
-        width: 400px;
+    /* @media (min-width: 768px) {
+        width: 350px;
         margin-top: -37px;
-    }
+    } */
 
     @media (min-width: 1024px) {
-        width: 500px;
-        margin-top: -47px;
+        width: 400px;
+        margin-top: -38px;
     }
 `;
 
@@ -42,11 +41,11 @@ export const Icing = styled.img`
     margin: 0 auto;
     z-index: 3;
 
-    @media (min-width: 768px) {
-        width: 405px;
-    }
+    /* @media (min-width: 768px) {
+        width: 355px;
+    } */
 
     @media (min-width: 1024px) {
-        width: 505px;
+        width: 405px;
     }
 `;

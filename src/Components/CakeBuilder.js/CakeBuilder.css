@@ -4,27 +4,12 @@
     margin: 0 auto;
 }
 
-.icing {
-    width: 360px;
-    /* transform: translateX(-2px); */
-}
-
 .CakeBuilderContainer {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     height: 60vh;
     position: relative;
-}
-
-.CakeBuilderControls {
-    /* width: 40%; */
-    /* display: grid;
-    grid-template-rows: repeat(4, 40px);
-    grid-template-columns: repeat(5, 80px);
-    align-items: center;
-    justify-content: center;
-    text-align: center; */
 }
 
 .CakeBuilderFirstColumn {
@@ -39,12 +24,6 @@
     height: 100%;
 }
 
-@media all and (max-width: 768px) {
-    .CakeBuilderContainer {
-        flex-direction: column;
-    }
-}
-
 .cake {
     color: blue;
     width: 80px;
@@ -54,6 +33,44 @@
 
 th {
     color: red;
-    width: 70px;
+    /* width: 70px; */
     text-align: center;
+}
+
+.CakeBuilderControls {
+    display: flex;
+    height: 244px;
+}
+
+.NumLayersControl {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 50px;
+    /* height: 244px; */
+    align-items: center;
+    /* font-size: 18px; */
+}
+
+.NumLayersIcons {
+    /* width: 80px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+@media all and (max-width: 840px) {
+    .CakeBuilderContainer {
+        flex-direction: column;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .CakeBuilderContainer {
+        justify-content: space-evenly;
+    }
+    .NumLayersControl {
+        margin: 0 10px;
+    }
 }
