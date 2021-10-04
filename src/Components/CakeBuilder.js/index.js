@@ -29,6 +29,42 @@ const CakeBuilder = () => {
     const [IcingType, setIcingType] = useState("");
     const [NumLayers, setNumLayers] = useState(2);
 
+    const [LayerSrc, setLayerSrc] = useState(VanillaLayer);
+    const [CreamSrc, setCreamSrc] = useState(VanillaCream);
+    const [IcingSrc, setIcingSrc] = useState(VanillaIcing);
+
+    useEffect(() => {
+        if (LayersType === "Vanilla") {
+            setLayerSrc(VanillaLayer);
+        } else if (LayersType === "Chocolate") {
+            setLayerSrc(ChocoLayer);
+        } else if (LayersType === "Lemon") {
+            setLayerSrc(LemonLayer);
+        } else if (LayersType === "Strawberry") {
+            setLayerSrc(StrawberryLayer);
+        }
+
+        if (CreamType === "Vanilla") {
+            setCreamSrc(VanillaCream);
+        } else if (CreamType === "Chocolate") {
+            setCreamSrc(ChocoCream);
+        } else if (CreamType === "Lemon") {
+            setCreamSrc(LemonCream);
+        } else if (CreamType === "Strawberry") {
+            setCreamSrc(StrawberryCream);
+        }
+
+        if (IcingType === "Vanilla") {
+            setIcingSrc(VanillaIcing);
+        } else if (IcingType === "Chocolate") {
+            setIcingSrc(ChocoIcing);
+        } else if (IcingType === "Lemon") {
+            setIcingSrc(LemonIcing);
+        } else if (IcingType === "Strawberry") {
+            setIcingSrc(StrawberryIcing);
+        }
+    }, [LayersType, CreamType, IcingType]);
+
     // useEffect(() => {
     //     let LayersSrc =
     //     return () => {
@@ -114,25 +150,31 @@ const CakeBuilder = () => {
                     </table>
                 </div>
                 <div className="NumLayersControl">
-                    <p>
+                    <p style={{ paddingBottom: "40px" }}>
                         <b>Layers:</b>
                     </p>
                     <div className="NumLayersIcons">
-                        <FiChevronUp style={{ margin: "0 auto", fontSize: "60px" }} onClick={() => setNumLayers((prevstate) => prevstate + 1)} />{" "}
-                        <span>{NumLayers}</span>{" "}
-                        <FiChevronDown style={{ margin: "0 auto", fontSize: "60px" }} onClick={() => setNumLayers((prevstate) => prevstate - 1)} />
+                        <FiChevronUp
+                            style={{ margin: "0 auto", fontSize: "60px", cursor: "pointer" }}
+                            onClick={() => setNumLayers((prevstate) => prevstate + 1)}
+                        />{" "}
+                        <span style={{ fontSize: "20px" }}>{NumLayers}</span>{" "}
+                        <FiChevronDown
+                            style={{ margin: "0 auto", fontSize: "60px", cursor: "pointer" }}
+                            onClick={() => setNumLayers((prevstate) => prevstate - 1)}
+                        />
                     </div>
                 </div>
                 <div style={{ display: "flex", flexDirection: "column" }}>
-                    <Icing src={StrawberryIcing} />
-                    <Layer src={VanillaLayer} first={true} />
+                    <Icing src={IcingSrc} />
+                    <Layer src={LayerSrc} first={true} />
                     {/* <Cream src={`../../images/CakeComponents/${CreamType ? CreamType : "Vanilla"}Cream.png`} /> */}
-                    <Cream src={LemonCream} />
-                    <Layer src={VanillaLayer} />
+                    <Cream src={CreamSrc} />
+                    <Layer src={LayerSrc} />
                     {[...Array(NumLayers - 2)].map((x, i) => (
                         <>
-                            <Cream src={LemonCream} key={`${i}th Cream`} />
-                            <Layer src={VanillaLayer} key={`${i}th Layer`} />
+                            <Cream src={CreamSrc} key={`${i}th Cream`} />
+                            <Layer src={LayerSrc} key={`${i}th Layer`} />
                         </>
                     ))}
                 </div>

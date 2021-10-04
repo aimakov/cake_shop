@@ -58,6 +58,7 @@ th {
     flex-direction: column;
     justify-content: space-between;
     text-align: center;
+    transform: translateY(-15px);
 }
 
 @media all and (max-width: 840px) {
