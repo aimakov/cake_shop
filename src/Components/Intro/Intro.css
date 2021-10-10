@@ -3,17 +3,31 @@
 }
 
 .slogan {
-    font-size: 7vw;
+    font-size: 6vw;
     margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 .intro_cake {
-    max-width: 450px !important;
+    max-width: 400px !important;
     width: 100%;
+}
+
+.IntroText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px !important;
 }
 
 @media screen and (min-width: 993px) {
     .slogan {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 }
+
+/* @media screen and (min-width: 1024px) {
+    .slogan {
+        font-size: 2.5rem;
+    }
+} */

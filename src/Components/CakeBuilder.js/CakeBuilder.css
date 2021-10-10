@@ -7,15 +7,14 @@
 .CakeBuilderContainer {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 60vh;
+    align-items: flex-start;
+    height: 350px;
     position: relative;
 }
 
 .CakeBuilderFirstColumn {
     justify-self: end;
     border-right: 1px solid black;
-    height: 100%;
     padding: 5px;
 }
 
@@ -47,6 +46,8 @@ th {
     flex-direction: column;
     justify-content: center;
     margin: 0 50px;
+    margin-top: 15px;
+    /* height: 100%; */
     /* height: 244px; */
     align-items: center;
     /* font-size: 18px; */
@@ -54,6 +55,8 @@ th {
 
 .NumLayersIcons {
     /* width: 80px; */
+    margin-top: 50px;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -61,17 +64,41 @@ th {
     transform: translateY(-15px);
 }
 
+/* #Layers {
+    padding-bottom: 88px;
+} */
+
 @media all and (max-width: 840px) {
     .CakeBuilderContainer {
         flex-direction: column;
+        align-items: center;
+    }
+
+    .NumLayersControl {
+        flex-direction: row;
+        margin: 10px 0;
+        align-items: center;
+    }
+
+    .NumLayersIcons {
+        flex-direction: row;
+        align-items: center;
+        margin: 0;
+        width: 140px;
+        transform: translateY(0);
+    }
+
+    #PlusIcon {
+        order: 1;
+    }
+
+    #MinusIcon {
+        order: -1;
     }
 }
 
 @media all and (max-width: 1024px) {
     .CakeBuilderContainer {
         justify-content: space-evenly;
-    }
-    .NumLayersControl {
-        margin: 0 10px;
     }
 }

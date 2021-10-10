@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../Components/Navbar/Navbar";
 import Intro from "../Components/Intro/";
 import CakeBuilder from "../Components/CakeBuilder.js";
+import Menu from "../Components/Menu";
 
 const Layout = () => {
     return (
@@ -9,6 +10,7 @@ const Layout = () => {
             <Navbar />
             <Intro />
             <CakeBuilder />
+            <Menu />
         </>
     );
 };

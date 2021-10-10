@@ -17,21 +17,18 @@ const Navbar = () => {
                         </p>
                     </div>
                 </div>
-                <div className="navbar valign-wrapper transparent">
+                <div className="navbar valign-wrapper transparent center" style={{ width: "90%", margin: "0 auto" }}>
                     <nav style={{ background: "rgba(0,0,0,0)" }} className="z-depth-0">
                         <div className="nav-wrapper">
                             <ul id="nav-mobile" className="left hide-on-med-and-down left-links ">
                                 <li>
-                                    <a href="sass.html">Build a Cake</a>
+                                    <a href="/">Build a Cake</a>
                                 </li>
                                 <li>
-                                    <a href="badges.html">Menu</a>
+                                    <a href="/">Menu</a>
                                 </li>
                                 <li>
-                                    <a href="collapsible.html">Gallery</a>
-                                </li>
-                                <li>
-                                    <a href="collapsible.html">Contact Us</a>
+                                    <a href="/">Contact Us</a>
                                 </li>
                             </ul>
 

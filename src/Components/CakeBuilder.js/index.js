@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 // import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
 // import { FiMinusCircle } from "react-icons/fi";
 // import { VscChromeMinimize } from "react-icons/vsc";
-import { FiChevronUp, FiChevronDown } from "react-icons/fi";
+import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
 import "./CakeBuilder.css";
 
 import VanillaLayer from "../../images/CakeComponents/VanillaLayer3.png";
@@ -150,18 +150,20 @@ const CakeBuilder = () => {
                     </table>
                 </div>
                 <div className="NumLayersControl">
-                    <p style={{ paddingBottom: "40px" }}>
+                    <p id="Layers">
                         <b>Layers:</b>
                     </p>
                     <div className="NumLayersIcons">
-                        <FiChevronUp
-                            style={{ margin: "0 auto", fontSize: "60px", cursor: "pointer" }}
-                            onClick={() => setNumLayers((prevstate) => prevstate + 1)}
+                        <FiPlusCircle
+                            id="PlusIcon"
+                            style={{ margin: "0 auto", fontSize: "40px", cursor: "pointer" }}
+                            onClick={() => (NumLayers > 4 ? null : setNumLayers((prevstate) => prevstate + 1))}
                         />{" "}
-                        <span style={{ fontSize: "20px" }}>{NumLayers}</span>{" "}
-                        <FiChevronDown
-                            style={{ margin: "0 auto", fontSize: "60px", cursor: "pointer" }}
-                            onClick={() => setNumLayers((prevstate) => prevstate - 1)}
+                        <span style={{ fontSize: "25px", padding: "10px 0 8px 0" }}>{NumLayers}</span>{" "}
+                        <FiMinusCircle
+                            id="MinusIcon"
+                            style={{ margin: "0 auto", fontSize: "40px", cursor: "pointer" }}
+                            onClick={() => (NumLayers > 2 ? setNumLayers((prevstate) => prevstate - 1) : null)}
                         />
                     </div>
                 </div>
