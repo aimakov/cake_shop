@@ -24,9 +24,9 @@ import { Layer, Cream, Icing } from "./CakeComponents";
 import CakeRadio from "./CakeRadio";
 
 const CakeBuilder = () => {
-    const [LayersType, setLayersType] = useState("");
-    const [CreamType, setCreamType] = useState("");
-    const [IcingType, setIcingType] = useState("");
+    const [LayersType, setLayersType] = useState("Vanilla");
+    const [CreamType, setCreamType] = useState("Vanilla");
+    const [IcingType, setIcingType] = useState("Vanilla");
     const [NumLayers, setNumLayers] = useState(2);
 
     const [LayerSrc, setLayerSrc] = useState(VanillaLayer);
@@ -167,7 +167,7 @@ const CakeBuilder = () => {
                         />
                     </div>
                 </div>
-                <div style={{ display: "flex", flexDirection: "column" }}>
+                <div className="RenderedCake">
                     <Icing src={IcingSrc} />
                     <Layer src={LayerSrc} first={true} />
                     {/* <Cream src={`../../images/CakeComponents/${CreamType ? CreamType : "Vanilla"}Cream.png`} /> */}

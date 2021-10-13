@@ -64,6 +64,14 @@ th {
     transform: translateY(-15px);
 }
 
+.RenderedCake {
+    display: flex;
+    flex-direction: column;
+    /* background-color: blue; */
+    align-items: center;
+    justify-content: center;
+}
+
 /* #Layers {
     padding-bottom: 88px;
 } */
@@ -72,6 +80,8 @@ th {
     .CakeBuilderContainer {
         flex-direction: column;
         align-items: center;
+        justify-content: start;
+        height: 600px;
     }
 
     .NumLayersControl {
@@ -94,11 +104,5 @@ th {
 
     #MinusIcon {
         order: -1;
-    }
-}
-
-@media all and (max-width: 1024px) {
-    .CakeBuilderContainer {
-        justify-content: space-evenly;
     }
 }
