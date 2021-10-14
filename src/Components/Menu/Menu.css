@@ -2,17 +2,23 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-top: 124px !important;
 }
 
 .Menu img {
     height: 100% !important;
 }
 
+.CardContainer {
+    margin: 10px 0;
+}
+
 .CardElement {
-    padding: 0 10px !important;
-    margin: 10px 0 !important;
+    /* padding: 0 10px !important; */
+    /* margin: 10px 0 !important; */
     position: relative;
     overflow: hidden !important;
+    max-height: max-content !important;
 }
 
 .CardTitle {
@@ -20,13 +26,19 @@
     padding: 10px;
     height: 60px;
     width: 100%;
-    margin-top: -8px;
+    margin-top: -7px;
     border-radius: 0 0 30px 30px;
     display: flex;
     flex-direction: column;
+    /* justify-content: center; */
     align-items: center;
     text-align: center;
+    font-size: 17px;
     z-index: 10 !important;
+}
+
+.CardTitle p {
+    width: 80%;
 }
 
 .CakePrice {
@@ -40,7 +52,7 @@
     position: absolute;
     right: 20px;
     top: 20px;
-    padding-top: 6px;
+    /* padding-top: 6px; */
 }
 
 .Description {
@@ -50,11 +62,14 @@
     padding: 20px;
     border-radius: 30px 30px 0 0;
     /* right: -10px; */
-    /* height: 100%; */
-    width: calc(100% - 20px);
-    background-color: blue;
+    height: 100%;
+    /* width: calc(100% - 20px); */
+    width: calc(100% + 2px);
+    background-color: white;
     z-index: 1;
     transition: all 0.5s ease-in-out;
+    overflow: scroll;
+    font-size: 12px;
 }
 
 .Description-active {

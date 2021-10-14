@@ -11,10 +11,10 @@ const Navbar = () => {
             <div style={{ position: "absolute", top: "0", width: "100%" }}>
                 <div className="center" id="title">
                     <div className="col s12 center">
-                        <p id="cakesie">
+                        <a href="/" id="cakesie" style={{ color: "black" }}>
                             <span className="orange-text">Cake</span>
                             sie
-                        </p>
+                        </a>
                     </div>
                 </div>
                 <div className="navbar valign-wrapper transparent center" style={{ width: "90%", margin: "0 auto" }}>
@@ -25,7 +25,7 @@ const Navbar = () => {
                                     <a href="/">Build a Cake</a>
                                 </li>
                                 <li>
-                                    <a href="/">Menu</a>
+                                    <a href="/menu">Menu</a>
                                 </li>
                                 <li>
                                     <a href="/">Contact Us</a>
