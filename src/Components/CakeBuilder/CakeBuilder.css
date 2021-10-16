@@ -8,7 +8,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    height: 350px;
+    height: 320px;
     position: relative;
 }
 
@@ -70,6 +70,7 @@ th {
     /* background-color: blue; */
     align-items: center;
     justify-content: center;
+    height: 290px;
 }
 
 /* #Layers {

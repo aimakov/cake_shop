@@ -1,0 +1,15 @@
+.CakeOutside {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    height: 320px;
+    /* justify-content: center; */
+}
+
+.WholeCakeContainer {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../Components/Navbar/Navbar";
 import Intro from "../Components/Intro/";
-import CakeBuilder from "../Components/CakeBuilder.js";
+import CakeBuilder from "../Components/CakeBuilder/index.js";
 
 const Layout = () => {
     return (

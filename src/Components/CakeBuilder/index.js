@@ -23,6 +23,8 @@ import StrawberryIcing from "../../images/CakeComponents/StrawberryIcing.png";
 import { Layer, Cream, Icing } from "./CakeComponents";
 import CakeRadio from "./CakeRadio";
 
+import CakeOutside from "../CakeOutside";
+
 const CakeBuilder = () => {
     const [LayersType, setLayersType] = useState("Vanilla");
     const [CreamType, setCreamType] = useState("Vanilla");
@@ -181,6 +183,7 @@ const CakeBuilder = () => {
                     ))}
                 </div>
             </div>
+            <CakeOutside NumLayers={NumLayers} IcingType={IcingType} />
         </>
     );
 };
