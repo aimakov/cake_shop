@@ -2,7 +2,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 124px !important;
+    margin-top: 150px !important;
 }
 
 .Menu img {
@@ -33,12 +33,13 @@
     /* justify-content: center; */
     align-items: center;
     text-align: center;
-    font-size: 17px;
+
     z-index: 10 !important;
 }
 
 .CardTitle p {
     width: 80%;
+    font-size: 15px;
 }
 
 .CakePrice {

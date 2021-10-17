@@ -37,7 +37,7 @@ const CakeOutside = (props) => {
 
     return (
         <>
-            <div className="CakeOutside container">
+            <div className="CakeOutside">
                 <div className="WholeCakeContainer">
                     <Mainbody src={CoverSrc} />
                     {[...Array(props.NumLayers - 2)].map((x, i) => (
@@ -54,14 +54,18 @@ const CakeOutside = (props) => {
                                 <th></th>
                                 <th>Berries</th>
                                 <th>Fruits</th>
-                                <th>Chocolate crumbs</th>
-                                <th>Whipped Cream</th>
+                                <th>
+                                    Chocolate <br /> crumbs
+                                </th>
+                                <th>
+                                    Whipped <br /> Cream
+                                </th>
                             </tr>
                         </thead>
 
                         <tbody>
                             <tr>
-                                <td className="cake">Layers</td>
+                                <td className="cake">Topping</td>
                                 <td className="center-align">
                                     <CakeRadio name="Top" value="Berries" />
                                 </td>
@@ -69,14 +73,14 @@ const CakeOutside = (props) => {
                                     <CakeRadio name="Top" value="Fruits" />
                                 </td>
                                 <td className="center-align">
-                                    <CakeRadio name="Top" value="Chocolate crumbs" />
+                                    <CakeRadio name="Top" value="Chocolate" />
                                 </td>
                                 <td className="center-align">
                                     <CakeRadio name="Top" value="Whipped Cream" />
                                 </td>
                             </tr>
                             <tr>
-                                <td className="cake">Cream</td>
+                                <td className="cake">Side</td>
                                 <td className="center-align">
                                     <CakeRadio name="Cream" value="Vanilla" />
                                 </td>
@@ -90,7 +94,7 @@ const CakeOutside = (props) => {
                                     <CakeRadio name="Cream" value="Strawberry" />
                                 </td>
                             </tr>
-                            <tr>
+                            {/* <tr>
                                 <td className="cake">Icing</td>
                                 <td className="center-align">
                                     <CakeRadio name="Icing" value="Vanilla" />
@@ -104,7 +108,7 @@ const CakeOutside = (props) => {
                                 <td className="center-align">
                                     <CakeRadio name="Icing" value="Strawberry" />
                                 </td>
-                            </tr>
+                            </tr> */}
                         </tbody>
                     </table>
                 </div>

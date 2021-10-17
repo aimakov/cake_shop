@@ -1,8 +1,10 @@
 .CakeOutside {
     display: flex;
     /* flex-direction: column; */
-    justify-content: space-between;
+    justify-content: center;
     height: 320px;
+    /* width: 70%; */
+    margin: 0 auto;
     /* justify-content: center; */
 }
 
@@ -12,4 +14,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding-right: 50px;
+}
+
+.CakeBuilderControls {
+    padding-left: 50px;
 }

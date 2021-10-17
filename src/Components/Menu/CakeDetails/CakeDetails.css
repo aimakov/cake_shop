@@ -1,0 +1,39 @@
+.CakeDetailsContainer {
+    display: flex;
+    justify-content: flex-start;
+    /* flex-direction: row; */
+}
+
+.LeftSide {
+    width: 50%;
+}
+
+.ZoomedImage {
+    width: 100%;
+}
+
+.ZoomedImage img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 30px;
+}
+
+.RightSide {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.TitlePrice {
+    display: flex;
+    flex-direction: column;
+}
+
+.TitlePrice h5:first-of-type {
+    align-self: center;
+    /* font-size: 22px; */
+}
+
+.Rating {
+    display: flex;
+}
