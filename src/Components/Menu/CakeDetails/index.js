@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Cake_12 from "../../../images/CakeGallery/Cake_12.jpeg";
 import "./CakeDetails.css";
 
-import { FiStar } from "react-icons/fi";
+import { FiStar, FiMinus, FiPlus } from "react-icons/fi";
 
 const CakeDetails = () => {
+    const [numCakes, setNumCakes] = useState(1);
+
     return (
         <>
             <div className="CakeDetailsContainer container">
@@ -33,8 +35,35 @@ const CakeDetails = () => {
                         <input type="date" style={{ width: "150px" }} />
                         <p>Due to high shipping volume, please schedule your gift to arrive before the birthday when possible</p>
                     </div>
-                    <div className="Upgrade"></div>
-                    <div className="QuantityCart"></div>
+                    <div className="QuantityCart">
+                        <div className="Arrows">
+                            <span style={{ lineHeight: "2.5rem", marginRight: "10px", paddingTop: "2px" }}>QUANTITY: </span>
+                            <div className="CakesQuantity">
+                                <FiMinus
+                                    style={{ fontSize: "26px", margin: "6px 8px 0 0 ", cursor: "pointer" }}
+                                    onClick={() => (numCakes > 1 ? setNumCakes((prevstate) => prevstate - 1) : null)}
+                                />
+                                <div
+                                    style={{
+                                        backgroundColor: "white",
+                                        width: "2.5rem",
+                                        height: "2.5rem",
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        alignItems: "center",
+                                    }}
+                                >
+                                    <span style={{ fontSize: "20px", paddingTop: "3px" }}>{numCakes}</span>
+                                </div>
+
+                                <FiPlus
+                                    style={{ fontSize: "26px", margin: "6px 0 0 8px", cursor: "pointer" }}
+                                    onClick={() => setNumCakes((prevstate) => prevstate + 1)}
+                                />
+                            </div>
+                            <button className="AddToCart waves-effect waves-light btn-medium orange lighten-1 black-text">ADD TO CART</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>

@@ -37,3 +37,19 @@
 .Rating {
     display: flex;
 }
+
+.Arrows {
+    display: flex;
+    justify-content: space-between;
+}
+
+.AddToCart {
+    padding: 10px;
+    justify-self: flex-end;
+    border-radius: 15px;
+    border: none;
+}
+
+.CakesQuantity {
+    display: flex;
+}
