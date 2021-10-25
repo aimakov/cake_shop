@@ -20,7 +20,7 @@ const Intro = () => {
                         businesses.{" "}
                     </p>
                     <button className="waves-effect waves-light btn-large orange lighten-1 black-text" style={{ borderRadius: "20px", width: "180px" }}>
-                        Order Now
+                        Start Now
                     </button>
                 </div>
                 {/* <div className="col l4 hide-on-med-and-down center">

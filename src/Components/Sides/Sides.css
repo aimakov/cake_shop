@@ -1,0 +1,52 @@
+.SidesContainer {
+    width: 100vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.SidesLeft {
+    width: 50%;
+    position: absolute;
+    height: 100%;
+    background-color: rgba(0, 100, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.5s ease-in-out;
+}
+
+.SidesRight {
+    width: 50%;
+    position: absolute;
+    height: 100%;
+    left: 50%;
+    background-color: rgba(0, 0, 100, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.5s ease-in-out;
+}
+
+.LeftBig {
+    width: 70%;
+}
+
+.RightBig {
+    width: 70%;
+    left: 30%;
+}
+
+.LeftSmall {
+    width: 30%;
+}
+
+.RightSmall {
+    width: 30%;
+    left: 70%;
+}
