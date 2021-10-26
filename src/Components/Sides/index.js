@@ -17,12 +17,12 @@ const Sides = () => {
 
     return (
         <>
-            <div className="SidesContainer">
+            <div className="SidesContainer" id="sides">
                 <div className={leftClass} onMouseEnter={LeftHover} onMouseLeave={() => (setLeftClass("SidesLeft"), setRightClass("SidesRight"))}>
-                    Left
+                    <a href="/create">Create Cake</a>
                 </div>
                 <div className={rightClass} onMouseEnter={RightHover} onMouseLeave={() => (setLeftClass("SidesLeft"), setRightClass("SidesRight"))}>
-                    Right
+                    <a href="/select">Select Cake</a>
                 </div>
             </div>
         </>

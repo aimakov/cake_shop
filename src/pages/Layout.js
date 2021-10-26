@@ -11,8 +11,8 @@ const Layout = () => {
             <Navbar />
             <Intro />
             <Sides />
-            <CakeBuilder />
-            <CakeDetails />
+            {/* <CakeBuilder />
+            <CakeDetails /> */}
         </>
     );
 };
