@@ -21,6 +21,8 @@ import Cake_16 from "../../images/CakeGallery/Cake_16.jpeg";
 import Cake_17 from "../../images/CakeGallery/Cake_17.jpeg";
 import Cake_18 from "../../images/CakeGallery/Cake_18.jpeg";
 
+import CakeDetails from "./CakeDetails/";
+
 const Menu = () => {
     // https://sendacake.com/fresh-baked-cakes?__cf_chl_captcha_tk__=pmd_gYJr2iLHCtkiK3jo3FX5C3geeMwMFevotYt4Vr_Gc0g-1633787267-0-gqNtZGzNAyWjcnBszQ1R
 
@@ -193,6 +195,7 @@ const Menu = () => {
         <>
             <div className="Menu container s12">
                 <div className="row">
+                    <CakeDetails />
                     {Cakes.map((cake) => (
                         // <div className="col s8 offset-s2 m6 l4 CardElement ">
                         //     <img src={cake.image} className="responsive-img activator" style={{ borderRadius: "30px 30px 0 0 ", width: "100%" }} />

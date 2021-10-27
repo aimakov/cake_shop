@@ -8,7 +8,7 @@ import "./Navbar.css";
 const Navbar = () => {
     return (
         <>
-            <div style={{ position: "absolute", top: "0", width: "100%" }}>
+            <div>
                 <div className="center" id="title">
                     <div className="col s12 center">
                         <a href="/" id="cakesie" style={{ color: "black" }}>

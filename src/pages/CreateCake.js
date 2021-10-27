@@ -4,7 +4,9 @@ import CakeBuilder from "../Components/CakeBuilder";
 const CreateCake = () => {
     return (
         <>
+            {" "}
             <Navbar />
+            {/* <h4 style={{ paddingTop: "150px" }}>Create your own cake:</h4> */}
             <CakeBuilder />
         </>
     );
