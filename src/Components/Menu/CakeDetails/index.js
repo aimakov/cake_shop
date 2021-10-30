@@ -10,7 +10,7 @@ const CakeDetails = () => {
 
     return (
         <>
-            <div className="CakeDetailsContainer container">
+            <div className="CakeDetailsContainer">
                 <div className="LeftSide">
                     <div className="ZoomedImage">
                         <img src={Cake_12} />
@@ -21,20 +21,15 @@ const CakeDetails = () => {
                 </div>
                 <div className="RightSide">
                     <div className="TitlePrice">
+                        <p>CAKE PRICE</p>
                         <h5>CAKE TITLE</h5>
                         <div className="Rating">
                             {[...Array(5)].map((x, i) => (
                                 <FiStar id={`${i}th_star`} />
                             ))}
-                            <span>(23) Rate this product!</span>
                         </div>
-                        <p>CAKE PRICE</p>
                     </div>
-                    <div className="DeliveryDate">
-                        <h5>Choose your delivery date</h5>
-                        <input type="date" style={{ width: "150px" }} />
-                        <p>Due to high shipping volume, please schedule your gift to arrive before the birthday when possible</p>
-                    </div>
+
                     <div className="QuantityCart">
                         <div className="Arrows">
                             <span style={{ lineHeight: "2.5rem", marginRight: "10px", paddingTop: "2px" }}>QUANTITY: </span>
@@ -61,8 +56,15 @@ const CakeDetails = () => {
                                     onClick={() => setNumCakes((prevstate) => prevstate + 1)}
                                 />
                             </div>
-                            <button className="AddToCart waves-effect waves-light btn-medium orange lighten-1 black-text">ADD TO CART</button>
                         </div>
+                        <div className="DeliveryDate">
+                            <p style={{ fontSize: "20px" }}>Choose your delivery date</p>
+                            <div>
+                                <input type="date" style={{ width: "150px" }} />
+                                <p>Due to high shipping volume, please schedule your gift to arrive before the birthday when possible</p>
+                            </div>
+                        </div>
+                        <button className="AddToCart waves-effect waves-light btn-medium orange lighten-1 black-text">ADD TO CART</button>
                     </div>
                 </div>
             </div>

@@ -1,6 +1,7 @@
 .CakeDetailsContainer {
     display: flex;
     justify-content: flex-start;
+    margin-bottom: 30px;
     /* flex-direction: row; */
 }
 
@@ -13,8 +14,8 @@
 }
 
 .ZoomedImage img {
-    width: 100%;
-    max-width: 400px;
+    width: 80%;
+    max-width: 500px;
     border-radius: 30px;
 }
 
@@ -26,7 +27,9 @@
 
 .TitlePrice {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
 }
 
 .TitlePrice h5:first-of-type {
@@ -41,6 +44,7 @@
 .Arrows {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .AddToCart {
@@ -52,4 +56,8 @@
 
 .CakesQuantity {
     display: flex;
+}
+
+.QuantityCart {
+    /* padding: 20px 0 !important; */
 }
