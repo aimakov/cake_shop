@@ -15,14 +15,14 @@ const CakeDetails = () => {
                     <div className="ZoomedImage">
                         <img src={Cake_12} />
                     </div>
-                    <div className="CakeDescription"></div>
+                    {/* <div className="CakeDescription"></div>
                     <div className="Details"></div>
-                    <div className="Shipping"></div>
+                    <div className="Shipping"></div> */}
                 </div>
                 <div className="RightSide">
                     <div className="TitlePrice">
                         <p>CAKE PRICE</p>
-                        <h5>CAKE TITLE</h5>
+                        <p>CAKE TITLE</p>
                         <div className="Rating">
                             {[...Array(5)].map((x, i) => (
                                 <FiStar id={`${i}th_star`} />
@@ -58,11 +58,11 @@ const CakeDetails = () => {
                             </div>
                         </div>
                         <div className="DeliveryDate">
-                            <p style={{ fontSize: "20px" }}>Choose your delivery date</p>
-                            <div>
-                                <input type="date" style={{ width: "150px" }} />
-                                <p>Due to high shipping volume, please schedule your gift to arrive before the birthday when possible</p>
-                            </div>
+                            <p align="center">Choose your delivery date: </p>
+                            <input type="date" />
+                        </div>
+                        <div>
+                            <p>Due to high shipping volume, please schedule your gift to arrive before the birthday when possible</p>
                         </div>
                         <button className="AddToCart waves-effect waves-light btn-medium orange lighten-1 black-text">ADD TO CART</button>
                     </div>

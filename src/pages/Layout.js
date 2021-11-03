@@ -4,6 +4,7 @@ import Intro from "../Components/Intro/";
 import CakeBuilder from "../Components/CakeBuilder/index.js";
 import CakeDetails from "../Components/Menu/CakeDetails";
 import Sides from "../Components/Sides";
+import Footer from "../Components/Footer";
 
 const Layout = () => {
     return (
@@ -11,6 +12,7 @@ const Layout = () => {
             <Navbar />
             <Intro />
             <Sides />
+            <Footer />
             {/* <CakeBuilder />
             <CakeDetails /> */}
         </>

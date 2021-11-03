@@ -186,7 +186,7 @@ const CakeBuilder = () => {
 
             <CakeOutside NumLayers={NumLayers} IcingType={IcingType} />
             <div className="AddToCartContainer">
-                <button className="AddToCart waves-effect waves-light btn-medium orange lighten-1 black-text">ADD TO CART</button>
+                <button className="AddToCart waves-effect waves-light btn-large orange lighten-1 black-text">ADD TO CART</button>
             </div>
         </>
     );

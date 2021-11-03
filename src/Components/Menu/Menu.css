@@ -3,6 +3,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-top: 50px !important;
+    margin-bottom: 30px !important;
 }
 
 .Menu img {
@@ -10,7 +11,7 @@
 }
 
 .CardContainer {
-    margin: 10px 0;
+    margin-top: 20px;
 }
 
 .CardElement {
