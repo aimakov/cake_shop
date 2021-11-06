@@ -41,7 +41,8 @@ export const FooterLinkItems = styled.div`
     justify-content: space-between;
     margin: 16px;
     /* text-align: center; */
-    width: 700px;
+    /* width: 700px; */
+    width: 100%;
     box-sizing: border-box;
     color: #fff;
 
@@ -62,6 +63,10 @@ export const FooterLink = styled(Link)`
     text-decoration: none;
     font-size: 14px;
     text-align: center;
+
+    @media screen and (max-width: 425px) {
+        font-size: 12px;
+    }
 
     &:hover {
         color: #fea726;

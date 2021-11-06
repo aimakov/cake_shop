@@ -7,20 +7,23 @@
 
 .LeftSide {
     width: 50%;
+    padding: 20px;
+    /* height: 50%; */
+    max-height: 300px;
+    display: flex;
+    justify-content: center;
 }
 
-.ZoomedImage {
-    /* width: 100%; */
-    height: 100%;
-}
-
-.ZoomedImage img {
-    width: 80%;
+.LeftSide img {
+    max-width: 100%;
+    height: auto;
+    /* height: 80%; */
     /* max-width: 500px; */
     border-radius: 30px;
 }
 
 .RightSide {
+    padding: 20px;
     display: flex;
     flex-direction: column;
     width: 50%;
@@ -75,9 +78,9 @@
 
 .CakesQuantity {
     display: flex;
-    position: absolute;
+    /* position: absolute;
     left: 51%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); */
 }
 
 .QuantityCart {
@@ -113,4 +116,27 @@
 
 .QuantityCart > button:last-child {
     width: 200px;
+}
+
+@media screen and (max-width: 425px) {
+    .CakeDetailsContainer {
+        flex-direction: column;
+        /* flex-direction: row; */
+    }
+    .RightSide {
+        width: 100%;
+    }
+
+    .LeftSide {
+        width: 100%;
+    }
+
+    .LeftSide img {
+        max-width: 80%;
+        /* max-width: 100%; */
+        height: auto;
+        /* height: 80%; */
+        /* max-width: 500px; */
+        border-radius: 30px;
+    }
 }

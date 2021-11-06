@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Menu.css";
 import MenuElement from "./MenuElement";
 
@@ -191,12 +191,14 @@ const Menu = () => {
         },
     ];
 
+    const [chosenCake, setChosenCake] = useState(0);
+
     return (
         <>
             <div className="Menu container s12">
                 <div className="row">
-                    <CakeDetails />
-                    {Cakes.map((cake) => (
+                    <CakeDetails cake={Cakes[chosenCake]} />
+                    {Cakes.map((cake, i) => (
                         // <div className="col s8 offset-s2 m6 l4 CardElement ">
                         //     <img src={cake.image} className="responsive-img activator" style={{ borderRadius: "30px 30px 0 0 ", width: "100%" }} />
                         //     <div className="CardTitle">
@@ -210,7 +212,7 @@ const Menu = () => {
                         //         <p>Here is some more information about this product that is only revealed once clicked on.</p>
                         //     </div>
                         // </div>
-                        <MenuElement cake={cake} />
+                        <MenuElement cake={cake} setChosenCake={setChosenCake} cake_id={i} />
                     ))}
                 </div>
             </div>

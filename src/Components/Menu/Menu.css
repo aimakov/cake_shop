@@ -46,7 +46,7 @@
 .CakePrice {
     width: 60px;
     height: 60px;
-    background-color: tomato;
+    background-color: rgba(255, 255, 255, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;

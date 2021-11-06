@@ -11,15 +11,22 @@ const MenuElement = (props) => {
                     <img
                         src={props.cake.image}
                         className="responsive-img"
-                        onClick={() => setIsOpen(true)}
+                        // onClick={() => setIsOpen(true)}
+                        onClick={() => props.setChosenCake(props.cake_id)}
                         style={{ borderRadius: "30px 30px 0 0 ", width: "100%", display: "block" }}
                     />
 
                     <div className="CakePrice">{props.cake.price}</div>
 
-                    <div className={isOpen ? "Description Description-active" : "Description"} onClick={() => setIsOpen(false)}>
+                    {/* <div
+                        className={isOpen ? "Description Description-active" : "Description"}
+                        // onClick={() => {
+                        //     props.setChosenCake(props.cake_id);
+                        //     setIsOpen(false);
+                        // }}
+                    >
                         <p>{props.cake.description}</p>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="CardTitle">
                     <p>{props.cake.title}</p>
