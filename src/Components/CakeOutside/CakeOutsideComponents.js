@@ -31,3 +31,38 @@ export const FullLayer = styled.img`
         /* background-color: ${({ first }) => (first ? "blue" : "red")}; */
     }
 `;
+
+export const Topping = styled.img`
+    position: absolute;
+    /* width: 305px; */
+    margin: 0 auto;
+    z-index: 3;
+    /* height: 76px; */
+    top: 50px;
+
+    /* @media (min-width: 768px) {
+        width: 355px;
+    } */
+
+    /* @media (min-width: 1024px) {
+        width: 405px;
+        height: 100px;
+    } */
+`;
+export const LayerSide = styled.img`
+    position: absolute;
+    width: 400px;
+    margin: 0 auto;
+    z-index: 3;
+    /* height: 76px; */
+    top: 143px;
+
+    /* @media (min-width: 768px) {
+        width: 355px;
+    } */
+
+    /* @media (min-width: 1024px) {
+        width: 405px;
+        height: 100px;
+    } */
+`;

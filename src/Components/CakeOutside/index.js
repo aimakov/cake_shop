@@ -10,7 +10,15 @@ import ChocoAddition from "../../images/CakeComponents/ChocoAddition.png";
 import LemonAddition from "../../images/CakeComponents/LemonAddition.png";
 import StrawberryAddition from "../../images/CakeComponents/StrawberryAddition.png";
 
-import { Mainbody, FullLayer } from "./CakeOutsideComponents";
+import FruitsTop from "../../images/CakeComponents/CakeOutside/Complete_Outside/FruitsTop.png";
+import BerriesTop from "../../images/CakeComponents/CakeOutside/Complete_Outside/BerriesTop.png";
+import VanillaTop from "../../images/CakeComponents/CakeOutside/Complete_Outside/VanillaTop.png";
+
+import FruitsSide from "../../images/CakeComponents/CakeOutside/Complete_Outside/FruitsSide.png";
+import BerriesSide from "../../images/CakeComponents/CakeOutside/Complete_Outside/BerriesSide.png";
+import SprinklesSide from "../../images/CakeComponents/CakeOutside/Complete_Outside/SprinklesSide.png";
+
+import { Mainbody, FullLayer, Topping, LayerSide } from "./CakeOutsideComponents";
 import "./CakeOutside.css";
 
 import CakeRadio from "../CakeBuilder/CakeRadio";
@@ -18,6 +26,9 @@ import CakeRadio from "../CakeBuilder/CakeRadio";
 const CakeOutside = (props) => {
     const [CoverSrc, setCoverSrc] = useState(VanillaCake);
     const [AdditionSrc, setAdditionSrc] = useState(VanillaAddition);
+
+    const [Top, setTop] = useState();
+    const [Side, setSide] = useState();
 
     useEffect(() => {
         if (props.IcingType === "Vanilla") {
@@ -40,6 +51,8 @@ const CakeOutside = (props) => {
             <div className="CakeOutside">
                 <div className="WholeCakeContainer">
                     <Mainbody src={CoverSrc} />
+                    <Topping src={BerriesTop} />
+                    <LayerSide src={FruitsSide} />
                     {[...Array(props.NumLayers - 2)].map((x, i) => (
                         <>
                             <FullLayer src={AdditionSrc} key={`${i}th Cream`} />
@@ -54,11 +67,11 @@ const CakeOutside = (props) => {
                                 <th></th>
                                 <th>Berries</th>
                                 <th>Fruits</th>
-                                <th>
+                                {/* <th>
                                     Chocolate <br /> crumbs
-                                </th>
+                                </th> */}
                                 <th>
-                                    Whipped <br /> Cream
+                                    Whipped Cream <br /> (Sprinkles)
                                 </th>
                             </tr>
                         </thead>
@@ -72,9 +85,9 @@ const CakeOutside = (props) => {
                                 <td className="center-align">
                                     <CakeRadio name="Top" value="Fruits" />
                                 </td>
-                                <td className="center-align">
+                                {/* <td className="center-align">
                                     <CakeRadio name="Top" value="Chocolate" />
-                                </td>
+                                </td> */}
                                 <td className="center-align">
                                     <CakeRadio name="Top" value="Whipped Cream" />
                                 </td>
@@ -87,9 +100,9 @@ const CakeOutside = (props) => {
                                 <td className="center-align">
                                     <CakeRadio name="Cream" value="Chocolate" />
                                 </td>
-                                <td className="center-align">
+                                {/* <td className="center-align">
                                     <CakeRadio name="Cream" value="Lemon" />
-                                </td>
+                                </td> */}
                                 <td className="center-align">
                                     <CakeRadio name="Cream" value="Strawberry" />
                                 </td>
