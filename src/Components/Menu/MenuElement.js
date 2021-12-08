@@ -6,7 +6,8 @@ const MenuElement = (props) => {
 
     return (
         <>
-            <div className="col s8 offset-s2 m6 l3 CardContainer">
+            {/* <div className="col s8 offset-s2 m6 l3 CardContainer"> */}
+            <div className="col s2 CardContainer">
                 <div className="CardElement">
                     <img
                         src={props.cake.image}

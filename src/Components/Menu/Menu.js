@@ -195,9 +195,10 @@ const Menu = () => {
 
     return (
         <>
-            <div className="Menu container s12">
-                <div className="row">
-                    <CakeDetails cake={Cakes[chosenCake]} />
+            <div className="SelectContainer">
+                <div className="Menu row">
+                    {/* <div className="row"> */}
+                    {/* <CakeDetails cake={Cakes[chosenCake]} /> */}
                     {Cakes.map((cake, i) => (
                         // <div className="col s8 offset-s2 m6 l4 CardElement ">
                         //     <img src={cake.image} className="responsive-img activator" style={{ borderRadius: "30px 30px 0 0 ", width: "100%" }} />
@@ -214,6 +215,7 @@ const Menu = () => {
                         // </div>
                         <MenuElement cake={cake} setChosenCake={setChosenCake} cake_id={i} />
                     ))}
+                    {/* </div> */}
                 </div>
             </div>
         </>
