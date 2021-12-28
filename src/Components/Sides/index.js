@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Sides.css";
 
-const Sides = () => {
+const Sides = (props) => {
     const [leftClass, setLeftClass] = useState("SidesLeft");
     const [rightClass, setRightClass] = useState("SidesRight");
+    const [left, setLeft] = useState("0");
 
     const LeftHover = () => {
         setLeftClass("SidesLeft LeftBig");
@@ -15,15 +16,25 @@ const Sides = () => {
         setRightClass("SidesRight RightBig");
     };
 
+    useEffect(() => {
+        if (props.active === "create") {
+            setLeft("100vw");
+        } else if (props.active === "sides") {
+            setLeft("0");
+        } else if (props.active === "select") {
+            setLeft("-100vw");
+        }
+    }, [props.active]);
+
     return (
         <>
-            <div className="SidesOutside" id="sides">
+            <div className="SidesOutside" id="sides" style={{ left: left }}>
                 <div className="SidesContainer">
                     <div className={leftClass} onMouseEnter={LeftHover} onMouseLeave={() => (setLeftClass("SidesLeft"), setRightClass("SidesRight"))}>
-                        <a href="/create">Create Cake</a>
+                        <button onClick={() => props.setActive("create")}>Create Cake</button>
                     </div>
                     <div className={rightClass} onMouseEnter={RightHover} onMouseLeave={() => (setLeftClass("SidesLeft"), setRightClass("SidesRight"))}>
-                        <a href="/select">Select Cake</a>
+                        <button onClick={() => props.setActive("select")}>Select Cake</button>
                     </div>
                 </div>
             </div>

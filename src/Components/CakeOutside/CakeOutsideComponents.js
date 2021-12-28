@@ -27,7 +27,7 @@ export const FullLayer = styled.img`
     @media (min-width: 1024px) {
         width: 400px;
         /* height: 64px; */
-        margin-top: ${({ first }) => (first ? "-62px" : "-37px")};
+        margin-top: ${({ first }) => (first ? "-66px" : "-48px")};
         /* background-color: ${({ first }) => (first ? "blue" : "red")}; */
     }
 `;
