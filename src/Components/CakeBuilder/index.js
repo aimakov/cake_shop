@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 // import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
 // import { FiMinusCircle } from "react-icons/fi";
 // import { VscChromeMinimize } from "react-icons/vsc";
-import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
+import { FiPlusCircle, FiMinusCircle, FiChevronRight } from "react-icons/fi";
 import "./CakeBuilder.css";
 
 import VanillaLayer from "../../images/CakeComponents/VanillaLayer3.png";
@@ -198,6 +198,13 @@ const CakeBuilder = (props) => {
                         </div>
                     </div> */}
                 </div>
+                {/* <button onClick={() => props.setActive("sides")} style={{ position: "absolute", top: "50%", right: "50px" }}>
+                    go back
+                </button> */}
+                <FiChevronRight
+                    onClick={() => props.setActive("sides")}
+                    style={{ position: "absolute", top: "50%", right: "50px", fontSize: "3rem", cursor: "pointer" }}
+                />
             </div>
         </>
     );

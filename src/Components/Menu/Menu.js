@@ -24,7 +24,7 @@ import Cake_18 from "../../images/CakeGallery/Cake_18.jpeg";
 import CakeDetails from "./CakeDetails/";
 
 import { VscChevronLeft, VscChevronRight } from "react-icons/vsc";
-import { FiStar, FiMinus, FiPlus } from "react-icons/fi";
+import { FiStar, FiMinus, FiPlus, FiChevronLeft } from "react-icons/fi";
 
 const Menu = (props) => {
     // https://sendacake.com/fresh-baked-cakes?__cf_chl_captcha_tk__=pmd_gYJr2iLHCtkiK3jo3FX5C3geeMwMFevotYt4Vr_Gc0g-1633787267-0-gqNtZGzNAyWjcnBszQ1R
@@ -204,7 +204,7 @@ const Menu = (props) => {
         if (props.active === "create") {
             setLeft("200vw");
         } else if (props.active === "sides") {
-            setLeft("100");
+            setLeft("100vw");
         } else if (props.active === "select") {
             setLeft("0");
         }
@@ -213,6 +213,11 @@ const Menu = (props) => {
     return (
         <>
             <div className="SelectContainer" style={{ left: left }}>
+                {/* <button onClick={() => props.setActive("sides")}>go back</button> */}
+                <FiChevronLeft
+                    onClick={() => props.setActive("sides")}
+                    style={{ position: "absolute", top: "50%", left: "50px", fontSize: "3rem", cursor: "pointer" }}
+                />
                 <div className="Menu">
                     <div className="CakesDisplay">
                         <button className="changeCakeButton" onClick={() => setCurrentCake((prevstate) => (prevstate - 1 + Cakes.length) % Cakes.length)}>
