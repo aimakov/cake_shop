@@ -24,6 +24,7 @@ import { Layer, Cream, Icing } from "./CakeComponents";
 import CakeRadio from "./CakeRadio";
 
 import CakeOutside from "../CakeOutside";
+import RadioGroup from "./RadioGroup";
 
 const CakeBuilder = (props) => {
     const [LayersType, setLayersType] = useState("Vanilla");
@@ -38,26 +39,6 @@ const CakeBuilder = (props) => {
     const [left, setLeft] = useState("-100vw");
 
     useEffect(() => {
-        if (LayersType === "Vanilla") {
-            setLayerSrc(VanillaLayer);
-        } else if (LayersType === "Chocolate") {
-            setLayerSrc(ChocoLayer);
-        } else if (LayersType === "Lemon") {
-            setLayerSrc(LemonLayer);
-        } else if (LayersType === "Strawberry") {
-            setLayerSrc(StrawberryLayer);
-        }
-
-        if (CreamType === "Vanilla") {
-            setCreamSrc(VanillaCream);
-        } else if (CreamType === "Chocolate") {
-            setCreamSrc(ChocoCream);
-        } else if (CreamType === "Lemon") {
-            setCreamSrc(LemonCream);
-        } else if (CreamType === "Strawberry") {
-            setCreamSrc(StrawberryCream);
-        }
-
         if (IcingType === "Vanilla") {
             setIcingSrc(VanillaIcing);
         } else if (IcingType === "Chocolate") {
@@ -67,7 +48,31 @@ const CakeBuilder = (props) => {
         } else if (IcingType === "Strawberry") {
             setIcingSrc(StrawberryIcing);
         }
-    }, [LayersType, CreamType, IcingType]);
+    }, [IcingType]);
+
+    useEffect(() => {
+        if (LayersType === "Vanilla") {
+            setLayerSrc(VanillaLayer);
+        } else if (LayersType === "Chocolate") {
+            setLayerSrc(ChocoLayer);
+        } else if (LayersType === "Lemon") {
+            setLayerSrc(LemonLayer);
+        } else if (LayersType === "Strawberry") {
+            setLayerSrc(StrawberryLayer);
+        }
+    }, [LayersType]);
+
+    useEffect(() => {
+        if (CreamType === "Vanilla") {
+            setCreamSrc(VanillaCream);
+        } else if (CreamType === "Chocolate") {
+            setCreamSrc(ChocoCream);
+        } else if (CreamType === "Lemon") {
+            setCreamSrc(LemonCream);
+        } else if (CreamType === "Strawberry") {
+            setCreamSrc(StrawberryCream);
+        }
+    }, [CreamType]);
 
     let AdditionalLayers = [];
     useEffect(() => {
@@ -99,7 +104,7 @@ const CakeBuilder = (props) => {
                 <div className="CakeBuilderContainer ">
                     <div className="CakeInside">
                         <div className="CakeBuilderControls center-align">
-                            <table className="center-align">
+                            {/* <table className="center-align">
                                 <thead>
                                     <tr>
                                         <th></th>
@@ -157,7 +162,15 @@ const CakeBuilder = (props) => {
                                         </td>
                                     </tr>
                                 </tbody>
-                            </table>
+                            </table> */}
+                            <RadioGroup
+                                LayersType={LayersType}
+                                setLayersType={setLayersType}
+                                CreamType={CreamType}
+                                setCreamType={setCreamType}
+                                IcingType={IcingType}
+                                setIcingType={setIcingType}
+                            />
                         </div>
                         <div className="NumLayersControl">
                             <p id="Layers">
