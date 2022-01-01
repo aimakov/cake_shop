@@ -26,6 +26,8 @@ import CakeDetails from "./CakeDetails/";
 import { VscChevronLeft, VscChevronRight } from "react-icons/vsc";
 import { FiStar, FiMinus, FiPlus, FiChevronLeft } from "react-icons/fi";
 
+import useWindowDimensions from "../../CustomHooks/useWindowDimensions";
+
 const Menu = (props) => {
     // https://sendacake.com/fresh-baked-cakes?__cf_chl_captcha_tk__=pmd_gYJr2iLHCtkiK3jo3FX5C3geeMwMFevotYt4Vr_Gc0g-1633787267-0-gqNtZGzNAyWjcnBszQ1R
 
@@ -199,6 +201,7 @@ const Menu = (props) => {
     const [chosenCakeQuantity, setChosenCakeQuantity] = useState(0);
 
     const [left, setLeft] = useState("100vw");
+    const { height, width } = useWindowDimensions();
 
     useEffect(() => {
         if (props.active === "create") {
@@ -210,6 +213,10 @@ const Menu = (props) => {
         }
     }, [props.active]);
 
+    useEffect(() => {
+        console.log(width);
+    }, [width]);
+
     return (
         <>
             <div className="SelectContainer" style={{ left: left }}>
@@ -219,37 +226,44 @@ const Menu = (props) => {
                     style={{ position: "absolute", top: "50%", left: "50px", fontSize: "3rem", cursor: "pointer" }}
                 />
                 <div className="Menu">
-                    <div className="CakesDisplay">
-                        <button className="changeCakeButton" onClick={() => setCurrentCake((prevstate) => (prevstate - 1 + Cakes.length) % Cakes.length)}>
-                            <VscChevronLeft />
-                        </button>
-                        <div className="CakesDisplayImages">
-                            <MenuElement
-                                cake={Cakes[(currentCake - 2 + Cakes.length) % Cakes.length]}
-                                cake_id={(currentCake - 2 + Cakes.length) % Cakes.length}
-                                setChosenCake={setChosenCake}
-                            />
-                            <MenuElement
-                                cake={Cakes[(currentCake - 1 + Cakes.length) % Cakes.length]}
-                                cake_id={(currentCake - 1 + Cakes.length) % Cakes.length}
-                                setChosenCake={setChosenCake}
-                            />
-                            <MenuElement cake={Cakes[currentCake]} cake_id={currentCake} setChosenCake={setChosenCake} />
-                            <MenuElement
-                                cake={Cakes[(currentCake + 1) % Cakes.length]}
-                                cake_id={(currentCake + 1) % Cakes.length}
-                                setChosenCake={setChosenCake}
-                            />
-                            <MenuElement
-                                cake={Cakes[(currentCake + 2) % Cakes.length]}
-                                cake_id={(currentCake + 2) % Cakes.length}
-                                setChosenCake={setChosenCake}
-                            />
-                        </div>
-                        <button className="changeCakeButton" onClick={() => setCurrentCake((prevstate) => (prevstate + 1) % Cakes.length)}>
-                            <VscChevronRight />
-                        </button>
-                    </div>
+                    {width > 1024 ? (
+                        <>
+                            <div className="CakesDisplay">
+                                <button
+                                    className="changeCakeButton"
+                                    onClick={() => setCurrentCake((prevstate) => (prevstate - 1 + Cakes.length) % Cakes.length)}
+                                >
+                                    <VscChevronLeft />
+                                </button>
+                                <div className="CakesDisplayImages">
+                                    <MenuElement
+                                        cake={Cakes[(currentCake - 2 + Cakes.length) % Cakes.length]}
+                                        cake_id={(currentCake - 2 + Cakes.length) % Cakes.length}
+                                        setChosenCake={setChosenCake}
+                                    />
+                                    <MenuElement
+                                        cake={Cakes[(currentCake - 1 + Cakes.length) % Cakes.length]}
+                                        cake_id={(currentCake - 1 + Cakes.length) % Cakes.length}
+                                        setChosenCake={setChosenCake}
+                                    />{" "}
+                                    <MenuElement cake={Cakes[currentCake]} cake_id={currentCake} setChosenCake={setChosenCake} />{" "}
+                                    <MenuElement
+                                        cake={Cakes[(currentCake + 1) % Cakes.length]}
+                                        cake_id={(currentCake + 1) % Cakes.length}
+                                        setChosenCake={setChosenCake}
+                                    />
+                                    <MenuElement
+                                        cake={Cakes[(currentCake + 2) % Cakes.length]}
+                                        cake_id={(currentCake + 2) % Cakes.length}
+                                        setChosenCake={setChosenCake}
+                                    />
+                                </div>
+                                <button className="changeCakeButton" onClick={() => setCurrentCake((prevstate) => (prevstate + 1) % Cakes.length)}>
+                                    <VscChevronRight />
+                                </button>
+                            </div>
+                        </>
+                    ) : null}
                     <div className="ChosenCakeDisplay">
                         <div className="ChosenCakeDisplayImage">
                             <img src={Cakes[chosenCake].image} />

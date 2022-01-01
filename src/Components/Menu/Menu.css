@@ -44,6 +44,7 @@
 .CakesDisplay {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .CakesDisplayImages {
@@ -55,6 +56,7 @@
 .CardContainer {
     /* margin-top: 20px; */
     width: 17%;
+    /* height: 200px; */
     height: fit-content;
 }
 
@@ -126,6 +128,8 @@
 .ChosenCakeDisplay {
     /* padding: 40px; */
     display: flex;
+    justify-content: space-between;
+    /* flex-direction: column; */
 }
 
 .ChosenCakeDisplayImage {
@@ -203,4 +207,23 @@
 
 #DeliveryDateInput {
     width: 100px;
+}
+
+@media all and (max-width: 1024px) {
+    .ChosenCakeDisplay {
+        flex-direction: column;
+        align-items: center;
+        /* background-color: blue; */
+    }
+    .ChosenCakeDisplayImage {
+        margin-left: 0px;
+    }
+    .ChosenCakeDisplayImage img {
+        border-radius: 40px;
+        width: 250px;
+    }
+
+    .ChosenCakeDisplayContent {
+        margin-left: 0px;
+    }
 }

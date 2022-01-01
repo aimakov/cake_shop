@@ -12,7 +12,7 @@ export const Layer = styled.img`
         margin-top: ${({ first }) => (first ? "-58px" : "-37px")};
     } */
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1300px) {
         width: 400px;
         height: 64px;
         margin-top: ${({ first }) => (first ? "-62px" : "-37px")};
@@ -33,7 +33,7 @@ export const Cream = styled.img`
         margin-top: -37px;
     } */
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1300px) {
         width: 400px;
         height: 58px;
         margin-top: -38px;
@@ -50,7 +50,7 @@ export const Icing = styled.img`
         width: 355px;
     } */
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1300px) {
         width: 405px;
         height: 100px;
     }
