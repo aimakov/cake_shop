@@ -27,14 +27,15 @@
 .Menu {
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-between;
+    justify-content: space-around;
+    align-items: center;
     /* margin-top: 50px !important;
     margin-bottom: 30px !important; */
-    width: 80%;
-    height: 80%;
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(93, 123, 234, 0.5);
     padding: 30px;
-    border-radius: 40px;
+    /* border-radius: 40px; */
 }
 
 .Menu img {
@@ -191,6 +192,11 @@
     margin-right: 10px;
 }
 
+.ChosenCakePrice {
+    display: flex;
+    justify-content: center;
+}
+
 .ChosenCakeDeliveryDate {
     display: flex;
     /* flex-direction: column; */
@@ -205,18 +211,24 @@
     /* width: 300px; */
 }
 
-#DeliveryDateInput {
-    width: 100px;
+#DeliveryDate {
+    width: 220px;
+    /* font-size: 22px; */
 }
 
 @media all and (max-width: 1024px) {
     .ChosenCakeDisplay {
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        max-width: 400px;
         /* background-color: blue; */
     }
+
     .ChosenCakeDisplayImage {
         margin-left: 0px;
+        margin-bottom: 20px;
     }
     .ChosenCakeDisplayImage img {
         border-radius: 40px;
@@ -225,5 +237,53 @@
 
     .ChosenCakeDisplayContent {
         margin-left: 0px;
+        width: 100%;
+    }
+
+    .ChosenCakeDisplayContent h4 {
+        font-size: 20px;
+    }
+    .ChosenCakeDisplayContent p {
+        font-size: 10px;
+        /* padding: 0 30px; */
+    }
+    .PriceQuantity h6 {
+        font-size: 12px;
+    }
+
+    #DeliveryDate {
+        font-size: 12px;
+        width: 120px;
+    }
+
+    .PriceQuantity {
+        flex-direction: column;
+    }
+
+    .CakesQuantity {
+        justify-content: center;
+    }
+
+    .ChosenCakeDeliveryDate {
+        justify-content: space-evenly;
+    }
+
+    .ChosenCakeDeliveryDate p {
+        flex-grow: unset;
+    }
+}
+
+@media all and (max-width: 400px) {
+    .ChosenCakeDisplayContent > p {
+        font-size: 8px;
+        /* padding: 0 30px; */
+    }
+
+    #DeliveryDate {
+        width: 45px;
+    }
+
+    .ChosenCakeDisplayContent h4 {
+        font-size: 16px;
     }
 }

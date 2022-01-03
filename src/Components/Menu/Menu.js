@@ -213,9 +213,9 @@ const Menu = (props) => {
         }
     }, [props.active]);
 
-    useEffect(() => {
-        console.log(width);
-    }, [width]);
+    // useEffect(() => {
+    //     console.log(width);
+    // }, [width]);
 
     return (
         <>
@@ -273,19 +273,18 @@ const Menu = (props) => {
                             <p>
                                 <b>Description: </b> {Cakes[chosenCake].description}
                             </p>
-                            <div style={{ display: "flex" }}>
-                                <div style={{ display: "flex" }}>
+                            <div className="PriceQuantity" style={{ display: "flex" }}>
+                                <div className="ChosenCakePrice">
                                     <h6>
                                         <b>Price: </b>
-                                        <span style={{ textDecoration: "line-through", textDecorationColor: "red", textDecorationThickness: "2px" }}>
-                                            {Cakes[chosenCake].price}
-                                        </span>
+                                        <del>{Cakes[chosenCake].price}</del>
                                     </h6>
                                     <h6 style={{ marginLeft: "10px" }}>${String(Number(Cakes[chosenCake].price.slice(-5)) - 5).slice(0, 5)}</h6>
                                 </div>
                                 <div className="CakesQuantity">
                                     <h6>QUANTITY: </h6>
                                     <FiMinus
+                                        className="FiMinus"
                                         style={{ fontSize: "26px", margin: "6px 8px 0 0 ", cursor: "pointer" }}
                                         onClick={() => (chosenCakeQuantity > 1 ? setChosenCakeQuantity((prevstate) => prevstate - 1) : null)}
                                     />
@@ -303,6 +302,7 @@ const Menu = (props) => {
                                     </div>
 
                                     <FiPlus
+                                        className=""
                                         style={{ fontSize: "26px", margin: "6px 0 0 8px", cursor: "pointer" }}
                                         onClick={() => setChosenCakeQuantity((prevstate) => prevstate + 1)}
                                     />
@@ -310,7 +310,7 @@ const Menu = (props) => {
                             </div>
                             <div className="ChosenCakeDeliveryDate">
                                 <p>Choose the pick-up date: </p>
-                                <input type="date" id="" style={{ width: "220px", paddingRight: "10px" }} />
+                                <input type="date" id="DeliveryDate" style={{ paddingRight: "10px" }} />
                             </div>
                             <button>Order</button>
                         </div>
