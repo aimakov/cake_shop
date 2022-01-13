@@ -31,17 +31,12 @@ const Menu = (props) => {
         }
     }, [props.active]);
 
-    // useEffect(() => {
-    //     console.log(width);
-    // }, [width]);
-
     return (
         <>
             <div className="SelectContainer" style={{ left: left }}>
-                {/* <button onClick={() => props.setActive("sides")}>go back</button> */}
                 <FiChevronLeft
                     onClick={() => props.setActive("sides")}
-                    style={{ position: "absolute", top: "50%", left: "50px", fontSize: "3rem", cursor: "pointer" }}
+                    style={{ position: "absolute", top: "50%", left: "1%", fontSize: "3rem", cursor: "pointer" }}
                 />
                 <div className="Menu">
                     {width > 1024 ? (
@@ -130,7 +125,9 @@ const Menu = (props) => {
                                 <p>Choose the pick-up date: </p>
                                 <input type="date" id="DeliveryDate" style={{ paddingRight: "10px" }} />
                             </div>
-                            <button>Order</button>
+                            <div className="AddToCartContainerMenu">
+                                <button className="waves-effect waves-light btn-medium lighten-1 black-text AddToCartMenu">ADD TO CART</button>
+                            </div>
                         </div>
                         <div className="ChosenCakeDisplayDetails"></div>
                     </div>

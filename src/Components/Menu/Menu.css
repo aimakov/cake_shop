@@ -166,7 +166,7 @@
     /* padding: 0 30px; */
 }
 
-.ChosenCakeDisplayContent button {
+/* .ChosenCakeDisplayContent button {
     background-color: rgba(93, 123, 234, 0.5);
     width: 100px;
     height: 30px;
@@ -179,7 +179,7 @@
 
 .ChosenCakeDisplayContent button:hover {
     background-color: rgba(0, 0, 0, 0.2);
-}
+} */
 
 .CakesQuantity {
     flex-grow: 1;
@@ -214,6 +214,27 @@
 #DeliveryDate {
     width: 220px;
     /* font-size: 22px; */
+}
+
+.AddToCartMenu {
+    /* padding: 20px; */
+    border-radius: 15px !important;
+    border: none;
+    text-align: center !important;
+    line-height: 100% !important;
+    padding: 15px !important;
+    background-color: rgba(93, 123, 234, 0.5) !important;
+    /* width: 150px; */
+    /* height: 60px !important; */
+    /* margin: 0 auto !important; */
+}
+
+.AddToCartContainerMenu {
+    width: 100%;
+    /* height: 80px; */
+    display: flex;
+    justify-content: center;
+    /* margin: 20px 0 60px 0; */
 }
 
 @media all and (max-width: 1024px) {

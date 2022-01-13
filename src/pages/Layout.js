@@ -14,7 +14,7 @@ const Layout = () => {
         <>
             <Navbar />
             <Intro />
-            <div style={{ position: "relative" }}>
+            <div style={{ position: "relative", overflow: "hidden", height: "100vh" }}>
                 <CakeBuilder active={active} setActive={setActive} />
                 <Sides active={active} setActive={setActive} />
                 <Menu active={active} setActive={setActive} />

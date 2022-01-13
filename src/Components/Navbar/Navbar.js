@@ -5,13 +5,15 @@
 import React from "react";
 import "./Navbar.css";
 
+import { FiShoppingCart, FiUser } from "react-icons/fi";
+
 const Navbar = () => {
     return (
         <>
             <div>
                 <div className="center" id="title">
                     <div className="col s12 center">
-                        <a href="/" id="cakesie" style={{ color: "black" }}>
+                        <a href="/" id="cakesie" style={{ color: "black", fontSize: "34px" }}>
                             <span className="orange-text">Cake</span>
                             sie
                         </a>
@@ -20,24 +22,16 @@ const Navbar = () => {
                 <div className="navbar valign-wrapper transparent center" style={{ width: "90%", margin: "0 auto" }}>
                     <nav style={{ background: "rgba(0,0,0,0)" }} className="z-depth-0">
                         <div className="nav-wrapper">
-                            <ul id="nav-mobile" className="left hide-on-med-and-down left-links ">
-                                <li>
-                                    <a href="/">Build a Cake</a>
-                                </li>
-                                <li>
-                                    <a href="/menu">Menu</a>
-                                </li>
-                                <li>
-                                    <a href="/">Contact Us</a>
-                                </li>
-                            </ul>
-
                             <ul id="nav-mobile" className="right hide-on-med-and-down right-links">
                                 <li>
-                                    <a href="sass.html">Login</a>
+                                    <a href="#">
+                                        <FiShoppingCart />
+                                    </a>
                                 </li>
                                 <li>
-                                    <a href="badges.html">Register</a>
+                                    <a href="#">
+                                        <FiUser />
+                                    </a>
                                 </li>
                             </ul>
                         </div>

@@ -80,8 +80,8 @@ const CakeBuilder = (props) => {
         for (let i = 2; i < NumLayers; i++) {
             AdditionalLayers.push(
                 <>
-                    <Cream src={LemonCream} />
-                    <Layer src={VanillaLayer} />
+                    <Cream src={LemonCream} key={`${i}_cream`} />
+                    <Layer src={VanillaLayer} key={`${i}_layer`} />
                 </>
             );
         }
@@ -103,52 +103,55 @@ const CakeBuilder = (props) => {
             <div className="CakeBuilderWrapper" style={{ left: left }}>
                 <div className="CakeBuilderContainer ">
                     <div className="CakeInside">
-                        <div className="CakeBuilderControls">
-                            <RadioGroup
-                                LayersType={LayersType}
-                                setLayersType={setLayersType}
-                                CreamType={CreamType}
-                                setCreamType={setCreamType}
-                                IcingType={IcingType}
-                                setIcingType={setIcingType}
-                            />
-                        </div>
-                        <div className="NumLayersControl">
-                            <p id="Layers">
-                                <b>Layers:</b>
-                            </p>
-                            <div className="NumLayersIcons">
-                                <FiPlusCircle
-                                    id="PlusIcon"
-                                    style={{ margin: "0 auto", fontSize: "40px", cursor: "pointer" }}
-                                    onClick={() => (NumLayers > 4 ? null : setNumLayers((prevstate) => prevstate + 1))}
-                                />
-                                <span style={{ fontSize: "25px", padding: "10px 0 8px 0" }}>{NumLayers}</span>{" "}
-                                <FiMinusCircle
-                                    id="MinusIcon"
-                                    style={{ margin: "0 auto", fontSize: "40px", cursor: "pointer" }}
-                                    onClick={() => (NumLayers > 2 ? setNumLayers((prevstate) => prevstate - 1) : null)}
+                        <div className="WithoutOrder">
+                            <div className="CakeBuilderControls">
+                                <RadioGroup
+                                    LayersType={LayersType}
+                                    setLayersType={setLayersType}
+                                    CreamType={CreamType}
+                                    setCreamType={setCreamType}
+                                    IcingType={IcingType}
+                                    setIcingType={setIcingType}
                                 />
                             </div>
+                            <div className="NumLayersControl">
+                                <p id="Layers">
+                                    <b>Layers:</b>
+                                </p>
+                                <div className="NumLayersIcons">
+                                    <FiPlusCircle
+                                        id="PlusIcon"
+                                        style={{ margin: "0 auto", fontSize: "40px", cursor: "pointer" }}
+                                        onClick={() => (NumLayers > 4 ? null : setNumLayers((prevstate) => prevstate + 1))}
+                                    />
+                                    <span style={{ fontSize: "25px", padding: "10px 0 8px 0" }}>{NumLayers}</span>{" "}
+                                    <FiMinusCircle
+                                        id="MinusIcon"
+                                        style={{ margin: "0 auto", fontSize: "40px", cursor: "pointer" }}
+                                        onClick={() => (NumLayers > 2 ? setNumLayers((prevstate) => prevstate - 1) : null)}
+                                    />
+                                </div>
+                            </div>
+                            <div className="RenderedCake">
+                                <Icing src={IcingSrc} />
+                                <Layer src={LayerSrc} first={true} />
+                                <Cream src={CreamSrc} />
+                                <Layer src={LayerSrc} />
+                                {[...Array(NumLayers - 2)].map((x, i) => (
+                                    <>
+                                        <Cream src={CreamSrc} key={`${i}th Cream`} />
+                                        <Layer src={LayerSrc} key={`${i}th Layer`} />
+                                    </>
+                                ))}
+                            </div>
                         </div>
-                        <div className="RenderedCake">
-                            <Icing src={IcingSrc} />
-                            <Layer src={LayerSrc} first={true} />
-                            <Cream src={CreamSrc} />
-                            <Layer src={LayerSrc} />
-                            {[...Array(NumLayers - 2)].map((x, i) => (
-                                <>
-                                    <Cream src={CreamSrc} key={`${i}th Cream`} />
-                                    <Layer src={LayerSrc} key={`${i}th Layer`} />
-                                </>
-                            ))}
+                        <div className="AddToCartContainer">
+                            <button className="waves-effect waves-light btn-medium lighten-1 black-text AddToCart">ADD TO CART</button>
                         </div>
                     </div>
                     {/* <div>
                         <CakeOutside NumLayers={NumLayers} IcingType={IcingType} />
-                        <div className="AddToCartContainer">
-                            <button className="AddToCart waves-effect waves-light btn-large orange lighten-1 black-text">ADD TO CART</button>
-                        </div>
+                        
                     </div> */}
                 </div>
                 <FiChevronRight

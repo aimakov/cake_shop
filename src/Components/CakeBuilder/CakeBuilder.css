@@ -45,14 +45,14 @@
 }
 
 .cake {
-    color: blue;
+    /* color: blue; */
     width: 80px;
     text-align: end;
     padding-right: 20px;
 }
 
 th {
-    color: red;
+    /* color: red; */
     /* width: 70px; */
     text-align: center;
 }
@@ -94,8 +94,14 @@ th {
     height: 290px;
 }
 
+.WithoutOrder {
+    display: flex;
+    justify-content: space-between;
+}
+
 .CakeInside {
     display: flex;
+    flex-direction: column;
     /* width: 100%; */
     /* padding: 50px 40px 20px 10px; */
     /* margin: 20px; */
@@ -154,12 +160,14 @@ th {
 
 .AddToCart {
     /* padding: 20px; */
-    border-radius: 20px !important;
+    border-radius: 15px !important;
     border: none;
     text-align: center !important;
     line-height: 100% !important;
-    width: 150px;
-    height: 60px !important;
+    padding: 15px !important;
+    background-color: rgba(254, 147, 147, 0.5) !important;
+    /* width: 150px; */
+    /* height: 60px !important; */
     /* margin: 0 auto !important; */
 }
 
@@ -168,5 +176,5 @@ th {
     /* height: 80px; */
     display: flex;
     justify-content: center;
-    margin: 20px 0 60px 0;
+    /* margin: 20px 0 60px 0; */
 }
