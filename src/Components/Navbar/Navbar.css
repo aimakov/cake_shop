@@ -19,6 +19,26 @@ nav ul li a {
     margin-top: 1rem;
 }
 
-nav div li a {
+nav div li div {
     font-size: 26px;
+    line-height: 26px;
+    padding: 12px !important;
+    cursor: pointer;
+    color: black;
+}
+
+#shoppingCart {
+    position: relative;
+}
+
+#cartAmount {
+    position: absolute;
+    font-size: 14px;
+    line-height: 14px;
+    /* color: red; */
+    right: -2px;
+    top: -2px;
+    /* background-color: white; */
+    padding: 5px;
+    border-radius: 50%;
 }

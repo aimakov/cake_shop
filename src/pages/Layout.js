@@ -19,10 +19,6 @@ const Layout = () => {
                 <Sides active={active} setActive={setActive} />
                 <Menu active={active} setActive={setActive} />
             </div>
-
-            {/* <Footer /> */}
-            {/* <CakeBuilder />
-            <CakeDetails /> */}
         </>
     );
 };

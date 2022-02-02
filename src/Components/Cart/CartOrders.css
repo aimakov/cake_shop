@@ -1,0 +1,91 @@
+.cartContainer {
+    width: 100vw;
+    /* padding: 100px; */
+    margin-top: 20px;
+    /* background-color: violet; */
+}
+
+.cartWrapper {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.cartElementWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 450px;
+}
+
+.cartElement {
+    width: 400px;
+    height: 100px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0 20px 20px 0;
+    margin-bottom: 10px;
+}
+
+.smallCakeWrapper {
+    margin-left: 2px;
+}
+
+.cartElementInfo {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.cartElement img {
+    width: 100px;
+}
+
+.cartElementIcons {
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+form {
+    width: 500px;
+}
+
+.formEntry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form input,
+label {
+    font-family: inherit;
+    font-size: 13px !important;
+    font-weight: 400;
+}
+
+form input[type="email"] {
+    width: 220px !important;
+}
+
+.cartWrapper button {
+    padding: 10px;
+    width: 100px;
+    margin: 5px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.cartWrapper button:first-of-type {
+    /* background-color: blue; */
+}

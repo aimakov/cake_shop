@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./Menu.css";
 import MenuElement from "./MenuElement";
 
@@ -10,6 +10,7 @@ import { VscChevronLeft, VscChevronRight } from "react-icons/vsc";
 import { FiStar, FiMinus, FiPlus, FiChevronLeft } from "react-icons/fi";
 
 import useWindowDimensions from "../../CustomHooks/useWindowDimensions";
+import { CartContext } from "../../App";
 
 const Menu = (props) => {
     // https://sendacake.com/fresh-baked-cakes?__cf_chl_captcha_tk__=pmd_gYJr2iLHCtkiK3jo3FX5C3geeMwMFevotYt4Vr_Gc0g-1633787267-0-gqNtZGzNAyWjcnBszQ1R
@@ -21,6 +22,8 @@ const Menu = (props) => {
     const [left, setLeft] = useState("100vw");
     const { height, width } = useWindowDimensions();
 
+    const [cart, setCart] = useContext(CartContext);
+
     useEffect(() => {
         if (props.active === "create") {
             setLeft("200vw");
@@ -31,6 +34,14 @@ const Menu = (props) => {
         }
     }, [props.active]);
 
+    const addToCart = () => {
+        const order = {
+            type: "selected",
+            cake: chosenCake,
+        };
+
+        setCart((prevstate) => [...prevstate, order]);
+    };
     return (
         <>
             <div className="SelectContainer" style={{ left: left }}>
@@ -121,12 +132,14 @@ const Menu = (props) => {
                                     />
                                 </div>
                             </div>
-                            <div className="ChosenCakeDeliveryDate">
+                            {/* <div className="ChosenCakeDeliveryDate">
                                 <p>Choose the pick-up date: </p>
                                 <input type="date" id="DeliveryDate" style={{ paddingRight: "10px" }} />
-                            </div>
+                            </div> */}
                             <div className="AddToCartContainerMenu">
-                                <button className="waves-effect waves-light btn-medium lighten-1 black-text AddToCartMenu">ADD TO CART</button>
+                                <button className="waves-effect waves-light btn-medium lighten-1 black-text AddToCartMenu" onClick={addToCart}>
+                                    ADD TO CART
+                                </button>
                             </div>
                         </div>
                         <div className="ChosenCakeDisplayDetails"></div>

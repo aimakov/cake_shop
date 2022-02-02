@@ -2,12 +2,18 @@
 //     background: -webkit-linear-gradient(to right, #e2e2e2, #c9d6ff); /* Chrome 10-25, Safari 5.1-6 */
 //     background: linear-gradient(to right, #e2e2e2, #c9d6ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-import React from "react";
+import React, { useContext, Link } from "react";
 import "./Navbar.css";
 
 import { FiShoppingCart, FiUser } from "react-icons/fi";
+import { CartContext } from "../../App";
+
+import { useHistory } from "react-router-dom";
 
 const Navbar = () => {
+    const [cart, setCart] = useContext(CartContext);
+    const history = useHistory();
+
     return (
         <>
             <div>
@@ -24,14 +30,15 @@ const Navbar = () => {
                         <div className="nav-wrapper">
                             <ul id="nav-mobile" className="right hide-on-med-and-down right-links">
                                 <li>
-                                    <a href="#">
+                                    <div onClick={() => history.push("/cart")} id="shoppingCart">
                                         <FiShoppingCart />
-                                    </a>
+                                        <p id="cartAmount">{cart.length}</p>
+                                    </div>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <div href="#">
                                         <FiUser />
-                                    </a>
+                                    </div>
                                 </li>
                             </ul>
                         </div>

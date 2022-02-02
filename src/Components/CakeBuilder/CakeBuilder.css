@@ -94,6 +94,10 @@ th {
     height: 290px;
 }
 
+.smallCake {
+    height: auto;
+}
+
 .WithoutOrder {
     display: flex;
     justify-content: space-between;

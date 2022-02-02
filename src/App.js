@@ -1,17 +1,22 @@
 import "./App.css";
 import Layout from "./pages/Layout";
-import SelectCake from "./pages/SelectCake";
-import CreateCake from "./pages/CreateCake";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import React, { useState, createContext } from "react";
+import Cart from "./pages/Cart";
+
+export const CartContext = createContext();
 
 function App() {
+    const [cart, setCart] = useState([]);
+
     return (
         <>
             <Router>
                 <Switch>
-                    <Route path="/" exact component={Layout} />
-                    <Route path="/select" exact component={SelectCake} />
-                    <Route path="/create" exact component={CreateCake} />
+                    <CartContext.Provider value={[cart, setCart]}>
+                        <Route path="/" exact component={Layout} />
+                        <Route path="/cart" component={Cart} />
+                    </CartContext.Provider>
                 </Switch>
             </Router>
         </>

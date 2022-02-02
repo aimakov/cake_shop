@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
 export const Layer = styled.img`
-    width: 300px;
+    width: ${({ small }) => (small ? "75px" : "300px")};
     margin: 0 auto;
-    height: 47px;
-    margin-top: ${({ first }) => (first ? "-45px" : "-28px")};
+    height: ${({ small }) => (small ? "12px" : "47px")};
+    margin-top: ${({ first, small }) => (first ? (small ? "-11px" : "-45px") : small ? "-7px" : "-28px")};
     z-index: 2;
 
     /* @media (min-width: 768px) {
@@ -13,20 +13,20 @@ export const Layer = styled.img`
     } */
 
     @media (min-width: 1300px) {
-        width: 400px;
-        height: 64px;
-        margin-top: ${({ first }) => (first ? "-62px" : "-37px")};
+        width: ${({ small }) => (small ? "100px" : "400px")};
+        height: ${({ small }) => (small ? "16px" : "64px")};
+        margin-top: ${({ first, small }) => (first ? (small ? "-16px" : "-62px") : small ? "-9px" : "-37px")};
         /* background-color: ${({ first }) => (first ? "blue" : "red")}; */
     }
 `;
 
 export const Cream = styled.img`
-    width: 300px;
+    width: ${({ small }) => (small ? "75px" : "300px")};
     margin: 0 auto;
-    margin-top: -28px;
-    padding-left: 2px;
+    margin-top: ${({ small }) => (small ? "-7px" : "-28px")};
+    padding-left: ${({ small }) => (small ? "0px" : "2px")};
     z-index: 1;
-    height: 44px;
+    height: ${({ small }) => (small ? "11px" : "44px")};
 
     /* @media (min-width: 768px) {
         width: 350px;
@@ -34,24 +34,24 @@ export const Cream = styled.img`
     } */
 
     @media (min-width: 1300px) {
-        width: 400px;
-        height: 58px;
-        margin-top: -38px;
+        width: ${({ small }) => (small ? "100px" : "400px")};
+        height: ${({ small }) => (small ? "15px" : "58px")};
+        margin-top: ${({ small }) => (small ? "-10px" : "-38px")};
     }
 `;
 
 export const Icing = styled.img`
-    width: 305px;
+    width: ${({ small }) => (small ? "76px" : "305px")};
     margin: 0 auto;
     z-index: 3;
-    height: 76px;
+    height: ${({ small }) => (small ? "19px" : "76px")};
 
     /* @media (min-width: 768px) {
         width: 355px;
     } */
 
     @media (min-width: 1300px) {
-        width: 405px;
-        height: 100px;
+        width: ${({ small }) => (small ? "100px" : "405px")};
+        height: ${({ small }) => (small ? "25px" : "100px")};
     }
 `;

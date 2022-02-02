@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 // import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
 // import { FiMinusCircle } from "react-icons/fi";
 // import { VscChromeMinimize } from "react-icons/vsc";
@@ -21,10 +21,10 @@ import LemonIcing from "../../images/CakeComponents/LemonIcing.png";
 import StrawberryIcing from "../../images/CakeComponents/StrawberryIcing.png";
 
 import { Layer, Cream, Icing } from "./CakeComponents";
-import CakeRadio from "./CakeRadio";
-
-import CakeOutside from "../CakeOutside";
 import RadioGroup from "./RadioGroup";
+import { CartContext } from "../../App";
+
+import RenderedCake from "./RenderedCake.js";
 
 const CakeBuilder = (props) => {
     const [LayersType, setLayersType] = useState("Vanilla");
@@ -37,6 +37,9 @@ const CakeBuilder = (props) => {
     const [IcingSrc, setIcingSrc] = useState(VanillaIcing);
 
     const [left, setLeft] = useState("-100vw");
+
+    const cartValue = useContext(CartContext);
+    const [cart, setCart] = cartValue;
 
     useEffect(() => {
         if (IcingType === "Vanilla") {
@@ -98,6 +101,22 @@ const CakeBuilder = (props) => {
         }
     }, [props.active]);
 
+    const addToCart = () => {
+        const order = {
+            type: "created",
+            numberOfLayers: NumLayers,
+            icingType: IcingType,
+            creamType: CreamType,
+            layerType: LayersType,
+        };
+
+        setCart((prevstate) => [...prevstate, order]);
+    };
+
+    useEffect(() => {
+        console.log(cart);
+    }, [cart]);
+
     return (
         <>
             <div className="CakeBuilderWrapper" style={{ left: left }}>
@@ -132,7 +151,8 @@ const CakeBuilder = (props) => {
                                     />
                                 </div>
                             </div>
-                            <div className="RenderedCake">
+                            <RenderedCake IcingSrc={IcingSrc} LayerSrc={LayerSrc} CreamSrc={CreamSrc} NumLayers={NumLayers} />
+                            {/* <div className="RenderedCake">
                                 <Icing src={IcingSrc} />
                                 <Layer src={LayerSrc} first={true} />
                                 <Cream src={CreamSrc} />
@@ -143,10 +163,12 @@ const CakeBuilder = (props) => {
                                         <Layer src={LayerSrc} key={`${i}th Layer`} />
                                     </>
                                 ))}
-                            </div>
+                            </div> */}
                         </div>
                         <div className="AddToCartContainer">
-                            <button className="waves-effect waves-light btn-medium lighten-1 black-text AddToCart">ADD TO CART</button>
+                            <button className="waves-effect waves-light btn-medium lighten-1 black-text AddToCart" onClick={addToCart}>
+                                ADD TO CART
+                            </button>
                         </div>
                     </div>
                     {/* <div>
