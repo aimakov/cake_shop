@@ -1,34 +1,30 @@
-nav ul li a {
-    color: black;
+.Navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-top: 15px;
 }
 
-.left-links {
-    margin-left: 1rem;
-}
-
-.right-links {
-    margin-right: 1rem;
+.NavLink {
+    cursor: pointer;
 }
 
 #cakesie {
     font-size: 2rem;
     font-weight: 700;
-}
-
-#title {
-    margin-top: 1rem;
-}
-
-nav div li div {
-    font-size: 26px;
-    line-height: 26px;
-    padding: 12px !important;
-    cursor: pointer;
-    color: black;
+    margin: 10px auto;
 }
 
 #shoppingCart {
-    position: relative;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    width: 70px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 20px;
 }
 
 #cartAmount {
@@ -36,8 +32,8 @@ nav div li div {
     font-size: 14px;
     line-height: 14px;
     /* color: red; */
-    right: -2px;
-    top: -2px;
+    right: 30px;
+    top: -10px;
     /* background-color: white; */
     padding: 5px;
     border-radius: 50%;

@@ -91,7 +91,13 @@ th {
     /* background-color: blue; */
     align-items: center;
     justify-content: center;
-    height: 290px;
+    height: 270px;
+}
+
+.CustomCakesQuantity {
+    margin: 20px auto;
+    margin-top: 0px;
+    display: flex;
 }
 
 .smallCake {
@@ -118,6 +124,27 @@ th {
 /* #Layers {
     padding-bottom: 88px;
 } */
+
+.AddToCart {
+    /* padding: 20px; */
+    border-radius: 15px !important;
+    border: none;
+    text-align: center !important;
+    line-height: 100% !important;
+    padding: 15px !important;
+    background-color: rgba(254, 147, 147, 0.5) !important;
+    /* width: 150px; */
+    /* height: 60px !important; */
+    /* margin: 0 auto !important; */
+}
+
+.AddToCartContainer {
+    width: 100%;
+    /* height: 80px; */
+    display: flex;
+    justify-content: center;
+    /* margin: 20px 0 60px 0; */
+}
 
 @media all and (max-width: 1024px) {
     .CakeBuilderContainer {
@@ -160,25 +187,8 @@ th {
     table {
         width: 80%;
     }
-}
 
-.AddToCart {
-    /* padding: 20px; */
-    border-radius: 15px !important;
-    border: none;
-    text-align: center !important;
-    line-height: 100% !important;
-    padding: 15px !important;
-    background-color: rgba(254, 147, 147, 0.5) !important;
-    /* width: 150px; */
-    /* height: 60px !important; */
-    /* margin: 0 auto !important; */
-}
-
-.AddToCartContainer {
-    width: 100%;
-    /* height: 80px; */
-    display: flex;
-    justify-content: center;
-    /* margin: 20px 0 60px 0; */
+    .WithoutOrder {
+        flex-direction: column;
+    }
 }

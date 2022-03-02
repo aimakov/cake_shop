@@ -17,12 +17,16 @@ const Menu = (props) => {
 
     const [chosenCake, setChosenCake] = useState(0);
     const [currentCake, setCurrentCake] = useState(2);
-    const [chosenCakeQuantity, setChosenCakeQuantity] = useState(0);
+    const [chosenCakeQuantity, setChosenCakeQuantity] = useState(1);
 
     const [left, setLeft] = useState("100vw");
     const { height, width } = useWindowDimensions();
 
     const [cart, setCart] = useContext(CartContext);
+
+    useEffect(() => {
+        setChosenCakeQuantity(1);
+    }, [chosenCake]);
 
     useEffect(() => {
         if (props.active === "create") {
@@ -38,10 +42,23 @@ const Menu = (props) => {
         const order = {
             type: "selected",
             cake: chosenCake,
+            uid: generateUID(),
+            amount: chosenCakeQuantity,
         };
 
         setCart((prevstate) => [...prevstate, order]);
     };
+
+    const generateUID = () => {
+        while (true) {
+            let uid = Math.floor((1 + Math.random()) * 0x10000)
+                .toString(16)
+                .substring(1);
+
+            if (cart.filter((element) => element.id === uid).length === 0) return uid;
+        }
+    };
+
     return (
         <>
             <div className="SelectContainer" style={{ left: left }}>
@@ -89,9 +106,26 @@ const Menu = (props) => {
                         </>
                     ) : null}
                     <div className="ChosenCakeDisplay">
-                        <div className="ChosenCakeDisplayImage">
-                            <img src={Cakes[chosenCake].image} />
+                        <div className="singleMenuCake">
+                            {width <= 1024 ? (
+                                <button
+                                    className="changeCakeButton"
+                                    onClick={() => setChosenCake((prevstate) => (prevstate - 1 + Cakes.length) % Cakes.length)}
+                                >
+                                    <VscChevronLeft />
+                                </button>
+                            ) : null}
+
+                            <div className="ChosenCakeDisplayImage">
+                                <img src={Cakes[chosenCake].image} />
+                            </div>
+                            {width <= 1024 ? (
+                                <button className="changeCakeButton" onClick={() => setChosenCake((prevstate) => (prevstate + 1) % Cakes.length)}>
+                                    <VscChevronRight />
+                                </button>
+                            ) : null}
                         </div>
+
                         <div className="ChosenCakeDisplayContent">
                             <h4 className="ChosenCakeTitle">{Cakes[chosenCake].title}</h4>
                             <p>

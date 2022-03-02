@@ -18,7 +18,7 @@ const Intro = () => {
 
     return (
         <>
-            <div className="row intro valign-wrapper" style={{ marginTop: "-120px" }}>
+            <div className="row intro valign-wrapper" style={{ marginTop: "-50px" }}>
                 <div className="col l6 hide-on-med-and-down center">
                     <img class="responsive-img intro_cake" src={Cake_1} />
                 </div>

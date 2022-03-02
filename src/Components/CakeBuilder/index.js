@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 // import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
 // import { FiMinusCircle } from "react-icons/fi";
 // import { VscChromeMinimize } from "react-icons/vsc";
-import { FiPlusCircle, FiMinusCircle, FiChevronRight } from "react-icons/fi";
+import { FiPlusCircle, FiMinusCircle, FiChevronRight, FiMinus, FiPlus } from "react-icons/fi";
 import "./CakeBuilder.css";
 
 import VanillaLayer from "../../images/CakeComponents/VanillaLayer3.png";
@@ -40,6 +40,8 @@ const CakeBuilder = (props) => {
 
     const cartValue = useContext(CartContext);
     const [cart, setCart] = cartValue;
+
+    const [customCakeQuantity, setCustomCakeQuantity] = useState(1);
 
     useEffect(() => {
         if (IcingType === "Vanilla") {
@@ -108,9 +110,21 @@ const CakeBuilder = (props) => {
             icingType: IcingType,
             creamType: CreamType,
             layerType: LayersType,
+            uid: generateUID(),
+            amount: customCakeQuantity,
         };
 
         setCart((prevstate) => [...prevstate, order]);
+    };
+
+    const generateUID = () => {
+        while (true) {
+            let uid = Math.floor((1 + Math.random()) * 0x10000)
+                .toString(16)
+                .substring(1);
+
+            if (cart.filter((element) => element.id === uid).length === 0) return uid;
+        }
     };
 
     useEffect(() => {
@@ -165,6 +179,34 @@ const CakeBuilder = (props) => {
                                 ))}
                             </div> */}
                         </div>
+
+                        <div className="CustomCakesQuantity">
+                            <h6 style={{ marginRight: "10px" }}>QUANTITY: </h6>
+                            <FiMinus
+                                className="FiMinus"
+                                style={{ fontSize: "26px", margin: "6px 8px 0 0 ", cursor: "pointer" }}
+                                onClick={() => (customCakeQuantity > 1 ? setCustomCakeQuantity((prevstate) => prevstate - 1) : null)}
+                            />
+                            <div
+                                style={{
+                                    backgroundColor: "white",
+                                    width: "2.5rem",
+                                    height: "2.5rem",
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    alignItems: "center",
+                                }}
+                            >
+                                <span style={{ fontSize: "20px", paddingTop: "3px" }}>{customCakeQuantity}</span>
+                            </div>
+
+                            <FiPlus
+                                className=""
+                                style={{ fontSize: "26px", margin: "6px 0 0 8px", cursor: "pointer" }}
+                                onClick={() => setCustomCakeQuantity((prevstate) => prevstate + 1)}
+                            />
+                        </div>
+
                         <div className="AddToCartContainer">
                             <button className="waves-effect waves-light btn-medium lighten-1 black-text AddToCart" onClick={addToCart}>
                                 ADD TO CART

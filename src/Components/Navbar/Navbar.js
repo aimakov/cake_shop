@@ -16,33 +16,15 @@ const Navbar = () => {
 
     return (
         <>
-            <div>
-                <div className="center" id="title">
-                    <div className="col s12 center">
-                        <a href="/" id="cakesie" style={{ color: "black", fontSize: "34px" }}>
-                            <span className="orange-text">Cake</span>
-                            sie
-                        </a>
-                    </div>
-                </div>
-                <div className="navbar valign-wrapper transparent center" style={{ width: "90%", margin: "0 auto" }}>
-                    <nav style={{ background: "rgba(0,0,0,0)" }} className="z-depth-0">
-                        <div className="nav-wrapper">
-                            <ul id="nav-mobile" className="right hide-on-med-and-down right-links">
-                                <li>
-                                    <div onClick={() => history.push("/cart")} id="shoppingCart">
-                                        <FiShoppingCart />
-                                        <p id="cartAmount">{cart.length}</p>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div href="#">
-                                        <FiUser />
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </nav>
+            <div className="Navbar">
+                <h4 id="cakesie">
+                    <span className="orange-text">Cake</span>
+                    sie
+                </h4>
+                <div id="shoppingCart">
+                    <FiShoppingCart className="NavLink" onClick={() => history.push("/cart")} />
+                    <p id="cartAmount">{cart.length}</p>
+                    <FiUser className="NavLink" />
                 </div>
             </div>
         </>

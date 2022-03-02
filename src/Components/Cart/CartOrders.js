@@ -20,17 +20,30 @@ import VanillaIcing from "../../images/CakeComponents/VanillaIcing.png";
 import ChocoIcing from "../../images/CakeComponents/ChocoIcing.png";
 import LemonIcing from "../../images/CakeComponents/LemonIcing.png";
 import StrawberryIcing from "../../images/CakeComponents/StrawberryIcing.png";
+import { useState } from "react/cjs/react.development";
 
 const CartOrders = () => {
     const history = useHistory();
     const [cart, setCart] = useContext(CartContext);
 
-    useEffect(() => {
-        console.log(cart);
-    }, []);
+    const [totalPrice, setTotalPrice] = useState(0);
 
-    const handleDelete = (id) => {
-        setCart(cart.filter((el) => el.cake !== id));
+    useEffect(() => {
+        console.log(cart, Cakes);
+        setTotalPrice(
+            parseFloat(
+                cart
+                    .filter((el) => el.type === "selected")
+                    .reduce((totalAmount, element) => totalAmount + (Number(Cakes[element.cake].price.slice(1, 6)) - 5) * element.amount, 0) +
+                    cart
+                        .filter((el) => el.type === "created")
+                        .reduce((totalAmount, element) => totalAmount + Number(element.numberOfLayers) * 12.95 * element.amount, 0)
+            ).toFixed(2)
+        );
+    }, [cart]);
+
+    const handleDelete = (uid) => {
+        setCart(cart.filter((el) => el.uid !== uid));
     };
 
     const handleDeleteCustomCake = (id) => {
@@ -59,63 +72,75 @@ const CartOrders = () => {
     };
 
     return (
-        <div className="cartContainer">
-            <div className="cartWrapper">
-                <div className="cartElementsList">
-                    {React.Children.toArray(
-                        cart.map((el) => {
-                            if (el.type === "selected") {
-                                return (
-                                    <div className="cartElementWrapper">
-                                        <div className="cartElement">
+        // <div className="cartContainer">
+        <div className="cartWrapper">
+            <div className="cartElementsList">
+                {React.Children.toArray(
+                    cart.map((el) => {
+                        return (
+                            <div className="cartElementWrapper">
+                                <div className="cartElement">
+                                    {el.type === "selected" ? (
+                                        <>
                                             <img src={Cakes[el.cake].image} />
                                             <div className="cartElementInfo">
-                                                <h6>{Cakes[el.cake].title}</h6>
-                                                {String(Number(Cakes[el.cake].price.slice(-5)) - 5).slice(0, 5)}$
+                                                <h6>
+                                                    {Cakes[el.cake].title} {el.amount > 1 ? `x${el.amount}` : null}
+                                                </h6>
+                                                <p className="cartPrice">
+                                                    ${parseFloat(String((Number(Cakes[el.cake].price.slice(-5)) - 5) * el.amount).slice(0, 5)).toFixed(2)}
+                                                </p>
+                                            </div>
+                                        </>
+                                    ) : (
+                                        <div className="smallCakeWrapper">
+                                            <RenderedCake
+                                                IcingSrc={handleIcing(el.icingType)}
+                                                LayerSrc={handleLayer(el.layerType)}
+                                                CreamSrc={handleCream(el.creamType)}
+                                                NumLayers={el.numberOfLayers}
+                                                small={true}
+                                            />
+                                            <div className="cartElementInfo">
+                                                <h6>Custom Cake {el.amount > 1 ? `x${el.amount}` : null}</h6>
+                                                <div className="customCakeInfo">
+                                                    <p>Layers: </p> <p>{el.layerType}</p>
+                                                    <p>Cream: </p> <p>{el.creamType}</p>
+                                                    <p>Icing: </p> <p>{el.icingType}</p>
+                                                    <p>Layers: </p> <p>{el.numberOfLayers}</p>
+                                                </div>
+                                                <p className="cartPrice">${parseFloat(String(Number(el.numberOfLayers) * 12.95) * el.amount).toFixed(2)}</p>
                                             </div>
                                         </div>
-                                        <div className="cartElementIcons" onClick={() => handleDelete(el.cake)}>
-                                            <FiX />
-                                        </div>
-                                    </div>
-                                );
-                            } else {
-                                return (
-                                    <div className="cartElementWrapper">
-                                        <div className="cartElement">
-                                            <div className="smallCakeWrapper">
-                                                <RenderedCake
-                                                    IcingSrc={handleIcing(el.icingType)}
-                                                    LayerSrc={handleLayer(el.layerType)}
-                                                    CreamSrc={handleCream(el.creamType)}
-                                                    NumLayers={el.numberOfLayers}
-                                                    small={true}
-                                                />
-                                            </div>
-                                        </div>
-                                        <div className="cartElementIcons" onClick={() => handleDelete(el.cake)}>
-                                            <FiX />
-                                        </div>
-                                    </div>
-                                );
-                            }
-                        })
-                    )}
+                                    )}
+                                </div>
+                                <div className="cartElementIcons" onClick={() => handleDelete(el.uid)}>
+                                    <FiX />
+                                </div>
+                            </div>
+                        );
+                    })
+                )}
+            </div>
+            <h6 id="totalPrice">Total Price: ${totalPrice}</h6>
+            <form>
+                <div className="formEntry">
+                    <label htmlFor="">Enter your email:</label>
+                    <input placeholder="email" type="email" />
                 </div>
-                <form>
-                    <div className="formEntry">
-                        <label htmlFor="">Enter your email:</label>
-                        <input placeholder="email" type="email" />
-                    </div>
-                    <div className="formEntry">
-                        <label>Choose Delivery Date:</label>
-                        <input type="date" id="DeliveryDate" />
-                    </div>
-                </form>
-                <button>Checkout</button>
-                <button onClick={() => console.log(history.goBack())}>Go Back</button>
+                <div className="formEntry">
+                    <label>Choose Pick-Up Date:</label>
+                    <input type="date" id="DeliveryDateInput" />
+                </div>
+            </form>
+            <div>
+                <button className="waves-effect waves-light btn-small lighten-5 black-text" onClick={() => history.goBack()}>
+                    Go Back
+                </button>
+                <button className="waves-effect waves-light btn-small orange lighten-1 black-text">Checkout</button>
             </div>
         </div>
+        // </div>
     );
 };
 

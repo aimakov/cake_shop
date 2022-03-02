@@ -1,40 +1,61 @@
 .cartContainer {
-    width: 100vw;
+    /* width: 100vw; */
     /* padding: 100px; */
-    margin-top: 20px;
+    /* margin-top: 20px; */
     /* background-color: violet; */
 }
 
 .cartWrapper {
-    width: 80%;
+    width: 80vw;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
+}
+
+.cartElementsList {
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    width: 70%;
+    max-width: 520px;
+    min-width: 450px;
 }
 
 .cartElementWrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 450px;
+    /* width: 480px; */
+    width: 100%;
 }
 
 .cartElement {
-    width: 400px;
+    width: 90%;
     height: 100px;
     padding-right: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(255, 255, 255);
-    border-radius: 0 20px 20px 0;
+    border-radius: 20px;
     margin-bottom: 10px;
+    position: relative;
+}
+
+.cartElement > img {
+    border-radius: 20px 0 0 20px;
 }
 
 .smallCakeWrapper {
-    margin-left: 2px;
+    padding-left: 5px;
+    width: 100%;
+    display: flex;
+    height: 100%;
 }
 
 .cartElementInfo {
@@ -45,6 +66,34 @@
     align-items: center;
     padding: 0 10px;
     text-align: center;
+    position: relative;
+    height: 100%;
+}
+
+.cartPrice {
+    position: absolute;
+    top: 10px;
+    right: 0px;
+}
+
+.customCakeInfo {
+    display: grid;
+    width: 90%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    position: relative;
+    /* height: 100%; */
+}
+
+.cartElementInfo p {
+    font-size: 11px;
+    text-align: center;
+}
+
+.cartElementInfo p:nth-child(2n + 1) {
+    /* color: red; */
+    text-align: right;
+    padding-right: 5px;
 }
 
 .cartElement img {
@@ -54,10 +103,20 @@
 .cartElementIcons {
     font-size: 1rem;
     cursor: pointer;
+    margin-right: 5px;
+}
+
+#totalPrice {
+    margin: 15px 0;
 }
 
 form {
-    width: 500px;
+    width: 70%;
+    max-width: 520px;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 15px;
+    border-radius: 20px;
+    min-width: 450px;
 }
 
 .formEntry {
@@ -77,15 +136,20 @@ form input[type="email"] {
     width: 220px !important;
 }
 
-.cartWrapper button {
-    padding: 10px;
-    width: 100px;
-    margin: 5px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
+#DeliveryDateInput {
+    width: 220px !important;
 }
 
-.cartWrapper button:first-of-type {
-    /* background-color: blue; */
+.cartWrapper button {
+    /* padding: 10px; */
+    /* width: 100px; */
+    border-radius: 10px !important;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: white !important;
+}
+
+.cartWrapper button:last-of-type {
+    background-color: #ff9800;
 }
