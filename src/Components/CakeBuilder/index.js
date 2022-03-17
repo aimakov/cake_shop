@@ -80,6 +80,7 @@ const CakeBuilder = (props) => {
     }, [CreamType]);
 
     let AdditionalLayers = [];
+
     useEffect(() => {
         AdditionalLayers = [];
         for (let i = 2; i < NumLayers; i++) {
@@ -166,18 +167,6 @@ const CakeBuilder = (props) => {
                                 </div>
                             </div>
                             <RenderedCake IcingSrc={IcingSrc} LayerSrc={LayerSrc} CreamSrc={CreamSrc} NumLayers={NumLayers} />
-                            {/* <div className="RenderedCake">
-                                <Icing src={IcingSrc} />
-                                <Layer src={LayerSrc} first={true} />
-                                <Cream src={CreamSrc} />
-                                <Layer src={LayerSrc} />
-                                {[...Array(NumLayers - 2)].map((x, i) => (
-                                    <>
-                                        <Cream src={CreamSrc} key={`${i}th Cream`} />
-                                        <Layer src={LayerSrc} key={`${i}th Layer`} />
-                                    </>
-                                ))}
-                            </div> */}
                         </div>
 
                         <div className="CustomCakesQuantity">

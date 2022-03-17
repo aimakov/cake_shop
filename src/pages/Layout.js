@@ -7,13 +7,18 @@ import Sides from "../Components/Sides";
 import Footer from "../Components/Footer";
 import Menu from "../Components/Menu/Menu";
 
+import "./Layout.css";
+
 const Layout = () => {
     const [active, setActive] = useState("sides");
 
     return (
         <>
-            <Navbar />
-            <Intro />
+            <div className="Intro">
+                <Navbar />
+                <Intro />
+            </div>
+
             <div style={{ position: "relative", overflow: "hidden", height: "100vh" }}>
                 <CakeBuilder active={active} setActive={setActive} />
                 <Sides active={active} setActive={setActive} />

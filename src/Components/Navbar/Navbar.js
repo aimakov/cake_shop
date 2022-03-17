@@ -21,10 +21,20 @@ const Navbar = () => {
                     <span className="orange-text">Cake</span>
                     sie
                 </h4>
-                <div id="shoppingCart">
-                    <FiShoppingCart className="NavLink" onClick={() => history.push("/cart")} />
-                    <p id="cartAmount">{cart.length}</p>
-                    <FiUser className="NavLink" />
+                <div className="Links">
+                    <p>Home</p>
+                    <p>About</p>
+                    <p>Staff</p>
+                    <p>Shop</p>
+                    <p>Contact</p>
+                </div>
+
+                <div className="NavbarRight">
+                    <p>Contact Us</p>
+                    <div id="shoppingCart">
+                        <FiShoppingCart className="NavLink" onClick={() => history.push("/cart")} />
+                        <p id="cartAmount">{cart.length}</p>
+                    </div>
                 </div>
             </div>
         </>
