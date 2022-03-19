@@ -1,5 +1,5 @@
 import React from "react";
-import { Icing, Layer, Cream } from "./CakeComponents";
+import { Icing, Layer, Cream } from "./cakeComponents";
 import "./CakeBuilder.css";
 
 const RenderedCake = (props) => {

@@ -1,30 +1,15 @@
 import React, { useState, useEffect, useContext } from "react";
-// import { FiPlusCircle, FiMinusCircle } from "react-icons/fi";
-// import { FiMinusCircle } from "react-icons/fi";
-// import { VscChromeMinimize } from "react-icons/vsc";
 import { FiPlusCircle, FiMinusCircle, FiChevronRight, FiMinus, FiPlus } from "react-icons/fi";
 import "./CakeBuilder.css";
 
-import VanillaLayer from "../../images/CakeComponents/VanillaLayer3.png";
-import ChocoLayer from "../../images/CakeComponents/ChocoLayer3.png";
-import LemonLayer from "../../images/CakeComponents/LemonLayer3.png";
-import StrawberryLayer from "../../images/CakeComponents/StrawberryLayer3.png";
-
-import VanillaCream from "../../images/CakeComponents/VanillaCream.png";
-import ChocoCream from "../../images/CakeComponents/ChocoCream.png";
-import LemonCream from "../../images/CakeComponents/LemonCream.png";
-import StrawberryCream from "../../images/CakeComponents/StrawberryCream.png";
-
-import VanillaIcing from "../../images/CakeComponents/VanillaIcing.png";
-import ChocoIcing from "../../images/CakeComponents/ChocoIcing.png";
-import LemonIcing from "../../images/CakeComponents/LemonIcing.png";
-import StrawberryIcing from "../../images/CakeComponents/StrawberryIcing.png";
-
-import { Layer, Cream, Icing } from "./CakeComponents";
+import { Layer, Cream, Icing } from "./cakeComponents";
 import RadioGroup from "./RadioGroup";
 import { CartContext } from "../../App";
 
 import RenderedCake from "./RenderedCake.js";
+import cakeElements from "./cakeElements";
+import NumLayersControl from "./NumLayersControl";
+import CakesQuantity from "./CakesQuantity";
 
 const CakeBuilder = (props) => {
     const [LayersType, setLayersType] = useState("Vanilla");
@@ -32,9 +17,9 @@ const CakeBuilder = (props) => {
     const [IcingType, setIcingType] = useState("Vanilla");
     const [NumLayers, setNumLayers] = useState(2);
 
-    const [LayerSrc, setLayerSrc] = useState(VanillaLayer);
-    const [CreamSrc, setCreamSrc] = useState(VanillaCream);
-    const [IcingSrc, setIcingSrc] = useState(VanillaIcing);
+    const [LayerSrc, setLayerSrc] = useState(cakeElements.layer.vanilla);
+    const [CreamSrc, setCreamSrc] = useState(cakeElements.cream.vanilla);
+    const [IcingSrc, setIcingSrc] = useState(cakeElements.icing.vanilla);
 
     const [left, setLeft] = useState("-100vw");
 
@@ -45,37 +30,37 @@ const CakeBuilder = (props) => {
 
     useEffect(() => {
         if (IcingType === "Vanilla") {
-            setIcingSrc(VanillaIcing);
+            setIcingSrc(cakeElements.icing.vanilla);
         } else if (IcingType === "Chocolate") {
-            setIcingSrc(ChocoIcing);
+            setIcingSrc(cakeElements.icing.chocolate);
         } else if (IcingType === "Lemon") {
-            setIcingSrc(LemonIcing);
+            setIcingSrc(cakeElements.icing.lemon);
         } else if (IcingType === "Strawberry") {
-            setIcingSrc(StrawberryIcing);
+            setIcingSrc(cakeElements.icing.strawberry);
         }
     }, [IcingType]);
 
     useEffect(() => {
         if (LayersType === "Vanilla") {
-            setLayerSrc(VanillaLayer);
+            setLayerSrc(cakeElements.layer.vanilla);
         } else if (LayersType === "Chocolate") {
-            setLayerSrc(ChocoLayer);
+            setLayerSrc(cakeElements.layer.chocolate);
         } else if (LayersType === "Lemon") {
-            setLayerSrc(LemonLayer);
+            setLayerSrc(cakeElements.layer.lemon);
         } else if (LayersType === "Strawberry") {
-            setLayerSrc(StrawberryLayer);
+            setLayerSrc(cakeElements.layer.strawberry);
         }
     }, [LayersType]);
 
     useEffect(() => {
         if (CreamType === "Vanilla") {
-            setCreamSrc(VanillaCream);
+            setCreamSrc(cakeElements.cream.vanilla);
         } else if (CreamType === "Chocolate") {
-            setCreamSrc(ChocoCream);
+            setCreamSrc(cakeElements.cream.chocolate);
         } else if (CreamType === "Lemon") {
-            setCreamSrc(LemonCream);
+            setCreamSrc(cakeElements.cream.lemon);
         } else if (CreamType === "Strawberry") {
-            setCreamSrc(StrawberryCream);
+            setCreamSrc(cakeElements.cream.strawberry);
         }
     }, [CreamType]);
 
@@ -86,12 +71,11 @@ const CakeBuilder = (props) => {
         for (let i = 2; i < NumLayers; i++) {
             AdditionalLayers.push(
                 <>
-                    <Cream src={LemonCream} key={`${i}_cream`} />
-                    <Layer src={VanillaLayer} key={`${i}_layer`} />
+                    <Cream src={CreamSrc} key={`${i}_cream`} />
+                    <Layer src={LayerSrc} key={`${i}_layer`} />
                 </>
             );
         }
-        console.log(AdditionalLayers);
     }, [NumLayers, LayersType, CreamType]);
 
     useEffect(() => {
@@ -134,84 +118,32 @@ const CakeBuilder = (props) => {
 
     return (
         <>
-            <div className="CakeBuilderWrapper" style={{ left: left }}>
-                <div className="CakeBuilderContainer ">
-                    <div className="CakeInside">
-                        <div className="WithoutOrder">
-                            <div className="CakeBuilderControls">
-                                <RadioGroup
-                                    LayersType={LayersType}
-                                    setLayersType={setLayersType}
-                                    CreamType={CreamType}
-                                    setCreamType={setCreamType}
-                                    IcingType={IcingType}
-                                    setIcingType={setIcingType}
-                                />
-                            </div>
-                            <div className="NumLayersControl">
-                                <p id="Layers">
-                                    <b>Layers:</b>
-                                </p>
-                                <div className="NumLayersIcons">
-                                    <FiPlusCircle
-                                        id="PlusIcon"
-                                        style={{ margin: "0 auto", fontSize: "40px", cursor: "pointer" }}
-                                        onClick={() => (NumLayers > 4 ? null : setNumLayers((prevstate) => prevstate + 1))}
-                                    />
-                                    <span style={{ fontSize: "25px", padding: "10px 0 8px 0" }}>{NumLayers}</span>{" "}
-                                    <FiMinusCircle
-                                        id="MinusIcon"
-                                        style={{ margin: "0 auto", fontSize: "40px", cursor: "pointer" }}
-                                        onClick={() => (NumLayers > 2 ? setNumLayers((prevstate) => prevstate - 1) : null)}
-                                    />
-                                </div>
-                            </div>
-                            <RenderedCake IcingSrc={IcingSrc} LayerSrc={LayerSrc} CreamSrc={CreamSrc} NumLayers={NumLayers} />
-                        </div>
-
-                        <div className="CustomCakesQuantity">
-                            <h6 style={{ marginRight: "10px" }}>QUANTITY: </h6>
-                            <FiMinus
-                                className="FiMinus"
-                                style={{ fontSize: "26px", margin: "6px 8px 0 0 ", cursor: "pointer" }}
-                                onClick={() => (customCakeQuantity > 1 ? setCustomCakeQuantity((prevstate) => prevstate - 1) : null)}
-                            />
-                            <div
-                                style={{
-                                    backgroundColor: "white",
-                                    width: "2.5rem",
-                                    height: "2.5rem",
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    alignItems: "center",
-                                }}
-                            >
-                                <span style={{ fontSize: "20px", paddingTop: "3px" }}>{customCakeQuantity}</span>
-                            </div>
-
-                            <FiPlus
-                                className=""
-                                style={{ fontSize: "26px", margin: "6px 0 0 8px", cursor: "pointer" }}
-                                onClick={() => setCustomCakeQuantity((prevstate) => prevstate + 1)}
-                            />
-                        </div>
-
-                        <div className="AddToCartContainer">
-                            <button className="waves-effect waves-light btn-medium lighten-1 black-text AddToCart" onClick={addToCart}>
-                                ADD TO CART
-                            </button>
-                        </div>
+            <div className="CakeBuilderContainer" style={{ left: left }}>
+                <div className="CakeInside">
+                    <div className="WithoutOrder">
+                        <RadioGroup
+                            LayersType={LayersType}
+                            setLayersType={setLayersType}
+                            CreamType={CreamType}
+                            setCreamType={setCreamType}
+                            IcingType={IcingType}
+                            setIcingType={setIcingType}
+                        />
+                        <NumLayersControl NumLayers={NumLayers} setNumLayers={setNumLayers} />
+                        <RenderedCake IcingSrc={IcingSrc} LayerSrc={LayerSrc} CreamSrc={CreamSrc} NumLayers={NumLayers} />
                     </div>
-                    {/* <div>
-                        <CakeOutside NumLayers={NumLayers} IcingType={IcingType} />
-                        
-                    </div> */}
+                    <CakesQuantity CakeQuantity={customCakeQuantity} setCakeQuantity={setCustomCakeQuantity} className="CustomCakesQuantity" />
+                    <div className="AddToCartContainer">
+                        <button className="waves-effect waves-light btn-medium lighten-1 black-text AddToCart" onClick={addToCart}>
+                            ADD TO CART
+                        </button>
+                    </div>
                 </div>
-                <FiChevronRight
-                    onClick={() => props.setActive("sides")}
-                    style={{ position: "absolute", top: "50%", right: "1%", fontSize: "3rem", cursor: "pointer" }}
-                />
             </div>
+            <FiChevronRight
+                onClick={() => props.setActive("sides")}
+                style={{ position: "absolute", top: "50%", right: "1%", fontSize: "3rem", cursor: "pointer" }}
+            />
         </>
     );
 };
