@@ -5,6 +5,7 @@ import CakeBuilder from "../Components/CakeBuilder/index.js";
 import Sides from "../Components/Sides";
 import Footer from "../Components/Footer";
 import Menu from "../Components/Menu/Menu";
+import Contact from "../Components/Contact";
 
 import "./Layout.css";
 
@@ -23,6 +24,7 @@ const Layout = () => {
                 <Sides active={active} setActive={setActive} />
                 <Menu active={active} setActive={setActive} />
             </div>
+            <Contact />
         </>
     );
 };
