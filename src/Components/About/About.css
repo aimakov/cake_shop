@@ -1,0 +1,32 @@
+.AboutContainer {
+    width: 100vw;
+    padding: 100px 0;
+    /* height: 300px; */
+    background-image: linear-gradient(118deg, #fbab7e 0%, #f7ce68 100%);
+}
+
+.CakeStores {
+    width: 70vw;
+    margin: 0 auto;
+    display: flex;
+}
+
+.CakeStores img {
+    object-fit: cover;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.leftCakeStore {
+    width: 50%;
+    margin-right: 10px;
+}
+
+.rightCakeStores {
+    width: 50%;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+}

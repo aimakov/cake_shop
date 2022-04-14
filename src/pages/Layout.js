@@ -6,6 +6,7 @@ import Sides from "../Components/Sides";
 import Footer from "../Components/Footer";
 import Menu from "../Components/Menu/Menu";
 import Contact from "../Components/Contact";
+import About from "../Components/About";
 
 import "./Layout.css";
 
@@ -18,7 +19,7 @@ const Layout = () => {
                 <Navbar />
                 <Intro />
             </div>
-
+            <About />
             <div style={{ position: "relative", overflow: "hidden", height: "100vh" }}>
                 <CakeBuilder active={active} setActive={setActive} />
                 <Sides active={active} setActive={setActive} />

@@ -95,3 +95,21 @@
     border: 0 !important;
     box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2) !important;
 }
+
+.SubmitButton {
+    margin: 0 30px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.SubmitButton:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 8px 12px 0 rgba();
+}
+
+.SubmitButton:focus {
+    background-color: white !important;
+}

@@ -31,6 +31,9 @@ const Contact = () => {
                         </label>
                         <textarea placeholder="Follow me @aimakov.dev on Instagram 😉" id="ContactMessage" className="ContactInput"></textarea>
                     </div>
+                    <button type="button" className="browser-default SubmitButton">
+                        Submit
+                    </button>
                 </form>
                 <GoogleMap />
             </div>
