@@ -1,0 +1,13 @@
+.StaffCardContainer {
+    width: clamp(200px, 35%, 500px);
+}
+
+.StaffCardContainer > img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 50px;
+}
+
+.StaffCardContainer > img:last-child {
+    transform: scale(1.3);
+}

@@ -10,8 +10,11 @@ import "./About.css";
 const index = () => {
     return (
         <div className="AboutContainer">
-            <h3>The best cakes since 2018</h3>
-            <p></p>
+            <h3>Best cakes since 2018</h3>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias eaque fugiat recusandae suscipit, ipsam ullam, voluptatum odio itaque quo
+                perferendis cupiditate modi alias tempore harum.
+            </p>
             <div className="CakeStores">
                 <div className="leftCakeStore">
                     <img src={first} />
