@@ -5,6 +5,7 @@ const StaffCard = (props) => {
     return (
         <div className="StaffCardContainer">
             <img src={props.img} />
+            <p></p>
         </div>
     );
 };

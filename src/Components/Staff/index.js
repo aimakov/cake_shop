@@ -2,6 +2,7 @@ import React from "react";
 import { loremIpsum } from "react-lorem-ipsum";
 import Nurik_Aigerim_Ayana from "../../images/Staff/Nurik_Aigerim_Ayana.jpeg";
 import Nurba_Hyewon from "../../images/Staff/Nurba_Hyewon.jpeg";
+import StaffCard from "./StaffCard";
 
 import "./Staff.css";
 
@@ -12,12 +13,13 @@ const Staff = () => {
             <p>{loremIpsum({ p: 1 })[0].split(".").slice(0, 5).join(".")}.</p>
             <div className="CardsContainer">
                 <div className="CardWrapper" id="NurikAigerimAyana">
-                    <img src={Nurik_Aigerim_Ayana} />
+                    {/* <img src={Nurik_Aigerim_Ayana} />
                     <div>
                         <p>Nurik</p>
                         <p>CTO</p>
-                    </div>
+                    </div> */}
 
+                    <StaffCard img={Nurik_Aigerim_Ayana} />
                     <div>
                         <p>Aigerim</p>
                         <p>CEO & Main Chef</p>
