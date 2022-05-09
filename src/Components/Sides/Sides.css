@@ -6,7 +6,7 @@
     align-items: center;
     position: absolute;
     transition: all 1s ease-in-out;
-    background: linear-gradient(118deg, #fbab7e 0%, #f7ce68 100%);
+    background: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
 }
 
 .SidesContainer {

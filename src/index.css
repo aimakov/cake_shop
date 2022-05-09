@@ -1,6 +1,9 @@
 html,
 body {
     height: 100%;
+    --big-screen: 1023px;
+    --tablet-screen: 767px;
+    --small-screen: 479px;
 }
 
 :root {

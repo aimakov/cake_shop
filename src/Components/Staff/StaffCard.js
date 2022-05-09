@@ -4,8 +4,11 @@ import "./StaffCard.css";
 const StaffCard = (props) => {
     return (
         <div className="StaffCardContainer">
-            <img src={props.img} />
-            <p></p>
+            <img src={props.team.img} />
+            <p>
+                <b>{props.team.name}</b>
+            </p>
+            <p>{props.team.role}</p>
         </div>
     );
 };

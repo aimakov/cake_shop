@@ -4,79 +4,22 @@
     justify-content: center;
     text-align: center;
     width: 100vw;
-    height: 80vh;
+    min-height: 100vh;
     padding: 0 100px;
     /* margin: 100px auto; */
     /* padding-bottom: 100px; */
-    background: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+    background: linear-gradient(118deg, #fbab7e 0%, #f7ce68 100%);
 }
 
 .StaffContainer > p {
-    font-size: 16px;
     width: 80%;
     margin: 0 auto;
 }
 
-.CardsContainer {
-    margin-top: 50px;
+.CardWrapper {
     display: flex;
     justify-content: space-evenly;
-
-    width: 100%;
-}
-
-.CardWrapper {
-    height: 100%;
-    position: relative;
-}
-
-.CardWrapper div {
-    position: absolute;
-    border-radius: 20px;
-    padding: 10px;
-}
-
-.CardWrapper p:first-child {
-    font-size: 1.3rem;
-    font-weight: 700;
-}
-
-#NurikAigerimAyana > div:nth-child(2) {
-    top: 15px;
-    left: -80px;
-    text-align: right;
-}
-
-#NurikAigerimAyana > div:nth-child(3) {
-    top: 15px;
-    left: 410px;
-    text-align: left;
-}
-
-#NurikAigerimAyana > div:nth-child(4) {
-    top: 400px;
-    left: 20px;
-    text-align: center;
-}
-
-#NurbaHyewon > div:nth-child(2) {
-    top: 30px;
-    left: 410px;
-    text-align: left;
-}
-
-#NurbaHyewon > div:nth-child(3) {
-    top: 200px;
-    left: -160px;
-    text-align: right;
-}
-
-.CardsContainer img {
-    /* object-fit: cover; */
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    border-radius: 50px;
+    margin-top: 3rem;
 }
 
 @media all and (max-width: 567px) {

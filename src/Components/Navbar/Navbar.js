@@ -8,6 +8,7 @@ import "./Navbar.css";
 import Title from "./Title";
 import Links from "./Links";
 import ContactUs from "./ContactUs";
+import BurgerMenu from "./BurgerMenu/BurgerMenu";
 
 const Navbar = () => {
     return (
@@ -16,6 +17,7 @@ const Navbar = () => {
                 <Title />
                 <Links />
                 <ContactUs />
+                <BurgerMenu />
             </div>
         </>
     );

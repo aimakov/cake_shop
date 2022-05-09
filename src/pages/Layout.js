@@ -21,12 +21,12 @@ const Layout = () => {
                 <Intro />
             </div>
             <About />
-            <Staff />
             <div style={{ position: "relative", overflow: "hidden", height: "100vh" }}>
                 <CakeBuilder active={active} setActive={setActive} />
                 <Sides active={active} setActive={setActive} />
                 <Menu active={active} setActive={setActive} />
             </div>
+            <Staff />
             <Contact />
         </>
     );

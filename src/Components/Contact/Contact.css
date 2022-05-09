@@ -1,5 +1,6 @@
 .ContactContainer {
     width: 100vw;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -112,4 +113,15 @@
 
 .SubmitButton:focus {
     background-color: white !important;
+}
+
+@media all and (max-width: 1024px) {
+    .ContactBody {
+        flex-direction: column;
+    }
+
+    .ContactForm {
+        margin-bottom: 2rem;
+        width: 100%;
+    }
 }

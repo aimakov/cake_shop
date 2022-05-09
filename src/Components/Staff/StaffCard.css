@@ -7,7 +7,3 @@
     width: 100%;
     border-radius: 50px;
 }
-
-.StaffCardContainer > img:last-child {
-    transform: scale(1.3);
-}
