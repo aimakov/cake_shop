@@ -28,72 +28,79 @@
 }
 
 .Links p:hover {
-    color: orange;
+  color: orange;
 }
 
 #cakesie {
-    font-size: 2rem;
-    font-weight: 700;
-    padding-left: 30px;
-    cursor: pointer;
-    margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  padding-left: 30px;
+  cursor: pointer;
+  margin: 0;
 }
 
 .NavbarRight {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 220px;
 }
 
 .NavbarRight > p {
-    font-size: 1.1rem;
-    padding: 10px 15px;
-    background-color: white;
-    border-radius: 20px;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
-    transition: 0.3s;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+  font-size: 1.1rem;
+  padding: 10px 15px;
+  background-color: white;
+  border-radius: 20px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  transition: 0.3s;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .NavbarRight > p:hover {
-    background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 #shoppingCart {
-    font-size: 1.5rem;
-    width: 70px;
-    display: flex;
-    justify-content: space-between;
+  font-size: 1.5rem;
+  width: 70px;
+  display: flex;
+  justify-content: space-between;
 
-    position: relative;
+  position: relative;
 }
 
 #cartAmount {
-    position: absolute;
-    font-size: 14px;
-    line-height: 14px;
-    /* color: red; */
-    right: 30px;
-    top: -10px;
-    /* background-color: white; */
-    padding: 5px;
-    border-radius: 50%;
+  position: absolute;
+  font-size: 14px;
+  line-height: 14px;
+  /* color: red; */
+  right: 30px;
+  top: -10px;
+  /* background-color: white; */
+  padding: 5px;
+  border-radius: 50%;
 }
 
 @media all and (max-width: 1023px) {
-    .Links {
-        display: none;
-    }
+  .Links {
+    display: none;
+  }
 
-    .NavbarRight > p {
-        display: none;
-    }
+  .NavbarRight > p {
+    display: none;
+  }
 
+<<<<<<< HEAD
     .NavbarRight {
         width: 125px;
         display: flex;
         margin-bottom: 5px;
     }
+=======
+  .NavbarRight {
+    justify-content: right;
+    display: none;
+  }
+>>>>>>> 7256ba683b92e3652bcc214f3803eeeb0e015dcb
 }
