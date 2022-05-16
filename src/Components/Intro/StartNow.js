@@ -3,8 +3,14 @@ import styled from "styled-components";
 
 const StartNow = () => {
     const StartNowButton = styled(Link)`
-        width: 180px;
+        width: fit-content;
+        padding: 15px 30px;
+        font-size: 22px;
         border-radius: 20px;
+        /* border: 1px solid white; */
+        background-color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        margin: 0 auto;
     `;
 
     const startNowHandler = () => {
@@ -21,7 +27,7 @@ const StartNow = () => {
             onClick={startNowHandler}
             className="waves-effect waves-light btn-large orange lighten-1 black-text"
         >
-            Start Now
+            Choose Now
         </StartNowButton>
     );
 };

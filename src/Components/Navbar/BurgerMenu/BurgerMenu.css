@@ -1,11 +1,14 @@
 #menu {
     z-index: 2;
+    height: 100%;
+    /* display: flex;
+    align-items: center; */
 }
 
 #menu-bar {
     width: 45px;
-    height: 40px;
-    margin: 30px 20px 20px auto;
+    height: 25px;
+    margin: 40px 30px 35px auto;
     cursor: pointer;
 }
 
@@ -96,4 +99,10 @@
     width: 520px;
     height: 460px;
     transform: translate(55%, -20%);
+}
+
+@media all and (min-width: 1023px) {
+    #menu {
+        display: none;
+    }
 }

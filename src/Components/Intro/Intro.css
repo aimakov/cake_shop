@@ -3,29 +3,93 @@
     flex-grow: 1;
 }
 
-.slogan {
-    font-size: 6vw;
-    margin-bottom: 1rem;
-    font-weight: 700;
-}
-
-.intro_cake {
-    max-width: 400px !important;
-    width: 100%;
-}
-
 .IntroText {
     display: flex;
     width: 50%;
     flex-direction: column;
     justify-content: center;
-    padding-left: 50px !important;
+    margin-top: -50px;
+}
+
+.IntroText > h2 {
+    font-size: 30px;
+    font-weight: 400;
+    margin: 10px 0;
+}
+
+.slogan {
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    width: 500px;
+    margin: 50px auto;
+    margin-bottom: 20px;
+    /* width: clamp(500px, 80%, 800px); */
+    grid-gap: 10px 0px;
+}
+
+.slogan > p {
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    line-height: 44px;
+}
+
+.slogan > p:nth-child(2n + 1) {
+    font-weight: 900;
+}
+
+.slogan > p:first-child {
+    text-align: right;
+    font-size: 40px;
+}
+
+.slogan > p:first-child::before,
+.slogan > p:nth-child(3)::before {
+    content: "";
+    color: aqua;
+    position: absolute;
+    font-size: 48px;
+    z-index: -1;
+    /* top: 2px; */
+    letter-spacing: -3px;
+    filter: blur(18px);
+}
+
+.slogan > p:first-child::before {
+    content: "CREATE";
+    left: 26px;
+    color: red;
+}
+
+.slogan > p:nth-child(2) {
+    line-height: 44px;
+}
+
+.slogan > p:nth-child(3) {
+    text-align: left;
+    font-size: 40px;
+}
+
+.slogan > p:nth-child(3)::before {
+    content: "SELECT";
+    left: -10px;
+    color: blue;
+}
+
+.slogan > p:last-child {
+    grid-column: 1/4;
+    font-size: 22px;
+    letter-spacing: 8px;
+    padding-left: 18px;
+}
+
+.intro_cake {
+    max-width: 400px;
+    width: 100%;
 }
 
 @media screen and (min-width: 993px) {
-    .slogan {
-        font-size: 2.5rem;
-    }
 }
 
 /* @media screen and (min-width: 1024px) {
