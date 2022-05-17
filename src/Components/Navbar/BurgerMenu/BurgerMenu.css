@@ -15,7 +15,7 @@
 .bar {
     height: 5px;
     width: 100%;
-    background-color: white;
+    background-color: black;
     display: block;
     border-radius: 5px;
     transition: 0.3s ease;
@@ -74,7 +74,7 @@
 }
 
 .change {
-    display: flex;
+    display: block;
 }
 
 .change ul li a {
@@ -87,6 +87,8 @@
 
 .change #menu-bar {
     margin-left: auto;
+    /* width: 45px; */
+    flex-direction: column;
 }
 
 .change #bar1 {
@@ -105,12 +107,6 @@
     width: 520px;
     height: 460px;
     transform: translate(55%, -15%);
-}
-
-@media all and (min-width: 1023px) {
-    #menu {
-        display: none;
-    }
 }
 
 @media all and (min-width: 1023px) {

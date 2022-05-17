@@ -6,9 +6,9 @@ const IntroText = () => {
         <div className="IntroText">
             {/* <h2>#1 Cakes in Ulsan</h2> */}
             <div className="slogan">
-                <p>CREATE</p>
+                <p className="CreateSelect">CREATE</p>
                 <p>or</p>
-                <p>SELECT</p>
+                <p className="CreateSelect">SELECT</p>
                 <p>Which side are you on?</p>
             </div>
 

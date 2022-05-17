@@ -1,11 +1,15 @@
 .blobContainer {
     position: relative;
     flex-grow: 1;
+    width: 50vw;
+    height: 100vh;
+    background-size: contain;
 }
 
 .blobContainer svg {
     position: absolute;
-    width: 100%;
+    /* width: 100%;
+    height: auto; */
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -17,4 +21,22 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+@media all and (max-width: 1023px) {
+    .blobContainer {
+        flex-grow: unset;
+        /* height: 700px; */
+        width: 100vw;
+        height: 50vh;
+    }
+
+    .blobContainer svg {
+        width: clamp(400px, 100%, 600px);
+        /* height: 100%; */
+    }
+
+    .blobContainer img {
+        width: clamp(200px, 50%, 300px);
+    }
 }
