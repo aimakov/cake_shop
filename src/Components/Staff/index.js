@@ -9,21 +9,25 @@ import "./Staff.css";
 const Staff = () => {
     const StaffMembers = {
         team_Nurik: {
-            name: "Nurkanat, Aigerim, Ayana",
-            role: "Owner, Main Chef & little helper",
+            // name: "Nurkanat, Aigerim, Ayana",
+            name: ["Nurkanat", "Ayana", "Aigerim"],
+            // role: "Owner, Main Chef & little helper",
+            role: ["Owner", "Little helper", "Main Baker"],
             img: Nurik_Aigerim_Ayana,
         },
         team_Nurba: {
-            name: "Nurbolat & Hyewon",
-            role: "FrontEnd Developer, DL Engineer",
+            name: ["Hyewon", "Nurbolat"],
+            role: ["ML Engineer", "Frontend Developer"],
+            // role: "FrontEnd Developer, ML Engineer",
             img: Nurba_Hyewon,
         },
     };
 
     return (
         <div className="StaffContainer">
-            <h4>Our Team</h4>
-            <p>{loremIpsum({ p: 1 })[0].split(".").slice(0, 5).join(".")}.</p>
+            <h3>Our Team</h3>
+            {/* <p>{loremIpsum({ p: 1 })[0].split(".").slice(0, 4).join(".")}.</p> */}
+            <p>Cakesie is a family-owned business. Our team consists of these beautiful people:</p>
             <div className="CardWrapper">
                 <StaffCard team={StaffMembers.team_Nurik} />
                 <StaffCard team={StaffMembers.team_Nurba} />

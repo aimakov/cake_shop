@@ -117,27 +117,25 @@ const CakeBuilder = (props) => {
     }, [cart]);
 
     return (
-        <>
-            <div className="CakeBuilderContainer" style={{ left: left }}>
-                <div className="CakeInside">
-                    <div className="WithoutOrder">
-                        <RadioGroup
-                            LayersType={LayersType}
-                            setLayersType={setLayersType}
-                            CreamType={CreamType}
-                            setCreamType={setCreamType}
-                            IcingType={IcingType}
-                            setIcingType={setIcingType}
-                        />
-                        <NumLayersControl NumLayers={NumLayers} setNumLayers={setNumLayers} />
-                        <RenderedCake IcingSrc={IcingSrc} LayerSrc={LayerSrc} CreamSrc={CreamSrc} NumLayers={NumLayers} />
-                    </div>
-                    <CakesQuantity CakeQuantity={customCakeQuantity} setCakeQuantity={setCustomCakeQuantity} className="CustomCakesQuantity" />
-                    <div className="AddToCartContainer">
-                        <button className="waves-effect waves-light btn-medium lighten-1 black-text AddToCart" onClick={addToCart}>
-                            ADD TO CART
-                        </button>
-                    </div>
+        <div className="CakeBuilderContainer" style={{ left: left }}>
+            <div className="CakeInside">
+                <div className="WithoutOrder">
+                    <RadioGroup
+                        LayersType={LayersType}
+                        setLayersType={setLayersType}
+                        CreamType={CreamType}
+                        setCreamType={setCreamType}
+                        IcingType={IcingType}
+                        setIcingType={setIcingType}
+                    />
+                    <NumLayersControl NumLayers={NumLayers} setNumLayers={setNumLayers} />
+                    <RenderedCake IcingSrc={IcingSrc} LayerSrc={LayerSrc} CreamSrc={CreamSrc} NumLayers={NumLayers} />
+                </div>
+                <CakesQuantity CakeQuantity={customCakeQuantity} setCakeQuantity={setCustomCakeQuantity} className="CustomCakesQuantity" />
+                <div className="AddToCartContainer">
+                    <button className="waves-effect waves-light btn-medium lighten-1 black-text AddToCart" onClick={addToCart}>
+                        ADD TO CART
+                    </button>
                 </div>
             </div>
             <FiChevronRight
@@ -150,7 +148,7 @@ const CakeBuilder = (props) => {
                     cursor: "pointer",
                 }}
             />
-        </>
+        </div>
     );
 };
 

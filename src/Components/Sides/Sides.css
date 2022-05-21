@@ -3,20 +3,20 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-end;
     position: absolute;
     transition: all 1s ease-in-out;
     background: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
 }
 
 .SidesContainer {
-    width: 80%;
-    height: 75%;
+    width: 100%;
+    height: calc(100% - 100px);
     display: flex;
     flex-direction: row;
     position: relative;
     /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4); */
-    border-radius: 40px;
+    /* border-radius: 40px; */
 }
 
 .SidesContainer button {
@@ -54,7 +54,7 @@
     align-items: center;
 
     transition: all 1.2s ease-in-out;
-    border-radius: 50px 0 0 50px;
+    /* border-radius: 50px 0 0 50px; */
 }
 
 .SidesLeft::after {
@@ -64,7 +64,7 @@
     height: 100%;
     background-color: rgba(254, 147, 147, 0.5);
     z-index: 2;
-    border-radius: 50px 0 0 50px;
+    /* border-radius: 50px 0 0 50px; */
 }
 
 .SidesRight {
@@ -82,7 +82,7 @@
 
     transition: all 1.2s ease-in-out;
 
-    border-radius: 0 50px 50px 0;
+    /* border-radius: 0 50px 50px 0; */
 }
 
 .SidesRight::after {
@@ -93,7 +93,7 @@
     background-color: rgba(93, 123, 234, 0.5);
     z-index: 2;
 
-    border-radius: 0 50px 50px 0;
+    /* border-radius: 0 50px 50px 0; */
 }
 
 .LeftBig {

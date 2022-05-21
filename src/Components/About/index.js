@@ -11,10 +11,7 @@ const index = () => {
     return (
         <div className="AboutContainer">
             <h3>Best cakes since 2018</h3>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias eaque fugiat recusandae suscipit, ipsam ullam, voluptatum odio itaque quo
-                perferendis cupiditate modi alias tempore harum.
-            </p>
+            <p>All of our cakes are handmade with love - no matter if you build your own or chose from the set of our pre-made ones!</p>
             <div className="CakeStores">
                 <div className="leftCakeStore">
                     <img src={first} />

@@ -1,14 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./StaffCard.css";
 
 const StaffCard = (props) => {
+    useEffect(() => {
+        console.log(props.team.name);
+    }, []);
     return (
         <div className="StaffCardContainer">
             <img src={props.team.img} />
-            <p>
-                <b>{props.team.name}</b>
-            </p>
-            <p>{props.team.role}</p>
+            <div>
+                {props.team.name.map((name, index) => (
+                    <div className="TeamInfo">
+                        <b>
+                            <span>{name}</span>
+                        </b>
+                        <p>{props.team.role[index]}</p>
+                    </div>
+                ))}
+            </div>
         </div>
     );
 };
