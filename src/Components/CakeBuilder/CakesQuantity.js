@@ -4,7 +4,7 @@ import { FiMinus, FiPlus } from "react-icons/fi";
 const CakesQuantity = (props) => {
     return (
         <div className={props.className}>
-            <h6 style={{ marginRight: "10px" }}>QUANTITY: </h6>
+            <p style={{ marginRight: "10px", lineHeight: "40px" }}>QUANTITY: </p>
             <FiMinus
                 className="FiMinus"
                 style={{ fontSize: "26px", margin: "6px 8px 0 0 ", cursor: "pointer" }}

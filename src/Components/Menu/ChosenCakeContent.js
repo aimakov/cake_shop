@@ -3,6 +3,11 @@ import ChosenCakePrice from "./ChosenCakePrice";
 import CakesQuantity from "../CakeBuilder/CakesQuantity";
 
 const ChosenCakeContent = (props) => {
+    const addToCart = () => {
+        props.addToCart();
+        window.alert("Your order has been added!");
+    };
+
     return (
         <div className="ChosenCakeDisplayContent">
             <h4 className="ChosenCakeTitle">{props.chosenCake.title}</h4>
@@ -14,7 +19,7 @@ const ChosenCakeContent = (props) => {
                 <CakesQuantity CakeQuantity={props.CakeQuantity} setCakeQuantity={props.setCakeQuantity} className="CakesQuantity" />
             </div>
             <div className="AddToCartContainerMenu">
-                <button className="waves-effect waves-light btn-medium lighten-1 black-text AddToCartMenu" onClick={props.addToCart}>
+                <button className="AddToCartMenu" onClick={addToCart}>
                     ADD TO CART
                 </button>
             </div>

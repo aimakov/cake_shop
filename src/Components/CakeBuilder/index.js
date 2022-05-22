@@ -100,6 +100,7 @@ const CakeBuilder = (props) => {
         };
 
         setCart((prevstate) => [...prevstate, order]);
+        window.alert("Your order has been added!");
     };
 
     const generateUID = () => {
@@ -133,7 +134,7 @@ const CakeBuilder = (props) => {
                 </div>
                 <CakesQuantity CakeQuantity={customCakeQuantity} setCakeQuantity={setCustomCakeQuantity} className="CustomCakesQuantity" />
                 <div className="AddToCartContainer">
-                    <button className="waves-effect waves-light btn-medium lighten-1 black-text AddToCart" onClick={addToCart}>
+                    <button className="AddToCart" onClick={addToCart}>
                         ADD TO CART
                     </button>
                 </div>

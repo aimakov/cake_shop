@@ -19,46 +19,46 @@ const RadioGroup = (props) => {
                 <tbody>
                     <tr>
                         <td className="cake">Layers</td>
-                        <td className="center-align">
+                        <td className="rowCell">
                             <CakeRadio CakePart={props.LayersType} name="Layers" value="Vanilla" setCakePart={props.setLayersType} />
                         </td>
-                        <td className="center-align">
+                        <td className="rowCell">
                             <CakeRadio CakePart={props.LayersType} name="Layers" value="Chocolate" setCakePart={props.setLayersType} />
                         </td>
-                        <td className="center-align">
+                        <td className="rowCell">
                             <CakeRadio CakePart={props.LayersType} name="Layers" value="Lemon" setCakePart={props.setLayersType} />
                         </td>
-                        <td className="center-align">
+                        <td className="rowCell">
                             <CakeRadio CakePart={props.LayersType} name="Layers" value="Strawberry" setCakePart={props.setLayersType} />
                         </td>
                     </tr>
                     <tr>
                         <td className="cake">Cream</td>
-                        <td className="center-align">
+                        <td className="rowCell">
                             <CakeRadio CakePart={props.CreamType} name="Cream" value="Vanilla" setCakePart={props.setCreamType} />
                         </td>
-                        <td className="center-align">
+                        <td className="rowCell">
                             <CakeRadio CakePart={props.CreamType} name="Cream" value="Chocolate" setCakePart={props.setCreamType} />
                         </td>
-                        <td className="center-align">
+                        <td className="rowCell">
                             <CakeRadio CakePart={props.CreamType} name="Cream" value="Lemon" setCakePart={props.setCreamType} />
                         </td>
-                        <td className="center-align">
+                        <td className="rowCell">
                             <CakeRadio CakePart={props.CreamType} name="Cream" value="Strawberry" setCakePart={props.setCreamType} />
                         </td>
                     </tr>
                     <tr>
                         <td className="cake">Icing</td>
-                        <td className="center-align">
+                        <td className="rowCell">
                             <CakeRadio CakePart={props.IcingType} name="Icing" value="Vanilla" setCakePart={props.setIcingType} />
                         </td>
-                        <td className="center-align">
+                        <td className="rowCell">
                             <CakeRadio CakePart={props.IcingType} name="Icing" value="Chocolate" setCakePart={props.setIcingType} />
                         </td>
-                        <td className="center-align">
+                        <td className="rowCell">
                             <CakeRadio CakePart={props.IcingType} name="Icing" value="Lemon" setCakePart={props.setIcingType} />
                         </td>
-                        <td className="center-align">
+                        <td className="rowCell">
                             <CakeRadio CakePart={props.IcingType} name="Icing" value="Strawberry" setCakePart={props.setIcingType} />
                         </td>
                     </tr>

@@ -163,11 +163,12 @@
 .ChosenCakeDisplayContent h4 {
     text-align: center;
     margin-top: 10px;
+    font-size: 20px;
     /* height: 65px; */
 }
 
 .ChosenCakeDisplayContent p {
-    font-size: 12px;
+    font-size: 14px;
     /* padding: 0 30px; */
 }
 
@@ -229,6 +230,7 @@
     line-height: 100% !important;
     padding: 15px !important;
     background-color: rgba(93, 123, 234, 0.5) !important;
+    cursor: pointer;
     /* width: 150px; */
     /* height: 60px !important; */
     /* margin: 0 auto !important; */
