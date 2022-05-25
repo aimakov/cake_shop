@@ -12,24 +12,24 @@ import Staff from "../Components/Staff";
 import "./Layout.css";
 
 const Layout = () => {
-    const [active, setActive] = useState("sides");
+  const [active, setActive] = useState("sides");
 
-    return (
-        <>
-            <div className="Intro">
-                <Navbar />
-                <Intro />
-            </div>
-            <About />
-            <div style={{ position: "relative", overflow: "hidden", height: "100vh" }}>
-                <CakeBuilder active={active} setActive={setActive} />
-                <Sides active={active} setActive={setActive} />
-                <Menu active={active} setActive={setActive} />
-            </div>
-            <Staff />
-            <Contact />
-        </>
-    );
+  return (
+    <>
+      <div className="Intro">
+        <Navbar />
+        <Intro />
+      </div>
+      <About />
+      <div style={{ position: "relative", height: "100vh" }}>
+        <CakeBuilder active={active} setActive={setActive} />
+        <Sides active={active} setActive={setActive} />
+        <Menu active={active} setActive={setActive} />
+      </div>
+      <Staff />
+      <Contact />
+    </>
+  );
 };
 
 export default Layout;

@@ -1,149 +1,149 @@
 .SidesOutside {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    position: absolute;
-    transition: all 1s ease-in-out;
-    background: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: absolute;
+  transition: all 1s ease-in-out;
+  background: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
 }
 
 .SidesContainer {
-    width: 100%;
-    height: calc(100% - 100px);
-    display: flex;
-    flex-direction: row;
-    position: relative;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4); */
-    /* border-radius: 40px; */
+  width: 100%;
+  height: calc(100% - 100px);
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4); */
+  /* border-radius: 40px; */
 }
 
 .SidesContainer button {
-    /* text-decoration: none; */
-    font-family: inherit;
-    border: none;
-    z-index: 5;
-    font-size: 20px;
-    border-radius: 20px;
-    cursor: pointer;
-    color: #000;
-    /* width: 100px; */
-    /* height: 30px; */
-    padding: 20px;
-    background-color: white;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    transition: all 0.2s ease-in-out;
+  /* text-decoration: none; */
+  font-family: inherit;
+  border: none;
+  z-index: 5;
+  font-size: 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #000;
+  /* width: 100px; */
+  /* height: 30px; */
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  transition: all 0.2s ease-in-out;
 }
 
 .SidesContainer button:hover {
-    background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(255, 255, 255, 0.8);
 }
 
 .SidesLeft {
-    background: url("../../images/create.jpeg") center center no-repeat;
-    /* background-size: cover; */
-    width: 50%;
-    position: absolute;
-    height: 100%;
-    background-color: rgba(0, 100, 0, 0.5);
+  background: url("../../images/create.jpeg") center center no-repeat;
+  /* background-size: cover; */
+  width: 50%;
+  position: absolute;
+  height: 100%;
+  background-color: rgba(0, 100, 0, 0.5);
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    transition: all 1.2s ease-in-out;
-    /* border-radius: 50px 0 0 50px; */
+  transition: all 1.2s ease-in-out;
+  /* border-radius: 50px 0 0 50px; */
 }
 
 .SidesLeft::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: rgba(254, 147, 147, 0.5);
-    z-index: 2;
-    /* border-radius: 50px 0 0 50px; */
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(254, 147, 147, 0.5);
+  z-index: 2;
+  /* border-radius: 50px 0 0 50px; */
 }
 
 .SidesRight {
-    background: url("../../images/select.jpeg") center center no-repeat;
-    /* background-size: 100%; */
-    width: 50%;
-    position: absolute;
-    height: 100%;
-    left: 50%;
-    /* background-color: rgba(0, 0, 100, 0.5); */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  background: url("../../images/select.jpeg") center center no-repeat;
+  /* background-size: 100%; */
+  width: 50%;
+  position: absolute;
+  height: 100%;
+  left: 50%;
+  /* background-color: rgba(0, 0, 100, 0.5); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    transition: all 1.2s ease-in-out;
+  transition: all 1.2s ease-in-out;
 
-    /* border-radius: 0 50px 50px 0; */
+  /* border-radius: 0 50px 50px 0; */
 }
 
 .SidesRight::after {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: rgba(93, 123, 234, 0.5);
-    z-index: 2;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(93, 123, 234, 0.5);
+  z-index: 2;
 
-    /* border-radius: 0 50px 50px 0; */
+  /* border-radius: 0 50px 50px 0; */
 }
 
 .LeftBig {
-    width: 80%;
-    z-index: 10;
+  width: 80%;
+  z-index: 10;
 }
 
 .RightBig {
-    width: 80%;
-    left: 20%;
-    z-index: 10;
+  width: 80%;
+  left: 20%;
+  z-index: 10;
 }
 
 .LeftSmall {
-    width: 20%;
-    z-index: 1;
+  width: 20%;
+  z-index: 1;
 }
 
 .RightSmall {
-    width: 20%;
-    left: 80%;
-    z-index: 1;
+  width: 20%;
+  left: 80%;
+  z-index: 1;
 }
 
 @media all and (max-width: 1024px) {
-    .SidesContainer button {
-        /* text-decoration: none; */
-        padding: 10px;
-        font-size: 12px;
-    }
+  .SidesContainer button {
+    /* text-decoration: none; */
+    padding: 10px;
+    font-size: 12px;
+  }
 
-    .LeftBig {
-        width: 70%;
-        z-index: 10;
-    }
+  .LeftBig {
+    width: 70%;
+    z-index: 10;
+  }
 
-    .RightBig {
-        width: 70%;
-        left: 30%;
-        z-index: 10;
-    }
+  .RightBig {
+    width: 70%;
+    left: 30%;
+    z-index: 10;
+  }
 
-    .LeftSmall {
-        width: 30%;
-        z-index: 1;
-    }
+  .LeftSmall {
+    width: 30%;
+    z-index: 1;
+  }
 
-    .RightSmall {
-        width: 30%;
-        left: 70%;
-        z-index: 1;
-    }
+  .RightSmall {
+    width: 30%;
+    left: 70%;
+    z-index: 1;
+  }
 }

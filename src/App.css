@@ -1,20 +1,21 @@
 body {
-    /* background: #c9d6ff;
+  /* background: #c9d6ff;
     background: -webkit-linear-gradient(to right, #e2e2e2, #c9d6ff); 
     background: linear-gradient(to right, #e2e2e2, #c9d6ff);  */
 
-    /* background-image: url("/src/images/Cake_background.jpeg");
+  /* background-image: url("/src/images/Cake_background.jpeg");
     background-size: 100vw;
     background-repeat: no-repeat; */
-    /* background-color: #fbab7e; */
-    background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
-    background-size: 100vw;
-    background-repeat: no-repeat;
+  /* background-color: #fbab7e; */
+  background-image: linear-gradient(62deg, #fbab7e 0%, #f7ce68 100%);
+  background-size: 100vw;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
 }
 
 * {
-    box-sizing: border-box !important;
-    margin: 0;
-    padding: 0;
-    font-family: "Comfortaa", cursive;
+  box-sizing: border-box !important;
+  margin: 0;
+  padding: 0;
+  font-family: "Comfortaa", cursive;
 }
