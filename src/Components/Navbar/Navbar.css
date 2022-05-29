@@ -46,8 +46,8 @@
 .NavbarRight {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 220px;
+    justify-content: flex-end;
+    width: 100px;
 }
 
 .NavbarRight > p {
@@ -72,6 +72,7 @@
     justify-content: space-between;
 
     position: relative;
+    cursor: pointer;
 }
 
 #cartAmount {
@@ -97,6 +98,13 @@
 
     .NavbarRight {
         justify-content: right;
-        display: none;
+        margin-left: auto;
+    }
+
+    #cakesie {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }

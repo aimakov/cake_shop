@@ -1,8 +1,8 @@
 .cartContainer {
-    /* width: 100vw; */
-    /* padding: 100px; */
+    width: 100vw;
+    min-height: 100vh;
+    padding: 100px;
     /* margin-top: 20px; */
-    /* background-color: violet; */
 }
 
 .cartWrapper {
@@ -70,6 +70,10 @@
     height: 100%;
 }
 
+.smallCakeWrapper > .cartElementInfo > p:first-child {
+    margin-bottom: 5px;
+}
+
 .cartPrice {
     position: absolute;
     top: 10px;
@@ -85,12 +89,16 @@
     /* height: 100%; */
 }
 
-.cartElementInfo p {
-    font-size: 11px;
+.customCakeInfo p {
+    font-size: 12px;
+}
+
+.cartElementInfo > p:first-child {
+    font-size: 16px;
     text-align: center;
 }
 
-.cartElementInfo p:nth-child(2n + 1) {
+.cartElementInfo > p:last-child {
     /* color: red; */
     text-align: right;
     padding-right: 5px;
@@ -108,6 +116,7 @@
 
 #totalPrice {
     margin: 15px 0;
+    font-size: 16px;
 }
 
 form {
@@ -132,6 +141,18 @@ label {
     font-weight: 400;
 }
 
+form input {
+    width: 220px;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+#DeliveryDateInput {
+    margin-bottom: 0;
+}
+
 form input[type="email"] {
     width: 220px !important;
 }
@@ -152,4 +173,13 @@ form input[type="email"] {
 
 .cartWrapper button:last-of-type {
     background-color: #ff9800;
+}
+
+.cartButtons button {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#emptyCart {
+    text-align: center;
 }

@@ -29,7 +29,6 @@ const CartOrders = () => {
     const [totalPrice, setTotalPrice] = useState(0);
 
     useEffect(() => {
-        console.log(cart, Cakes);
         setTotalPrice(
             parseFloat(
                 cart
@@ -72,75 +71,76 @@ const CartOrders = () => {
     };
 
     return (
-        // <div className="cartContainer">
-        <div className="cartWrapper">
-            <div className="cartElementsList">
-                {React.Children.toArray(
-                    cart.map((el) => {
-                        return (
-                            <div className="cartElementWrapper">
-                                <div className="cartElement">
-                                    {el.type === "selected" ? (
-                                        <>
-                                            <img src={Cakes[el.cake].image} />
-                                            <div className="cartElementInfo">
-                                                <h6>
-                                                    {Cakes[el.cake].title} {el.amount > 1 ? `x${el.amount}` : null}
-                                                </h6>
-                                                <p className="cartPrice">
-                                                    ${parseFloat(String((Number(Cakes[el.cake].price.slice(-5)) - 5) * el.amount).slice(0, 5)).toFixed(2)}
-                                                </p>
-                                            </div>
-                                        </>
-                                    ) : (
-                                        <div className="smallCakeWrapper">
-                                            <RenderedCake
-                                                IcingSrc={handleIcing(el.icingType)}
-                                                LayerSrc={handleLayer(el.layerType)}
-                                                CreamSrc={handleCream(el.creamType)}
-                                                NumLayers={el.numberOfLayers}
-                                                small={true}
-                                            />
-                                            <div className="cartElementInfo">
-                                                <h6>Custom Cake {el.amount > 1 ? `x${el.amount}` : null}</h6>
-                                                <div className="customCakeInfo">
-                                                    <p>Layers: </p> <p>{el.layerType}</p>
-                                                    <p>Cream: </p> <p>{el.creamType}</p>
-                                                    <p>Icing: </p> <p>{el.icingType}</p>
-                                                    <p>Layers: </p> <p>{el.numberOfLayers}</p>
+        <div className="cartContainer">
+            <div className="cartWrapper">
+                <div className="cartElementsList">
+                    {cart.length === 0 ? <p id="emptyCart">Cart is empty</p> : null}
+                    {React.Children.toArray(
+                        cart.map((el) => {
+                            return (
+                                <div className="cartElementWrapper">
+                                    <div className="cartElement">
+                                        {el.type === "selected" ? (
+                                            <>
+                                                <img src={Cakes[el.cake].image} />
+                                                <div className="cartElementInfo selectedInfo">
+                                                    <p>
+                                                        {Cakes[el.cake].title} {el.amount > 1 ? `x${el.amount}` : null}
+                                                    </p>
+                                                    <p className="cartPrice">
+                                                        ${parseFloat(String((Number(Cakes[el.cake].price.slice(-5)) - 5) * el.amount).slice(0, 5)).toFixed(2)}
+                                                    </p>
                                                 </div>
-                                                <p className="cartPrice">${parseFloat(String(Number(el.numberOfLayers) * 12.95) * el.amount).toFixed(2)}</p>
+                                            </>
+                                        ) : (
+                                            <div className="smallCakeWrapper">
+                                                <RenderedCake
+                                                    IcingSrc={handleIcing(el.icingType)}
+                                                    LayerSrc={handleLayer(el.layerType)}
+                                                    CreamSrc={handleCream(el.creamType)}
+                                                    NumLayers={el.numberOfLayers}
+                                                    small={true}
+                                                />
+                                                <div className="cartElementInfo">
+                                                    <p>Custom Cake {el.amount > 1 ? `x${el.amount}` : null}</p>
+                                                    <div className="customCakeInfo">
+                                                        <p>Layers: </p> <p>{el.layerType}</p>
+                                                        <p>Cream: </p> <p>{el.creamType}</p>
+                                                        <p>Icing: </p> <p>{el.icingType}</p>
+                                                        <p>Layers: </p> <p>{el.numberOfLayers}</p>
+                                                    </div>
+                                                    <p className="cartPrice">${parseFloat(String(Number(el.numberOfLayers) * 12.95) * el.amount).toFixed(2)}</p>
+                                                </div>
                                             </div>
-                                        </div>
-                                    )}
+                                        )}
+                                    </div>
+                                    <div className="cartElementIcons" onClick={() => handleDelete(el.uid)}>
+                                        <FiX />
+                                    </div>
                                 </div>
-                                <div className="cartElementIcons" onClick={() => handleDelete(el.uid)}>
-                                    <FiX />
-                                </div>
-                            </div>
-                        );
-                    })
-                )}
-            </div>
-            <h6 id="totalPrice">Total Price: ${totalPrice}</h6>
-            <form>
-                <div className="formEntry">
-                    <label htmlFor="">Enter your email:</label>
-                    <input placeholder="email" type="email" />
+                            );
+                        })
+                    )}
                 </div>
-                <div className="formEntry">
-                    <label>Choose Pick-Up Date:</label>
-                    <input type="date" id="DeliveryDateInput" />
+                <p id="totalPrice">Total Price: ${totalPrice}</p>
+                <form>
+                    <div className="formEntry">
+                        <label htmlFor="">Enter your email:</label>
+                        <input placeholder="email" type="email" />
+                    </div>
+                    <div className="formEntry">
+                        <label>Choose Pick-Up Date:</label>
+                        <input type="date" id="DeliveryDateInput" />
+                    </div>
+                </form>
+                <div className="cartButtons">
+                    <button className="waves-effect waves-light btn-small lighten-5 black-text" onClick={() => history.goBack()}>
+                        Go Back
+                    </button>
+                    <button className="waves-effect waves-light btn-small orange lighten-1 black-text">Checkout</button>
                 </div>
-            </form>
-            <div>
-                <button className="waves-effect waves-light btn-small lighten-5 black-text" onClick={() => history.goBack()}>
-                    Go Back
-                </button>
-                <button className="waves-effect waves-light btn-small orange lighten-1 black-text">Checkout</button>
             </div>
         </div>
-        // </div>
     );
 };
 

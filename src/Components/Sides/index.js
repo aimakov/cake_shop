@@ -31,10 +31,14 @@ const Sides = (props) => {
             <div className="SidesOutside" id="sides" style={{ left: left }}>
                 <div className="SidesContainer">
                     <div className={leftClass} onMouseEnter={LeftHover} onMouseLeave={() => (setLeftClass("SidesLeft"), setRightClass("SidesRight"))}>
-                        <button onClick={() => props.setActive("create")}>Create Cake</button>
+                        <button onClick={() => props.setActive("create")}>
+                            <p>Create Cake</p>
+                        </button>
                     </div>
                     <div className={rightClass} onMouseEnter={RightHover} onMouseLeave={() => (setLeftClass("SidesLeft"), setRightClass("SidesRight"))}>
-                        <button onClick={() => props.setActive("select")}>Select Cake</button>
+                        <button onClick={() => props.setActive("select")}>
+                            <p>Select Cake</p>
+                        </button>
                     </div>
                 </div>
             </div>

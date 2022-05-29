@@ -28,5 +28,22 @@
     margin-top: 3rem;
 }
 
-@media all and (max-width: 567px) {
+@media all and (max-width: 1023px) {
+    .CardWrapper {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .StaffContainer {
+        padding: 0;
+    }
+
+    .StaffContainer h3 {
+        font-size: 1.5rem;
+    }
+
+    .StaffContainer > p {
+        font-size: 1rem;
+    }
 }

@@ -8,7 +8,7 @@
 #menu-bar {
     width: 45px;
     height: 25px;
-    margin: 40px 30px 35px auto;
+    margin: 40px auto 35px 30px;
     cursor: pointer;
 }
 
@@ -58,7 +58,7 @@
 .menu-bg,
 #menu {
     top: 0;
-    right: 0;
+    left: 0;
     position: absolute;
 }
 
@@ -106,7 +106,7 @@
 .change-bg {
     width: 520px;
     height: 460px;
-    transform: translate(55%, -15%);
+    transform: translate(-55%, -15%);
 }
 
 @media all and (min-width: 1023px) {

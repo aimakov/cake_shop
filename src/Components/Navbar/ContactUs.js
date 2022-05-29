@@ -11,7 +11,7 @@ const ContactUs = () => {
 
     return (
         <div className="NavbarRight">
-            <p>Contact Us</p>
+            {/* <p>Contact Us</p> */}
             <div id="shoppingCart">
                 <FiShoppingCart className="NavLink" onClick={() => history.push("/cart")} />
                 <p id="cartAmount">{cart.length}</p>

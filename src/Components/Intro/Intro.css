@@ -107,7 +107,7 @@
 @media screen and (max-width: 1023px) {
     .IntroContainer {
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: flex-start;
     }
 
     .IntroText {

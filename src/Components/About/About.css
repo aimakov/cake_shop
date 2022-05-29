@@ -49,6 +49,14 @@
 }
 
 @media all and (max-width: 1023px) {
+    .AboutContainer h3 {
+        font-size: 1.5rem;
+    }
+
+    .AboutContainer p {
+        font-size: 1rem;
+    }
+
     .CakeStores {
         flex-direction: column;
     }
