@@ -35,6 +35,10 @@
     width: 300px;
 }
 
+.form {
+    min-width: none;
+}
+
 .ContactInput {
     margin: 0;
     margin-bottom: 10px;

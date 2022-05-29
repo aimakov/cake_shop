@@ -73,7 +73,7 @@ const CartOrders = () => {
     return (
         <div className="cartContainer">
             <div className="cartWrapper">
-                <div className="cartElementsList">
+                <div id="cartElementsList">
                     {cart.length === 0 ? <p id="emptyCart">Cart is empty</p> : null}
                     {React.Children.toArray(
                         cart.map((el) => {
@@ -123,7 +123,7 @@ const CartOrders = () => {
                     )}
                 </div>
                 <p id="totalPrice">Total Price: ${totalPrice}</p>
-                <form>
+                <form id="cartForm">
                     <div className="formEntry">
                         <label htmlFor="">Enter your email:</label>
                         <input placeholder="email" type="email" />

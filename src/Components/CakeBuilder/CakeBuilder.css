@@ -23,7 +23,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 40px;
+    border-radius: 20px;
     padding: 20px;
 }
 
@@ -117,16 +117,16 @@ th {
 
 .AddToCart {
     /* padding: 20px; */
-    border-radius: 15px !important;
+    border-radius: 15px;
     border: none;
-    text-align: center !important;
-    line-height: 100% !important;
-    padding: 15px !important;
-    background-color: rgba(254, 147, 147, 0.5) !important;
+    text-align: center;
+    line-height: 100%;
+    padding: 15px;
+    background-color: rgba(254, 147, 147, 0.5);
     cursor: pointer;
     /* width: 150px; */
-    /* height: 60px !important; */
-    /* margin: 0 auto !important; */
+    /* height: 60px ; */
+    /* margin: 0 auto ; */
 }
 
 .AddToCartContainer {
@@ -137,12 +137,22 @@ th {
     /* margin: 20px 0 60px 0; */
 }
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 1023px) {
     .CakeBuilderContainer {
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
+        padding-bottom: 75px;
         /* height: 600px; */
+    }
+
+    .CakeBuilderControls {
+        height: 120px;
+        font-size: 14px;
+    }
+
+    .CakeBuilderControls th {
+        padding: 3px;
     }
 
     .NumLayersControl {
@@ -171,7 +181,7 @@ th {
         flex-direction: column;
         align-items: center;
         justify-content: space-evenly;
-        padding: 5px;
+        padding: 10px;
         /* padding-right: 50px; */
     }
 

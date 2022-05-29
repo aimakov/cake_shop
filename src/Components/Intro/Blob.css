@@ -36,7 +36,7 @@
     }
 
     .blobContainer svg {
-        width: clamp(400px, 80%, 600px);
+        width: clamp(350px, 80%, 600px);
         /* height: 100%; */
     }
 

@@ -5,7 +5,7 @@ import CakeRadio from "./CakeRadio";
 const RadioGroup = (props) => {
     return (
         <div className="CakeBuilderControls">
-            <table className="center-align">
+            <table>
                 <thead>
                     <tr>
                         <th></th>
