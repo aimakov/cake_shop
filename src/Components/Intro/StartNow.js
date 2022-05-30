@@ -18,15 +18,7 @@ const StartNow = () => {
     };
 
     return (
-        <StartNowButton
-            to="sides"
-            smooth={true}
-            duration={750}
-            spy={true}
-            exact="true"
-            onClick={startNowHandler}
-            className="waves-effect waves-light btn-large orange lighten-1 black-text"
-        >
+        <StartNowButton to="sides" smooth={true} duration={750} spy={true} exact="true" onClick={startNowHandler}>
             Choose Now
         </StartNowButton>
     );

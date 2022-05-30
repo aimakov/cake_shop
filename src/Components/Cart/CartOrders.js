@@ -125,11 +125,11 @@ const CartOrders = () => {
                 <p id="totalPrice">Total Price: ${totalPrice}</p>
                 <form id="cartForm">
                     <div className="formEntry">
-                        <label htmlFor="">Enter your email:</label>
+                        <label htmlFor="">Email:</label>
                         <input placeholder="email" type="email" />
                     </div>
                     <div className="formEntry">
-                        <label>Choose Pick-Up Date:</label>
+                        <label>Pick-Up Date:</label>
                         <input type="date" id="DeliveryDateInput" />
                     </div>
                 </form>

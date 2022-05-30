@@ -24,7 +24,7 @@ const Staff = () => {
     };
 
     return (
-        <div className="StaffContainer">
+        <div className="StaffContainer" id="staff">
             <h3>Our Team</h3>
             {/* <p>{loremIpsum({ p: 1 })[0].split(".").slice(0, 4).join(".")}.</p> */}
             <p>Cakesie is a family-owned business. Our team consists of these beautiful people:</p>

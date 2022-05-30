@@ -9,7 +9,7 @@ import "./About.css";
 
 const index = () => {
     return (
-        <div className="AboutContainer">
+        <div className="AboutContainer" id="about">
             <h3>Best cakes since 2018</h3>
             <p>All of our cakes are handmade with love - no matter if you build your own or chose from the set of our pre-made ones!</p>
             <div className="CakeStores">

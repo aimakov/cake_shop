@@ -7,7 +7,7 @@ import IntroText from "./IntroText";
 const Intro = () => {
     return (
         <>
-            <div className="IntroContainer">
+            <div className="IntroContainer" id="intro">
                 <Blob />
                 <IntroText />
             </div>
