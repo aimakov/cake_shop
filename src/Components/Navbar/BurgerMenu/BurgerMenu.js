@@ -1,9 +1,16 @@
 import React, { useState } from "react";
-import { Link } from "react-scroll/modules";
+// import { Link } from "react-scroll/modules";
 import "./BurgerMenu.css";
+
+import styled from "styled-components";
+import { Link, animateScroll } from "react-scroll";
 
 const BurgerMenu = () => {
     const [menuClass, setMenuClass] = useState(false);
+
+    // const burgerLink = styled(Link)`
+
+    // `
 
     return (
         <>
@@ -22,19 +29,29 @@ const BurgerMenu = () => {
                 <nav className={menuClass ? "nav change" : "nav"}>
                     <ul>
                         <li>
-                            <Link>Home</Link>
+                            <Link smooth={true} duration={750} spy={true} exact="true" onClick={animateScroll.scrollToTop}>
+                                Home
+                            </Link>
                         </li>
                         <li>
-                            <Link>About</Link>
+                            <Link to="about" smooth={true} duration={750} spy={true} exact="true">
+                                About
+                            </Link>
                         </li>
                         <li>
-                            <Link>Shopping</Link>
+                            <Link to="sides" smooth={true} duration={750} spy={true} exact="true">
+                                Shopping
+                            </Link>
                         </li>
                         <li>
-                            <Link>Our Team</Link>
+                            <Link to="staff" smooth={true} duration={750} spy={true} exact="true">
+                                Our Team
+                            </Link>
                         </li>
                         <li>
-                            <Link>Contact Us</Link>
+                            <Link to="contact" smooth={true} duration={750} spy={true} exact="true">
+                                Contact Us
+                            </Link>
                         </li>
                     </ul>
                 </nav>
