@@ -3,7 +3,7 @@ import Navbar from "../Components/Navbar/Navbar";
 import Intro from "../Components/Intro/";
 import CakeBuilder from "../Components/CakeBuilder/index.js";
 import Sides from "../Components/Sides";
-import Footer from "../Components/Footer";
+// import Footer from "../Components/Footer";
 import Menu from "../Components/Menu/Menu";
 import Contact from "../Components/Contact";
 import About from "../Components/About";

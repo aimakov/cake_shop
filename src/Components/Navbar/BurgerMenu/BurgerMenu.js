@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-// import { Link } from "react-scroll/modules";
 import "./BurgerMenu.css";
 
-import styled from "styled-components";
 import { Link, animateScroll } from "react-scroll";
 
 const BurgerMenu = () => {

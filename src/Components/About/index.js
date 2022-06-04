@@ -14,13 +14,13 @@ const index = () => {
             <p>All of our cakes are handmade with love - no matter if you build your own or chose from the set of our pre-made ones!</p>
             <div className="CakeStores">
                 <div className="leftCakeStore">
-                    <img src={first} />
+                    <img src={first} alt="" />
                 </div>
                 <div className="rightCakeStores">
-                    <img src={second} />
-                    <img src={third} />
-                    <img src={fourth} />
-                    <img src={fifth} />
+                    <img src={second} alt="" />
+                    <img src={third} alt="" />
+                    <img src={fourth} alt="" />
+                    <img src={fifth} alt="" />
                 </div>
             </div>
         </div>

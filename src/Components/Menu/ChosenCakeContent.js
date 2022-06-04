@@ -11,7 +11,7 @@ const ChosenCakeContent = (props) => {
     return (
         <div className="ChosenCakeDisplayContent">
             <h4 className="ChosenCakeTitle">{props.chosenCake.title}</h4>
-            <p>
+            <p id="cakeDescription">
                 <b>Description: </b> {props.chosenCake.description}
             </p>
             <div className="PriceQuantity" style={{ display: "flex" }}>

@@ -1,13 +1,10 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./StaffCard.css";
 
 const StaffCard = (props) => {
-    useEffect(() => {
-        console.log(props.team.name);
-    }, []);
     return (
         <div className="StaffCardContainer">
-            <img src={props.team.img} />
+            <img src={props.team.img} alt="" />
             <div>
                 {props.team.name.map((name, index) => (
                     <div className="TeamInfo">

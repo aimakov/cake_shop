@@ -1,5 +1,5 @@
 .StaffCardContainer {
-    width: clamp(250px, 35%, 500px);
+    width: clamp(200px, 35%, 500px);
 }
 
 .StaffCardContainer > div {

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Menu.css";
 
 const MenuElement = (props) => {
@@ -13,6 +13,7 @@ const MenuElement = (props) => {
                         // onClick={() => setIsOpen(true)}
                         onClick={() => props.setChosenCake(props.cake_id)}
                         style={{ borderRadius: "30px 30px 0 0 ", width: "100%", display: "block" }}
+                        alt=""
                     />
 
                     <div className="CakePrice">{props.cake.price}</div>

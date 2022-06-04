@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
-import { FiPlusCircle, FiMinusCircle, FiChevronRight, FiMinus, FiPlus } from "react-icons/fi";
+import { FiChevronRight } from "react-icons/fi";
 import "./CakeBuilder.css";
 
-import { Layer, Cream, Icing } from "./cakeComponents";
+import { Layer, Cream } from "./cakeComponents";
 import RadioGroup from "./RadioGroup";
 import { CartContext } from "../../App";
 
@@ -67,7 +67,6 @@ const CakeBuilder = (props) => {
     let AdditionalLayers = [];
 
     useEffect(() => {
-        AdditionalLayers = [];
         for (let i = 2; i < NumLayers; i++) {
             AdditionalLayers.push(
                 <>
@@ -76,6 +75,7 @@ const CakeBuilder = (props) => {
                 </>
             );
         }
+        // eslint-disable-next-line
     }, [NumLayers, LayersType, CreamType]);
 
     useEffect(() => {

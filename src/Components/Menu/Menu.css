@@ -146,6 +146,7 @@
 .ChosenCakeDisplayContent {
     /* flex-grow: 1; */
     margin-left: 30px;
+    min-height: 250px;
     max-width: 650px;
     border-radius: 30px;
     /* margin: 0 auto; */
@@ -164,12 +165,18 @@
     text-align: center;
     margin-top: 10px;
     font-size: 20px;
-    /* height: 65px; */
+    height: 30px;
 }
 
 .ChosenCakeDisplayContent p {
     font-size: 14px;
+    /* min-height: 40px; */
     /* padding: 0 30px; */
+}
+
+#cakeDescription {
+    /* color: red; */
+    height: 50px;
 }
 
 /* .ChosenCakeDisplayContent button {

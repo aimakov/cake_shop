@@ -6,7 +6,7 @@ import { useHistory } from "react-router-dom";
 import { CartContext } from "../../App";
 
 const ContactUs = () => {
-    const [cart, setCart] = useContext(CartContext);
+    const [cart] = useContext(CartContext);
     const history = useHistory();
 
     return (

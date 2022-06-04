@@ -11,7 +11,7 @@ const blob = () => {
                     transform="translate(100 100)"
                 />
             </svg>
-            <img src={Cake_1} />
+            <img src={Cake_1} alt="" />
         </div>
     );
 };

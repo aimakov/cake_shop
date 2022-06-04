@@ -1,5 +1,4 @@
 import React from "react";
-import { loremIpsum } from "react-lorem-ipsum";
 import Nurik_Aigerim_Ayana from "../../images/Staff/Nurik_Aigerim_Ayana.jpeg";
 import Nurba_Hyewon from "../../images/Staff/Nurba_Hyewon.jpeg";
 import StaffCard from "./StaffCard";

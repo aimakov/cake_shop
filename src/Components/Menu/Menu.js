@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
 import "./Menu.css";
-import MenuElement from "./MenuElement";
 
 import Cakes from "./Cakes";
 import { VscChevronLeft, VscChevronRight } from "react-icons/vsc";
@@ -19,7 +18,7 @@ const Menu = (props) => {
     const [chosenCakeQuantity, setChosenCakeQuantity] = useState(1);
 
     const [left, setLeft] = useState("100vw");
-    const { height, width } = useWindowDimensions();
+    const [width] = useWindowDimensions();
 
     const [cart, setCart] = useContext(CartContext);
 
@@ -79,7 +78,7 @@ const Menu = (props) => {
                             )}
 
                             <div className="ChosenCakeDisplayImage">
-                                <img src={Cakes[chosenCake].image} />
+                                <img src={Cakes[chosenCake].image} alt="" />
                             </div>
 
                             {width <= 1024 && (

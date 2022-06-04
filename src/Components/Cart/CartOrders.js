@@ -45,9 +45,9 @@ const CartOrders = () => {
         setCart(cart.filter((el) => el.uid !== uid));
     };
 
-    const handleDeleteCustomCake = (id) => {
-        setCart(cart.filter((el) => el.cake !== id));
-    };
+    // const handleDeleteCustomCake = (id) => {
+    //     setCart(cart.filter((el) => el.cake !== id));
+    // };
 
     const handleIcing = (icingType) => {
         if (icingType === "Vanilla") return VanillaIcing;
@@ -82,7 +82,7 @@ const CartOrders = () => {
                                     <div className="cartElement">
                                         {el.type === "selected" ? (
                                             <>
-                                                <img src={Cakes[el.cake].image} />
+                                                <img src={Cakes[el.cake].image} alt="" />
                                                 <div className="cartElementInfo selectedInfo">
                                                     <p>
                                                         {Cakes[el.cake].title} {el.amount > 1 ? `x${el.amount}` : null}
