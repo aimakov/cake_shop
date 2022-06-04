@@ -1,7 +1,7 @@
 .AboutContainer {
     width: 100vw;
     min-height: 100vh;
-    padding: 100px 0;
+    padding-top: 100px;
     /* height: 300px; */
     /* background-image: linear-gradient(118deg, #fbab7e 0%, #f7ce68 100%); */
     display: flex;
@@ -62,15 +62,26 @@
         flex-direction: column;
     }
 
-    .leftCakeStore {
-        width: 75%;
+    .leftCakeStore,
+    .rightCakeStores {
+        width: 60%;
         margin: 0 auto;
     }
+}
 
+@media all and (max-width: 425px) {
+    .leftCakeStore,
     .rightCakeStores {
-        width: 75%;
-        margin: 0 auto;
-        /* grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 1fr; */
+        width: 80%;
+    }
+}
+
+@media all and (min-width: 2560px) {
+    .AboutContainer h3 {
+        font-size: 60px;
+    }
+
+    .AboutContainer p {
+        font-size: 30px;
     }
 }

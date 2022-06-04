@@ -7,7 +7,7 @@ const StaffCard = (props) => {
             <img src={props.team.img} alt="" />
             <div>
                 {props.team.name.map((name, index) => (
-                    <div className="TeamInfo">
+                    <div className="TeamInfo" key={`${name}${index}`}>
                         <b>
                             <span>{name}</span>
                         </b>

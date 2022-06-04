@@ -1,6 +1,6 @@
 .ContactContainer {
     width: 100vw;
-    min-height: 80vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,7 +32,7 @@
     background: transparent;
     padding: 0;
     height: 360px;
-    width: 300px;
+    width: 400px;
 }
 
 .form {
@@ -125,6 +125,10 @@
 }
 
 @media all and (max-width: 1023px) {
+    .ContactContainer {
+        padding-top: 100px;
+    }
+
     .FirstLine,
     .SecondLine,
     .ContactForm > button {
@@ -139,5 +143,35 @@
     .ContactForm {
         margin-bottom: 2rem;
         width: 100%;
+    }
+}
+
+@media all and (min-width: 2560px) {
+    .ContactHeadline {
+        font-size: 2rem;
+        width: 100%;
+    }
+
+    .ContactForm {
+        width: 800px;
+        height: 600px;
+    }
+
+    .ContactForm label,
+    .ContactForm input,
+    .ContactForm input::placeholder,
+    .ContactForm textarea,
+    .ContactForm textarea::placeholder {
+        font-size: 20px;
+        /* color: red; */
+    }
+
+    .ContactInput {
+        height: 60px;
+        padding: 20px;
+    }
+
+    .SubmitButton {
+        font-size: 20px;
     }
 }

@@ -13,20 +13,20 @@ const Contact = () => {
                 <form className="ContactForm">
                     <div className="FirstLine">
                         <div>
-                            <label for="FirstName">
+                            <label htmlFor="FirstName">
                                 First Name<sup>*</sup>
                             </label>
                             <input id="FirstName" type="text" name="FirstName" placeholder="Nurbolat" className="ContactInput" />
                         </div>
                         <div>
-                            <label for="SecondName">
+                            <label htmlFor="SecondName">
                                 Second Name<sup>*</sup>
                             </label>
                             <input id="SecondName" type="text" name="SecondName" placeholder="Aimakov" className="ContactInput" />
                         </div>
                     </div>
                     <div className="SecondLine">
-                        <label for="ContactMessage">
+                        <label htmlFor="ContactMessage">
                             Message<sup>*</sup>
                         </label>
                         <textarea placeholder="Follow me @aimakov.dev on Instagram 😉" id="ContactMessage" className="ContactInput"></textarea>

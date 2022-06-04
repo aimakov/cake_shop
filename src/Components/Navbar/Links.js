@@ -14,7 +14,7 @@ const Links = () => {
 
     return (
         <div className="Links">
-            <SLink smooth={true} duration={750} spy={true} exact="true" onClick={animateScroll.scrollToTop}>
+            <SLink to="" smooth={true} duration={750} spy={true} exact="true" onClick={animateScroll.scrollToTop}>
                 Home
             </SLink>
             <SLink to="about" smooth={true} duration={750} spy={true} exact="true">

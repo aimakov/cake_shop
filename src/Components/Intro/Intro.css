@@ -6,9 +6,10 @@
 
 .IntroText {
     display: flex;
-    width: 60%;
+    width: 50%;
     flex-direction: column;
     justify-content: center;
+    padding-right: 5%;
     /* margin-top: -50px; */
     /* padding-right: 100px; */
 }
@@ -23,7 +24,7 @@
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
     grid-template-rows: 1fr 1fr;
-    width: 50vw;
+    width: 100%;
     margin: 50px auto;
     margin-bottom: 20px;
     /* width: clamp(500px, 80%, 800px); */
@@ -108,10 +109,12 @@
     .IntroContainer {
         flex-direction: column;
         justify-content: flex-start;
+        gap: 40px;
     }
 
     .IntroText {
         width: 100%;
+        padding: 0;
     }
 
     .slogan {
@@ -127,7 +130,12 @@
 
     .slogan > p:first-child,
     .slogan > p:nth-child(3) {
-        font-size: clamp(32px, 5vw, 100px);
+        font-size: clamp(30px, 5vw, 100px);
+    }
+
+    .slogan > p:nth-child(3)::before,
+    .slogan > p:first-child::before {
+        font-size: clamp(30px, 5vw, 100px);
     }
 
     /* .slogan > p:first-child,
@@ -136,8 +144,21 @@
     } */
 }
 
-/* @media screen and (min-width: 1024px) {
-    .slogan {
-        font-size: 2.5rem;
+@media screen and (min-width: 2560px) {
+    .slogan > p:first-child,
+    .slogan > p:nth-child(3) {
+        font-size: clamp(36px, 3vw, 200px);
     }
-} */
+
+    .slogan > p:first-child::before,
+    .slogan > p:nth-child(3)::before {
+        font-size: clamp(36px, 3.1vw, 200px);
+    }
+
+    .slogan > p:last-child {
+        font-size: clamp(20px, 1.2vw, 100px);
+        letter-spacing: clamp(2px, 0.8vw, 16px);
+
+        padding-top: 10px;
+    }
+}

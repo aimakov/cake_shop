@@ -65,10 +65,10 @@ const Menu = (props) => {
                     style={{ position: "absolute", top: "50%", left: "1%", fontSize: "3rem", cursor: "pointer" }}
                 />
                 <div className="Menu">
-                    {width > 1024 && <FullCakesDisplay currentCake={currentCake} setCurrentCake={setCurrentCake} Cakes={Cakes} setChosenCake={setChosenCake} />}
+                    {width > 1023 && <FullCakesDisplay currentCake={currentCake} setCurrentCake={setCurrentCake} Cakes={Cakes} setChosenCake={setChosenCake} />}
                     <div className="ChosenCakeDisplay">
                         <div className="singleMenuCake">
-                            {width <= 1024 && (
+                            {width <= 1023 && (
                                 <button
                                     className="changeCakeButton"
                                     onClick={() => setChosenCake((prevstate) => (prevstate - 1 + Cakes.length) % Cakes.length)}
@@ -81,7 +81,7 @@ const Menu = (props) => {
                                 <img src={Cakes[chosenCake].image} alt="" />
                             </div>
 
-                            {width <= 1024 && (
+                            {width <= 1023 && (
                                 <button className="changeCakeButton" onClick={() => setChosenCake((prevstate) => (prevstate + 1) % Cakes.length)}>
                                     <VscChevronRight />
                                 </button>

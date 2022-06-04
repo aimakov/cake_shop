@@ -10,7 +10,7 @@
 
 .blobContainer svg {
     position: absolute;
-    width: 700px;
+    width: 100%;
     height: auto;
     top: 50%;
     left: 50%;
@@ -19,7 +19,7 @@
 
 .blobContainer > img {
     position: absolute;
-    width: 350px;
+    width: 55%;
     height: auto;
     top: 50%;
     left: 50%;
@@ -36,11 +36,10 @@
     }
 
     .blobContainer svg {
-        width: clamp(350px, 80%, 600px);
-        /* height: 100%; */
+        width: clamp(300px, 60%, 600px);
     }
 
     .blobContainer img {
-        width: clamp(200px, 40%, 300px);
+        width: clamp(180px, 30%, 300px);
     }
 }

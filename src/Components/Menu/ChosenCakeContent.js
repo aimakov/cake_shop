@@ -10,18 +10,22 @@ const ChosenCakeContent = (props) => {
 
     return (
         <div className="ChosenCakeDisplayContent">
-            <h4 className="ChosenCakeTitle">{props.chosenCake.title}</h4>
-            <p id="cakeDescription">
-                <b>Description: </b> {props.chosenCake.description}
-            </p>
-            <div className="PriceQuantity" style={{ display: "flex" }}>
-                <ChosenCakePrice price={props.chosenCake.price} />
-                <CakesQuantity CakeQuantity={props.CakeQuantity} setCakeQuantity={props.setCakeQuantity} className="CakesQuantity" />
+            <div>
+                <h4 className="ChosenCakeTitle">{props.chosenCake.title}</h4>
+                <p id="cakeDescription">
+                    <b>Description: </b> {props.chosenCake.description}
+                </p>
             </div>
-            <div className="AddToCartContainerMenu">
-                <button className="AddToCartMenu" onClick={addToCart}>
-                    ADD TO CART
-                </button>
+            <div>
+                <div className="PriceQuantity" style={{ display: "flex" }}>
+                    <ChosenCakePrice price={props.chosenCake.price} />
+                    <CakesQuantity CakeQuantity={props.CakeQuantity} setCakeQuantity={props.setCakeQuantity} className="CakesQuantity" />
+                </div>
+                <div className="AddToCartContainerMenu">
+                    <button className="AddToCartMenu" onClick={addToCart}>
+                        ADD TO CART
+                    </button>
+                </div>
             </div>
         </div>
     );

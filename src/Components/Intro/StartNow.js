@@ -11,6 +11,11 @@ const StartNow = () => {
         background-color: rgba(255, 255, 255, 0.5);
         cursor: pointer;
         margin: 0 auto;
+
+        @media (min-width: 2560px) {
+            font-size: 30px;
+            padding: 20px 30px;
+        }
     `;
 
     const startNowHandler = () => {

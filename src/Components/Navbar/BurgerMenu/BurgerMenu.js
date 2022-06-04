@@ -27,7 +27,7 @@ const BurgerMenu = () => {
                 <nav className={menuClass ? "nav change" : "nav"}>
                     <ul>
                         <li>
-                            <Link smooth={true} duration={750} spy={true} exact="true" onClick={animateScroll.scrollToTop}>
+                            <Link to="" smooth={true} duration={750} spy={true} exact="true" onClick={animateScroll.scrollToTop}>
                                 Home
                             </Link>
                         </li>

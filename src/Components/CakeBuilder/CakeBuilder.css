@@ -9,7 +9,8 @@
     /* height: 80%; */
     width: 100vw;
     height: 100vh;
-    padding: 20px;
+    padding-top: 100px;
+    /* padding: 20px; */
     background-color: rgba(254, 147, 147, 0.5);
     display: flex;
     justify-content: center;
@@ -141,14 +142,14 @@ th {
     .CakeBuilderContainer {
         flex-direction: column;
         align-items: center;
-        justify-content: flex-end;
-        padding-bottom: 75px;
+        justify-content: center;
+        /* padding-bottom: 75px; */
         /* height: 600px; */
     }
 
     .CakeBuilderControls {
         height: 120px;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .CakeBuilderControls th {

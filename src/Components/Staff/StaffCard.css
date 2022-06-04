@@ -15,6 +15,18 @@
 
 .StaffCardContainer > img {
     object-fit: cover;
-    width: 100%;
+    width: 90%;
     border-radius: 25px;
+}
+
+@media all and (max-width: 1023px) {
+    .StaffCardContainer > img {
+        width: 80%;
+    }
+}
+
+@media all and (max-width: 425px) {
+    .StaffCardContainer > img {
+        width: 95%;
+    }
 }

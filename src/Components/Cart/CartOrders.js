@@ -25,6 +25,8 @@ import { useState } from "react/cjs/react.development";
 const CartOrders = () => {
     const history = useHistory();
     const [cart, setCart] = useContext(CartContext);
+    const [email, setEmail] = useState();
+    const [date, setDate] = useState();
 
     const [totalPrice, setTotalPrice] = useState(0);
 
@@ -48,6 +50,13 @@ const CartOrders = () => {
     // const handleDeleteCustomCake = (id) => {
     //     setCart(cart.filter((el) => el.cake !== id));
     // };
+
+    const handleSubmit = (e) => {
+        window.alert("Your order has been submitted!");
+        setEmail("");
+        setDate("");
+        setCart([]);
+    };
 
     const handleIcing = (icingType) => {
         if (icingType === "Vanilla") return VanillaIcing;
@@ -123,21 +132,23 @@ const CartOrders = () => {
                     )}
                 </div>
                 <p id="totalPrice">Total Price: ${totalPrice}</p>
-                <form id="cartForm">
+                <form id="cartForm" onSubmit={handleSubmit}>
                     <div className="formEntry">
                         <label htmlFor="">Email:</label>
-                        <input placeholder="email" type="email" />
+                        <input placeholder="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} />
                     </div>
                     <div className="formEntry">
                         <label>Pick-Up Date:</label>
-                        <input type="date" id="DeliveryDateInput" />
+                        <input type="date" id="DeliveryDateInput" value={date} onChange={(e) => setDate(e.target.value)} />
                     </div>
                 </form>
                 <div className="cartButtons">
                     <button className="waves-effect waves-light btn-small lighten-5 black-text" onClick={() => history.goBack()}>
                         Go Back
                     </button>
-                    <button className="waves-effect waves-light btn-small orange lighten-1 black-text">Checkout</button>
+                    <button className="waves-effect waves-light btn-small orange lighten-1 black-text" onClick={handleSubmit}>
+                        Checkout
+                    </button>
                 </div>
             </div>
         </div>
