@@ -132,11 +132,13 @@ const CakeBuilder = (props) => {
                     <NumLayersControl NumLayers={NumLayers} setNumLayers={setNumLayers} />
                     <RenderedCake IcingSrc={IcingSrc} LayerSrc={LayerSrc} CreamSrc={CreamSrc} NumLayers={NumLayers} />
                 </div>
-                <CakesQuantity CakeQuantity={customCakeQuantity} setCakeQuantity={setCustomCakeQuantity} className="CustomCakesQuantity" />
-                <div className="AddToCartContainer">
-                    <button className="AddToCart" onClick={addToCart}>
-                        ADD TO CART
-                    </button>
+                <div className="Quantity_Order">
+                    <CakesQuantity CakeQuantity={customCakeQuantity} setCakeQuantity={setCustomCakeQuantity} className="CustomCakesQuantity" />
+                    <div className="AddToCartContainer">
+                        <button className="AddToCart" onClick={addToCart}>
+                            ADD TO CART
+                        </button>
+                    </div>
                 </div>
             </div>
             <FiChevronRight

@@ -9,10 +9,9 @@ const MenuElement = (props) => {
                 <div className="CardElement">
                     <img
                         src={props.cake.image}
-                        className="responsive-img"
+                        className="cakeImg"
                         // onClick={() => setIsOpen(true)}
                         onClick={() => props.setChosenCake(props.cake_id)}
-                        style={{ borderRadius: "30px 30px 0 0 ", width: "100%", display: "block" }}
                         alt=""
                     />
 

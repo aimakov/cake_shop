@@ -16,7 +16,7 @@ const ChosenCakeContent = (props) => {
                     <b>Description: </b> {props.chosenCake.description}
                 </p>
             </div>
-            <div>
+            <div className="PriceQuantityAddToCart">
                 <div className="PriceQuantity" style={{ display: "flex" }}>
                     <ChosenCakePrice price={props.chosenCake.price} />
                     <CakesQuantity CakeQuantity={props.CakeQuantity} setCakeQuantity={props.setCakeQuantity} className="CakesQuantity" />

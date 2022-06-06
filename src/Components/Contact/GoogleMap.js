@@ -1,15 +1,15 @@
 import React from "react";
-import useWindowDimensions from "../../CustomHooks/useWindowDimensions";
+// import useWindowDimensions from "../../CustomHooks/useWindowDimensions";
 
 const GoogleMap = () => {
-    const [width] = useWindowDimensions();
+    // const [width] = useWindowDimensions();
 
     return (
         <iframe
             // width="480"
             // height="360"
             // width={width > 1023 ? "480" : "300"}
-            width="40%"
+            width="100%"
             // height={width > 1023 ? "360" : "240"}
             style={{ border: "0", borderRadius: "20px", boxShadow: "0 8px 12px 0 rgba(0, 0, 0, 0.2)", margin: "0 auto" }}
             loading="lazy"
