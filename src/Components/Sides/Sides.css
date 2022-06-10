@@ -79,7 +79,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    /* background-size: cover; */
     transition: all 1.2s ease-in-out;
 
     /* border-radius: 0 50px 50px 0; */
@@ -157,5 +157,10 @@
         font-size: 40px;
         padding: 40px;
         border-radius: 40px;
+    }
+
+    .SidesLeft,
+    .SidesRight {
+        background-size: cover;
     }
 }

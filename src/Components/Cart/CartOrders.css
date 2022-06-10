@@ -156,7 +156,7 @@ label {
     margin-bottom: 0;
 }
 
-#cartForm input[type="email"],
+#cartForm input,
 #DeliveryDateInput {
     width: 60%;
 }
@@ -208,5 +208,58 @@ label {
     #cartForm input,
     label {
         font-size: 12px;
+    }
+}
+
+@media all and (max-width: 767px) {
+    #cartElementsList,
+    #cartForm {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+@media all and (min-width: 2560px) {
+    .cartWrapper {
+        width: clamp(700px, 80%, 1200px);
+    }
+
+    #emptyCart {
+        font-size: 24px;
+    }
+
+    #totalPrice {
+        font-size: 24px;
+    }
+
+    .formEntry > label,
+    .formEntry > input::placeholder {
+        font-size: 20px;
+    }
+
+    #cartForm input {
+        width: 40%;
+    }
+
+    .cartButtons button {
+        font-size: 22px;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    /* 
+    .cartElement {
+        padding: 20px 10px 20px 0;
+    } */
+
+    /* .cartElement img {
+        width: 150px;
+    } */
+
+    .cartElementInfo > p:first-child {
+        font-size: 24px;
+    }
+
+    .customCakeInfo p {
+        font-size: 20px;
     }
 }

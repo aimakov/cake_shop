@@ -77,9 +77,9 @@ const Menu = (props) => {
                                 </button>
                             )}
 
-                            <div className="ChosenCakeDisplayImage">
-                                <img src={Cakes[chosenCake].image} alt="" />
-                            </div>
+                            {/* <div className="ChosenCakeDisplayImage"> */}
+                            <img id="ChosenCakeImage" src={Cakes[chosenCake].image} alt="" />
+                            {/* </div> */}
 
                             {width <= 1023 && (
                                 <button className="changeCakeButton" onClick={() => setChosenCake((prevstate) => (prevstate + 1) % Cakes.length)}>

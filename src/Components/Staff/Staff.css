@@ -44,3 +44,25 @@
         font-size: 1rem;
     }
 }
+
+@media all and (min-width: 2560px) {
+    .StaffContainer h3 {
+        font-size: 60px;
+    }
+
+    .StaffContainer > p {
+        font-size: 30px;
+    }
+
+    .StaffCardContainer {
+        width: clamp(500px, 35%, 800px);
+    }
+
+    .StaffCardContainer > div {
+        font-size: 30px;
+    }
+
+    .TeamInfo > p {
+        font-size: 24px;
+    }
+}
